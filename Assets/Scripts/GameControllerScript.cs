@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class GameControllerScript : MonoBehaviour
   public GameObject enemyOF1;
   public GameObject enemyOF2;
   public GameObject enemyOF3;
+  public Text ReplayText;
+  public Text ResultText;
+  private bool isGameOver;
 
   IEnumerator SpawnPlayerOF1()
   {
@@ -97,11 +102,36 @@ public class GameControllerScript : MonoBehaviour
       StartCoroutine("SpawnPlayerOF1");
       StartCoroutine("SpawnPlayerOF2");
       StartCoroutine("SpawnPlayerOF3");
+      ResultText.text = "";
+      ReplayText.text = "";
+      isGameOver = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+      if (!isGameOver)
+      {
+        return;
+      }
 
+      if (Input.GetMouseButtonDown(0))
+      {
+        SceneManager.LoadScene("MainScene");
+      }
+    }
+
+    public void Win()
+    {
+      isGameOver = true;
+      ResultText.text = "You win!";
+      ReplayText.text = "Tap screen to play again";
+    }
+
+    public void Lose()
+    {
+      isGameOver = true;
+      ResultText.text = "You lose!";
+      ReplayText.text = "Tap screen to play again";
     }
 }
