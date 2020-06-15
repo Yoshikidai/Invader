@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
-
   public GameObject playerOF1;
+  public int playerOF1Attack;
+  public int playerOF1Interval;
   public GameObject playerOF2;
+  public int playerOF2Attack;
+  public int playerOF2Interval;
   public GameObject playerOF3;
+  public int playerOF3Attack;
+  public int playerOF3Interval;
   public GameObject playerOFbox1;
   public GameObject playerOFbox2;
   public GameObject playerOFbox3;
@@ -20,8 +25,14 @@ public class GameControllerScript : MonoBehaviour
   public GameObject playerDF5;
   public GameObject playerDF6;
   public GameObject enemyOF1;
+  public int enemyOF1Attack;
+  public int enemyOF1Interval;
   public GameObject enemyOF2;
+  public int enemyOF2Attack;
+  public int enemyOF2Interval;
   public GameObject enemyOF3;
+  public int enemyOF3Attack;
+  public int enemyOF3Interval;
   public GameObject enemyOFbox1;
   public GameObject enemyOFbox2;
   public GameObject enemyOFbox3;
@@ -45,7 +56,6 @@ public class GameControllerScript : MonoBehaviour
   public Text ResultText;
   public bool isVictory;
   public bool isDefeat;
-
 
   // Start is called before the first frame update
   void Start()
@@ -159,7 +169,6 @@ public class GameControllerScript : MonoBehaviour
     isDefeat = false;
   }
 
-
   // Update is called once per frame
   void Update()
   {
@@ -171,16 +180,6 @@ public class GameControllerScript : MonoBehaviour
     if (Input.GetMouseButtonDown(0))
     {
       SceneManager.LoadScene("Invader");
-    }
-
-    if(isVictory)
-    {
-      isDefeat = false;
-    }
-
-    if(isDefeat)
-    {
-      isVictory = false;
     }
 
   }
@@ -204,6 +203,8 @@ public class GameControllerScript : MonoBehaviour
   {
       while (true)
       {
+        playerOF1Attack = 2;
+        playerOF1Interval = 10;
           Instantiate(
               playerOF1,
               new Vector3(playerOFbox1.transform.position.x, transform.position.y, 0f),
@@ -211,6 +212,7 @@ public class GameControllerScript : MonoBehaviour
           );
           yield return new WaitForSeconds(6f);
       }
+
   }
 
 
@@ -218,6 +220,8 @@ public class GameControllerScript : MonoBehaviour
   {
       while (true)
       {
+        playerOF2Attack = 2;
+        playerOF2Interval = 10;
           Instantiate(
               playerOF2,
               new Vector3(playerOFbox2.transform.position.x, transform.position.y, 0f),
@@ -225,12 +229,15 @@ public class GameControllerScript : MonoBehaviour
           );
           yield return new WaitForSeconds(6f);
       }
+
   }
 
   IEnumerator SpawnPlayerOF3()
   {
       while (true)
       {
+        playerOF3Attack = 2;
+        playerOF3Interval = 10;
           Instantiate(
               playerOF3,
               new Vector3(playerOFbox3.transform.position.x, transform.position.y, 0f),
@@ -238,10 +245,13 @@ public class GameControllerScript : MonoBehaviour
           );
           yield return new WaitForSeconds(6f);
       }
+
   }
 
   IEnumerator SpawnEnemyOF1()
   {
+    enemyOF1Attack = 2;
+    enemyOF1Interval = 10;
       while (true)
       {
           Instantiate(
@@ -255,6 +265,8 @@ public class GameControllerScript : MonoBehaviour
 
   IEnumerator SpawnEnemyOF2()
   {
+    enemyOF2Attack = 2;
+    enemyOF2Interval = 10;
       while (true)
       {
           Instantiate(
@@ -264,9 +276,12 @@ public class GameControllerScript : MonoBehaviour
           );
           yield return new WaitForSeconds(6f);
       }
+
   }
   IEnumerator SpawnEnemyOF3()
   {
+    enemyOF3Attack = 2;
+    enemyOF3Interval = 10;
       while (true)
       {
           Instantiate(
@@ -276,6 +291,7 @@ public class GameControllerScript : MonoBehaviour
           );
           yield return new WaitForSeconds(6f);
       }
+
   }
 
 }

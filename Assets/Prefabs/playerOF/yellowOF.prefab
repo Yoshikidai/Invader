@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 8794107367694020325}
   - component: {fileID: 8794107367694020324}
   - component: {fileID: 8794107367694020326}
-  - component: {fileID: 7349304184359553344}
   - component: {fileID: 9192768735559688746}
   - component: {fileID: 5658123561172643244}
   - component: {fileID: 8582981741692663633}
+  - component: {fileID: 8510495514354871010}
   m_Layer: 0
   m_Name: yellowOF
-  m_TagString: playerOF
+  m_TagString: playerOF3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,18 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7349304184359553344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8794107367694020323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f837bf88e1be44a82b59cfd43b80b16c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &9192768735559688746
 Rigidbody2D:
   serializedVersion: 4
@@ -170,3 +158,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 2}
   m_Size: {x: 3, y: 5}
   m_Direction: 0
+--- !u!114 &8510495514354871010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794107367694020323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afdddbe014b4d4b35ab129d143702818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 100
+  Speed: 2

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class redOF : MonoBehaviour
+public class playerRedOF : MonoBehaviour
 {
   private GameControllerScript gameController;
 

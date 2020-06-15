@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 1877879939997188755}
   - component: {fileID: 7818016248127807378}
   - component: {fileID: 4829006400963578005}
-  - component: {fileID: 2201539258763260742}
   - component: {fileID: -4771693116501977178}
   - component: {fileID: 287187727808949395}
   - component: {fileID: -7864722594178449138}
+  - component: {fileID: -1524591743547164947}
   m_Layer: 0
   m_Name: enemyRedOF
-  m_TagString: enemyOF
+  m_TagString: enemyOF1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,18 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2201539258763260742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3142577979109561341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291422048f4ce4273962b857d606c76d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &-4771693116501977178
 Rigidbody2D:
   serializedVersion: 4
@@ -170,3 +158,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -2}
   m_Size: {x: 3, y: 5}
   m_Direction: 0
+--- !u!114 &-1524591743547164947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142577979109561341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b02b392b1cdc346b49573512d3803075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 30
+  Attack: 10
+  Interval: 10
+  Speed: 2

@@ -14,7 +14,7 @@ public class BoundaryScript : MonoBehaviour
       {
         gameController.Win();
       }
-      
+
       if (collision.gameObject.CompareTag("enemyOF"))
       {
         gameController.Lose();
