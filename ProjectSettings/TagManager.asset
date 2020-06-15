@@ -6,6 +6,10 @@ TagManager:
   tags:
   - playerOF
   - enemyOF
+  - playerBox
+  - playerYellowBox
+  - playerRedBox
+  - playerBlueBox
   layers:
   - Default
   - TransparentFX

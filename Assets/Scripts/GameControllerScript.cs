@@ -35,9 +35,16 @@ public class GameControllerScript : MonoBehaviour
   public GameObject emptyOFbox2;
   public GameObject emptyOFbox3;
   public GameObject emptyOFbox4;
+  public GameObject emptyOFbox5;
+  public GameObject emptyOFbox6;
+  public GameObject emptyOFbox7;
+  public GameObject emptyOFbox8;
+  public GameObject emptyOFbox9;
+  public GameObject emptyOFbox10;
   public Text ReplayText;
   public Text ResultText;
-  private bool isGameOver;
+  public bool isVictory;
+  public bool isDefeat;
 
 
   // Start is called before the first frame update
@@ -47,77 +54,116 @@ public class GameControllerScript : MonoBehaviour
     (
       -2f,
       transform.position.y,
-      0f
+      1f
     );
     playerOFbox2.transform.position = new Vector3
     (
       0f,
       transform.position.y,
-      0f
+      1f
     );
     playerOFbox3.transform.position = new Vector3
     (
       2f,
       transform.position.y,
-      0f
+      1f
     );
     enemyOFbox1.transform.position = new Vector3
     (
       -2f,
       -transform.position.y,
-      0f
+      1f
     );
     enemyOFbox2.transform.position = new Vector3
     (
       0f,
       -transform.position.y,
-      0f
+      1f
     );
     enemyOFbox3.transform.position = new Vector3
     (
       2f,
       -transform.position.y,
-      0f
+      1f
     );
     emptyOFbox1.transform.position = new Vector3
     (
-      -1f,
+      -2f,
       transform.position.y,
-      0f
+      2f
     );
     emptyOFbox2.transform.position = new Vector3
     (
-      1f,
+      -1f,
       transform.position.y,
-      0f
+      2f
     );
     emptyOFbox3.transform.position = new Vector3
     (
-      -1f,
-      -transform.position.y,
-      0f
+      0f,
+      transform.position.y,
+      2f
     );
     emptyOFbox4.transform.position = new Vector3
     (
       1f,
-      -transform.position.y,
-      0f
+      transform.position.y,
+      2f
     );
-
+    emptyOFbox5.transform.position = new Vector3
+    (
+      2f,
+      transform.position.y,
+      2f
+    );
+    emptyOFbox6.transform.position = new Vector3
+    (
+      -2f,
+      -transform.position.y,
+      2f
+    );
+    emptyOFbox7.transform.position = new Vector3
+    (
+      -1f,
+      -transform.position.y,
+      2f
+    );
+    emptyOFbox8.transform.position = new Vector3
+    (
+      0f,
+      -transform.position.y,
+      2f
+    );
+    emptyOFbox9.transform.position = new Vector3
+    (
+      1f,
+      -transform.position.y,
+      2f
+    );
+    emptyOFbox10.transform.position = new Vector3
+    (
+      2f,
+      -transform.position.y,
+      2f
+    );
 
     StartCoroutine("SpawnPlayerOF1");
     StartCoroutine("SpawnPlayerOF2");
     StartCoroutine("SpawnPlayerOF3");
+    StartCoroutine("SpawnEnemyOF1");
+    StartCoroutine("SpawnEnemyOF2");
+    StartCoroutine("SpawnEnemyOF3");
     ResultText.text = "";
     ReplayText.text = "";
-    isGameOver = false;
+    isVictory = false;
+    isDefeat = false;
   }
 
 
   // Update is called once per frame
   void Update()
   {
-    if (!isGameOver)
+    if ((!isVictory)&&(!isDefeat))
     {
       return;
     }
@@ -127,18 +173,28 @@ public class GameControllerScript : MonoBehaviour
       SceneManager.LoadScene("Invader");
     }
 
+    if(isVictory)
+    {
+      isDefeat = false;
+    }
+
+    if(isDefeat)
+    {
+      isVictory = false;
+    }
+
   }
 
   public void Win()
   {
-    isGameOver = true;
+    isVictory = true;
     ResultText.text = "You win!";
     ReplayText.text = "Tap screen to play again";
   }
 
   public void Lose()
   {
-    isGameOver = true;
+    isDefeat = true;
     ResultText.text = "You lose!";
     ReplayText.text = "Tap screen to play again";
   }
