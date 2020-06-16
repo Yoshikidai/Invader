@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3898672922554351797}
   - component: {fileID: 6925085982211771575}
   - component: {fileID: 7248878350741363773}
-  - component: {fileID: -1219560096125070379}
+  - component: {fileID: 2382346471717306536}
   m_Layer: 0
   m_Name: enemyWhiteOF
   m_TagString: enemyOF3
@@ -158,7 +158,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -2}
   m_Size: {x: 3, y: 5}
   m_Direction: 0
---- !u!114 &-1219560096125070379
+--- !u!114 &2382346471717306536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,6 +171,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoint: 30
-  Attack: 10
-  Interval: 10
   Speed: 2

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2298664460408968621}
   - component: {fileID: -3098725515028472826}
   - component: {fileID: -8274641599878529693}
-  - component: {fileID: 1208196188454669954}
+  - component: {fileID: 2651337522825187306}
   m_Layer: 0
   m_Name: blueOF 1
   m_TagString: playerOF1
@@ -158,7 +158,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 2}
   m_Size: {x: 3, y: 5}
   m_Direction: 0
---- !u!114 &1208196188454669954
+--- !u!114 &2651337522825187306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,5 +170,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdddbe014b4d4b35ab129d143702818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 100
+  HitPoint: 30
   Speed: 2

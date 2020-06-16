@@ -8,8 +8,89 @@ public class playerOF : MonoBehaviour
   public int HitPoint;
   public int Speed;
 
-  private void OnTriggerStay2D(Collider2D collision)
+  private void OnTriggerEnter2D(Collider2D collision)
   {
+
+    Vector3 Apos = collision.gameObject.transform.position;
+    Vector3 Bpos = transform.position;
+    float dis = Vector3.Distance(Apos,Bpos);
+    float disX = Mathf.Abs(Apos.x - Bpos.x);
+    float disY = Mathf.Abs(Apos.y - Bpos.y);
+
+    IEnumerator AttackByEnemyOF1()
+    {
+      int i = 0;
+      while(true)
+      {
+
+        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
+        {
+          i++;
+          HitPoint -= gameController.enemyOF1Attack;
+          Debug.Log("Enemy1 succeeded");
+          yield return new WaitForSeconds(gameController.enemyOF1Interval * 0.1f);
+        }
+        else
+        {
+          if(i > 0)
+          {
+            break;
+          }
+          yield return null;
+        }
+
+      }
+    }
+
+    IEnumerator AttackByEnemyOF2()
+    {
+      int j = 0;
+      while(true)
+      {
+
+        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
+        {
+          j++;
+          HitPoint -= gameController.enemyOF2Attack;
+          Debug.Log("Enemy2 succeeded");
+          yield return new WaitForSeconds(gameController.enemyOF2Interval * 0.1f);
+        }
+        else
+        {
+          if(j > 0)
+          {
+            break;
+          }
+          yield return null;
+        }
+      }
+    }
+
+    IEnumerator AttackByEnemyOF3()
+    {
+      int k = 0;
+      while(true)
+      {
+
+        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
+        {
+          k++;
+          HitPoint -= gameController.enemyOF3Attack;
+          Debug.Log("Enemy3 succeeded");
+          yield return new WaitForSeconds(gameController.enemyOF3Interval * 0.1f);
+        }
+        else
+        {
+          if(k > 0)
+          {
+            break;
+          }
+          yield return null;
+        }
+      }
+    }
+
+
     if (collision.gameObject.CompareTag("enemyOF1"))
     {
       StartCoroutine(AttackByEnemyOF1());
@@ -23,11 +104,6 @@ public class playerOF : MonoBehaviour
     if (collision.gameObject.CompareTag("enemyOF1"))
     {
       StartCoroutine(AttackByEnemyOF3());
-    }
-
-    if(HitPoint <= 0)
-    {
-      Destroy(gameObject);
     }
 
   }
@@ -51,39 +127,20 @@ public class playerOF : MonoBehaviour
         0f
       );
 
+      if(HitPoint <= 0)
+      {
+        Destroy(gameObject);
+      }
+
+      if(transform.position.y > -gameController.transform.position.y)
+      {
+        gameController.Win();
+      }
+
       if(gameController.isDefeat == true)
       {
         Destroy(gameObject);
       }
     }
 
-    IEnumerator AttackByEnemyOF1()
-    {
-      while(true)
-      {
-        HitPoint -= gameController.enemyOF1Attack;
-        Debug.Log("Enemy1 succeeded");
-        yield return new WaitForSeconds(gameController.enemyOF1Interval);
-      }
-    }
-
-    IEnumerator AttackByEnemyOF2()
-    {
-      while(true)
-      {
-        HitPoint -= gameController.enemyOF2Attack;
-        Debug.Log("Enemy2 succeeded");
-        yield return new WaitForSeconds(gameController.enemyOF2Interval);
-      }
-    }
-
-    IEnumerator AttackByEnemyOF3()
-    {
-      while(true)
-      {
-        HitPoint -= gameController.enemyOF3Attack;
-        Debug.Log("Enemy3 succeeded");
-        yield return new WaitForSeconds(gameController.enemyOF3Interval);
-      }
-    }
 }

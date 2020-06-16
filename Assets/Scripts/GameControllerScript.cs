@@ -189,6 +189,9 @@ public class GameControllerScript : MonoBehaviour
     isVictory = true;
     ResultText.text = "You win!";
     ReplayText.text = "Tap screen to play again";
+    StopCoroutine("SpawnEnemyOF1");
+    StopCoroutine("SpawnEnemyOF2");
+    StopCoroutine("SpawnEnemyOF3");
   }
 
   public void Lose()
@@ -196,6 +199,9 @@ public class GameControllerScript : MonoBehaviour
     isDefeat = true;
     ResultText.text = "You lose!";
     ReplayText.text = "Tap screen to play again";
+    StopCoroutine("SpawnPlayerOF1");
+    StopCoroutine("SpawnPlayerOF2");
+    StopCoroutine("SpawnPlayerOF3");
   }
 
 
@@ -203,8 +209,6 @@ public class GameControllerScript : MonoBehaviour
   {
       while (true)
       {
-        playerOF1Attack = 2;
-        playerOF1Interval = 10;
           Instantiate(
               playerOF1,
               new Vector3(playerOFbox1.transform.position.x, transform.position.y, 0f),
@@ -220,8 +224,6 @@ public class GameControllerScript : MonoBehaviour
   {
       while (true)
       {
-        playerOF2Attack = 2;
-        playerOF2Interval = 10;
           Instantiate(
               playerOF2,
               new Vector3(playerOFbox2.transform.position.x, transform.position.y, 0f),
@@ -236,8 +238,6 @@ public class GameControllerScript : MonoBehaviour
   {
       while (true)
       {
-        playerOF3Attack = 2;
-        playerOF3Interval = 10;
           Instantiate(
               playerOF3,
               new Vector3(playerOFbox3.transform.position.x, transform.position.y, 0f),
@@ -250,8 +250,6 @@ public class GameControllerScript : MonoBehaviour
 
   IEnumerator SpawnEnemyOF1()
   {
-    enemyOF1Attack = 2;
-    enemyOF1Interval = 10;
       while (true)
       {
           Instantiate(
@@ -265,8 +263,6 @@ public class GameControllerScript : MonoBehaviour
 
   IEnumerator SpawnEnemyOF2()
   {
-    enemyOF2Attack = 2;
-    enemyOF2Interval = 10;
       while (true)
       {
           Instantiate(
@@ -280,8 +276,6 @@ public class GameControllerScript : MonoBehaviour
   }
   IEnumerator SpawnEnemyOF3()
   {
-    enemyOF3Attack = 2;
-    enemyOF3Interval = 10;
       while (true)
       {
           Instantiate(

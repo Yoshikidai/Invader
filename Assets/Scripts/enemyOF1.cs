@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyOF : MonoBehaviour
+public class enemyOF1 : MonoBehaviour
 {
   private GameControllerScript gameController;
   public int HitPoint;
@@ -22,7 +22,7 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
         {
           i++;
           HitPoint -= gameController.playerOF1Attack;
@@ -43,20 +43,20 @@ public class enemyOF : MonoBehaviour
 
     IEnumerator AttackByPlayerOF2()
     {
-      int j = 0;
+      int i = 0;
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
         {
-          j++;
+          i++;
           HitPoint -= gameController.playerOF2Attack;
           Debug.Log("Player2 succeeded");
           yield return new WaitForSeconds(gameController.playerOF2Interval * 0.1f);
         }
         else
         {
-          if(j > 0)
+          if(i > 0)
           {
             break;
           }
@@ -67,20 +67,20 @@ public class enemyOF : MonoBehaviour
 
     IEnumerator AttackByPlayerOF3()
     {
-      int k = 0;
+      int i = 0;
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
         {
-          k++;
+          i++;
           HitPoint -= gameController.playerOF3Attack;
           Debug.Log("Player3 succeeded");
           yield return new WaitForSeconds(gameController.playerOF3Interval * 0.1f);
         }
         else
         {
-          if(k > 0)
+          if(i > 0)
           {
             break;
           }
@@ -104,7 +104,10 @@ public class enemyOF : MonoBehaviour
       StartCoroutine(AttackByPlayerOF3());
     }
 
-
+    if(HitPoint <= 0)
+    {
+      Destroy(gameObject);
+    }
   }
 
     // Start is called before the first frame update
@@ -126,20 +129,41 @@ public class enemyOF : MonoBehaviour
         0f
       );
 
-      if(HitPoint <= 0)
-      {
-        Destroy(gameObject);
-      }
-
-      if(transform.position.y < gameController.transform.position.y)
-      {
-        gameController.Lose();
-      }
-
       if(gameController.isVictory == true)
       {
         Destroy(gameObject);
       }
     }
+
+    IEnumerator AttackByPlayerOF1()
+    {
+      while(true)
+      {
+        HitPoint -= gameController.playerOF1Attack;
+        Debug.Log("Player1 succeeded");
+        yield return new WaitForSeconds(gameController.enemyOF1Interval);
+      }
+    }
+
+    IEnumerator AttackByPlayerOF2()
+    {
+      while(true)
+      {
+        HitPoint -= gameController.playerOF2Attack;
+        Debug.Log("Player2 succeeded");
+        yield return new WaitForSeconds(gameController.enemyOF2Interval);
+      }
+    }
+
+    IEnumerator AttackByPlayerOF3()
+    {
+      while(true)
+      {
+        HitPoint -= gameController.playerOF3Attack;
+        Debug.Log("Player3 succeeded");
+        yield return new WaitForSeconds(gameController.enemyOF3Interval);
+      }
+    }
+
 
 }

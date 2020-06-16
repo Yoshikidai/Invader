@@ -1590,15 +1590,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOF1: {fileID: 4432889668339283252, guid: 8b3ce25171a3049bfa7084842e2c5870,
     type: 3}
-  playerOF1Attack: 2
+  playerOF1Attack: 10
   playerOF1Interval: 10
   playerOF2: {fileID: 2155899002734208476, guid: 25911ceb258314d3fa3ac7cc6f8b68b4,
     type: 3}
-  playerOF2Attack: 2
+  playerOF2Attack: 10
   playerOF2Interval: 10
   playerOF3: {fileID: 8794107367694020323, guid: 8bb15059531d4434d9c87aabefa214f0,
     type: 3}
-  playerOF3Attack: 2
+  playerOF3Attack: 10
   playerOF3Interval: 10
   playerOFbox1: {fileID: 1890888795}
   playerOFbox2: {fileID: 163399794}
@@ -1611,15 +1611,15 @@ MonoBehaviour:
   playerDF6: {fileID: 199194588}
   enemyOF1: {fileID: 3142577979109561341, guid: a68d71a17fd7646669c3534034e3abb9,
     type: 3}
-  enemyOF1Attack: 2
+  enemyOF1Attack: 10
   enemyOF1Interval: 10
   enemyOF2: {fileID: 7675457664217798245, guid: bc5cbc957db9e4bb5988c83c6d33dc48,
     type: 3}
-  enemyOF2Attack: 2
+  enemyOF2Attack: 10
   enemyOF2Interval: 10
   enemyOF3: {fileID: 7545865205280552894, guid: 2d50b720d6101410f9692df839abcfde,
     type: 3}
-  enemyOF3Attack: 2
+  enemyOF3Attack: 10
   enemyOF3Interval: 10
   enemyOFbox1: {fileID: 1046128184}
   enemyOFbox2: {fileID: 827273891}
@@ -1642,7 +1642,7 @@ MonoBehaviour:
   emptyOFbox10: {fileID: 1675270721}
   ReplayText: {fileID: 816786326}
   ResultText: {fileID: 305681778}
-  isVictory: 0
+  isVictory: 1
   isDefeat: 0
 --- !u!4 &867853771
 Transform:
@@ -2899,7 +2899,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.3945491, y: -2.68}
+  m_Offset: {x: 2.5007758, y: -3.0407305}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2910,7 +2910,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.7409654, y: 7}
+  m_Size: {x: 11.581552, y: 16.215704}
   m_EdgeRadius: 0
 --- !u!114 &1816186551
 MonoBehaviour:

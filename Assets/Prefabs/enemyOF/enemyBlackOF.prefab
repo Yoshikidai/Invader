@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3513426725368340812}
   - component: {fileID: 8734750092259091045}
   - component: {fileID: -3914419543281321583}
-  - component: {fileID: -5454146683569127923}
+  - component: {fileID: -1512078917932212168}
   m_Layer: 0
   m_Name: enemyBlackOF
   m_TagString: enemyOF2
@@ -158,7 +158,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -2}
   m_Size: {x: 3, y: 5}
   m_Direction: 0
---- !u!114 &-5454146683569127923
+--- !u!114 &-1512078917932212168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,6 +171,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoint: 30
-  Attack: 10
-  Interval: 10
   Speed: 2

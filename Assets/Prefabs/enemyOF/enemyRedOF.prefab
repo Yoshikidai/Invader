@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4771693116501977178}
   - component: {fileID: 287187727808949395}
   - component: {fileID: -7864722594178449138}
-  - component: {fileID: -1524591743547164947}
+  - component: {fileID: -1467477998839224703}
   m_Layer: 0
   m_Name: enemyRedOF
   m_TagString: enemyOF1
@@ -158,7 +158,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -2}
   m_Size: {x: 3, y: 5}
   m_Direction: 0
---- !u!114 &-1524591743547164947
+--- !u!114 &-1467477998839224703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,6 +171,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoint: 30
-  Attack: 10
-  Interval: 10
   Speed: 2

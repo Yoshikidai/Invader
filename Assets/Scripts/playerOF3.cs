@@ -2,32 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyOF : MonoBehaviour
+public class playerOF3 : MonoBehaviour
 {
   private GameControllerScript gameController;
   public int HitPoint;
   public int Speed;
 
+
   private void OnTriggerEnter2D(Collider2D collision)
   {
+
     Vector3 Apos = collision.gameObject.transform.position;
     Vector3 Bpos = transform.position;
     float dis = Vector3.Distance(Apos,Bpos);
     float disX = Mathf.Abs(Apos.x - Bpos.x);
     float disY = Mathf.Abs(Apos.y - Bpos.y);
 
-    IEnumerator AttackByPlayerOF1()
+    IEnumerator AttackByEnemyOF1()
     {
       int i = 0;
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
         {
           i++;
-          HitPoint -= gameController.playerOF1Attack;
-          Debug.Log("player1 succeeded");
-          yield return new WaitForSeconds(gameController.playerOF1Interval * 0.1f);
+          HitPoint -= gameController.enemyOF1Attack;
+          Debug.Log("Enemy1 succeeded");
+          yield return new WaitForSeconds(gameController.enemyOF1Interval * 0.1f);
         }
         else
         {
@@ -41,22 +43,22 @@ public class enemyOF : MonoBehaviour
       }
     }
 
-    IEnumerator AttackByPlayerOF2()
+    IEnumerator AttackByEnemyOF2()
     {
-      int j = 0;
+      int i = 0;
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
         {
-          j++;
-          HitPoint -= gameController.playerOF2Attack;
-          Debug.Log("Player2 succeeded");
-          yield return new WaitForSeconds(gameController.playerOF2Interval * 0.1f);
+          i++;
+          HitPoint -= gameController.enemyOF2Attack;
+          Debug.Log("Enemy2 succeeded");
+          yield return new WaitForSeconds(gameController.enemyOF2Interval * 0.1f);
         }
         else
         {
-          if(j > 0)
+          if(i > 0)
           {
             break;
           }
@@ -65,22 +67,22 @@ public class enemyOF : MonoBehaviour
       }
     }
 
-    IEnumerator AttackByPlayerOF3()
+    IEnumerator AttackByEnemyOF3()
     {
-      int k = 0;
+      int i = 0;
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
         {
-          k++;
-          HitPoint -= gameController.playerOF3Attack;
-          Debug.Log("Player3 succeeded");
-          yield return new WaitForSeconds(gameController.playerOF3Interval * 0.1f);
+          i++;
+          HitPoint -= gameController.enemyOF3Attack;
+          Debug.Log("Enemy3 succeeded");
+          yield return new WaitForSeconds(gameController.enemyOF3Interval * 0.1f);
         }
         else
         {
-          if(k > 0)
+          if(i > 0)
           {
             break;
           }
@@ -89,21 +91,26 @@ public class enemyOF : MonoBehaviour
       }
     }
 
-    if (collision.gameObject.CompareTag("playerOF1"))
+
+    if (collision.gameObject.CompareTag("enemyOF1"))
     {
-      StartCoroutine(AttackByPlayerOF1());
+      StartCoroutine(AttackByEnemyOF1());
     }
 
-    if (collision.gameObject.CompareTag("playerOF2"))
+    if (collision.gameObject.CompareTag("enemyOF2"))
     {
-      StartCoroutine(AttackByPlayerOF2());
+      StartCoroutine(AttackByEnemyOF2());
     }
 
-    if (collision.gameObject.CompareTag("playerOF3"))
+    if (collision.gameObject.CompareTag("enemyOF1"))
     {
-      StartCoroutine(AttackByPlayerOF3());
+      StartCoroutine(AttackByEnemyOF3());
     }
 
+    if(HitPoint <= 0)
+    {
+      Destroy(gameObject);
+    }
 
   }
 
@@ -122,21 +129,11 @@ public class enemyOF : MonoBehaviour
 
       transform.position = new Vector3(
         transform.position.x,
-        transform.position.y - dy,
+        transform.position.y + dy,
         0f
       );
 
-      if(HitPoint <= 0)
-      {
-        Destroy(gameObject);
-      }
-
-      if(transform.position.y < gameController.transform.position.y)
-      {
-        gameController.Lose();
-      }
-
-      if(gameController.isVictory == true)
+      if(gameController.isDefeat == true)
       {
         Destroy(gameObject);
       }
