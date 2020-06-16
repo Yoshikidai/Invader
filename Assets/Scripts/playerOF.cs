@@ -23,7 +23,7 @@ public class playerOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
+        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
         {
           i++;
           HitPoint -= gameController.enemyOF1Attack;
@@ -48,7 +48,7 @@ public class playerOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
+        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
         {
           j++;
           HitPoint -= gameController.enemyOF2Attack;
@@ -72,7 +72,7 @@ public class playerOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
+        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
         {
           k++;
           HitPoint -= gameController.enemyOF3Attack;
@@ -87,6 +87,7 @@ public class playerOF : MonoBehaviour
           }
           yield return null;
         }
+
       }
     }
 
@@ -101,7 +102,7 @@ public class playerOF : MonoBehaviour
       StartCoroutine(AttackByEnemyOF2());
     }
 
-    if (collision.gameObject.CompareTag("enemyOF1"))
+    if (collision.gameObject.CompareTag("enemyOF3"))
     {
       StartCoroutine(AttackByEnemyOF3());
     }

@@ -9,12 +9,15 @@ public class GameControllerScript : MonoBehaviour
   public GameObject playerOF1;
   public int playerOF1Attack;
   public int playerOF1Interval;
+  public int playerOF1SpawnTime;
   public GameObject playerOF2;
   public int playerOF2Attack;
   public int playerOF2Interval;
+  public int playerOF2SpawnTime;
   public GameObject playerOF3;
   public int playerOF3Attack;
   public int playerOF3Interval;
+  public int playerOF3SpawnTime;
   public GameObject playerOFbox1;
   public GameObject playerOFbox2;
   public GameObject playerOFbox3;
@@ -27,12 +30,15 @@ public class GameControllerScript : MonoBehaviour
   public GameObject enemyOF1;
   public int enemyOF1Attack;
   public int enemyOF1Interval;
+  public int enemyOF1SpawnTime;
   public GameObject enemyOF2;
   public int enemyOF2Attack;
   public int enemyOF2Interval;
+  public int enemyOF2SpawnTime;
   public GameObject enemyOF3;
   public int enemyOF3Attack;
   public int enemyOF3Interval;
+  public int enemyOF3SpawnTime;
   public GameObject enemyOFbox1;
   public GameObject enemyOFbox2;
   public GameObject enemyOFbox3;
@@ -214,7 +220,7 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(playerOFbox1.transform.position.x, transform.position.y, 0f),
               transform.rotation
           );
-          yield return new WaitForSeconds(6f);
+          yield return new WaitForSeconds(playerOF1SpawnTime);
       }
 
   }
@@ -229,7 +235,7 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(playerOFbox2.transform.position.x, transform.position.y, 0f),
               transform.rotation
           );
-          yield return new WaitForSeconds(6f);
+          yield return new WaitForSeconds(playerOF2SpawnTime);
       }
 
   }
@@ -243,7 +249,7 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(playerOFbox3.transform.position.x, transform.position.y, 0f),
               transform.rotation
           );
-          yield return new WaitForSeconds(6f);
+          yield return new WaitForSeconds(playerOF3SpawnTime);
       }
 
   }
@@ -257,7 +263,7 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(enemyOFbox1.transform.position.x, -transform.position.y, 0f),
               transform.rotation
           );
-          yield return new WaitForSeconds(6f);
+          yield return new WaitForSeconds(enemyOF1SpawnTime);
       }
   }
 
@@ -270,7 +276,7 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(enemyOFbox2.transform.position.x, -transform.position.y, 0f),
               transform.rotation
           );
-          yield return new WaitForSeconds(6f);
+          yield return new WaitForSeconds(enemyOF2SpawnTime);
       }
 
   }
@@ -283,7 +289,7 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(enemyOFbox3.transform.position.x, -transform.position.y, 0f),
               transform.rotation
           );
-          yield return new WaitForSeconds(6f);
+          yield return new WaitForSeconds(enemyOF3SpawnTime);
       }
 
   }

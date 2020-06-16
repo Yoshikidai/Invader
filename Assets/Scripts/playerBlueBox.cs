@@ -15,69 +15,69 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     if (TargetPos.x < -1.5f)
     {
 
-      if (playerRedBox.transform.position == new Vector3(-2f,-3.5f,-1f))
+      if (playerRedBox.transform.position == new Vector3(-2f,-3.5f,0f))
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if (playerYellowBox.transform.position == new Vector3(-2f,-3.5f,-1f))
+      else if (playerYellowBox.transform.position == new Vector3(-2f,-3.5f,0f))
       {
         playerYellowBox.transform.position = transform.position;
       }
 
-      transform.position = new Vector3(-2f,-3.5f,-1f);
+      transform.position = new Vector3(-2f,-3.5f,0f);
 
     }
     else if (TargetPos.x < -0.5f)
     {
 
-      if (playerRedBox.transform.position == new Vector3(-1f,-3.5f,-1f))
+      if (playerRedBox.transform.position == new Vector3(-1f,-3.5f,0f))
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if (playerYellowBox.transform.position == new Vector3(-1f,-3.5f,-1f))
+      else if (playerYellowBox.transform.position == new Vector3(-1f,-3.5f,0f))
       {
         playerYellowBox.transform.position = transform.position;
       }
 
-      transform.position = new Vector3(-1f,-3.5f,-1f);
+      transform.position = new Vector3(-1f,-3.5f,0f);
     }
     else if (TargetPos.x < 0.5f)
     {
-      if (playerRedBox.transform.position == new Vector3(0f,-3.5f,-1f))
+      if (playerRedBox.transform.position == new Vector3(0f,-3.5f,0f))
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if (playerYellowBox.transform.position == new Vector3(0f,-3.5f,-1f))
+      else if (playerYellowBox.transform.position == new Vector3(0f,-3.5f,0f))
       {
         playerYellowBox.transform.position = transform.position;
       }
 
-      transform.position = new Vector3(0f,-3.5f,-1f);
+      transform.position = new Vector3(0f,-3.5f,0f);
     }
     else if (TargetPos.x < 1.5f)
     {
-      if (playerRedBox.transform.position == new Vector3(1f,-3.5f,-1f))
+      if (playerRedBox.transform.position == new Vector3(1f,-3.5f,0f))
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if (playerYellowBox.transform.position == new Vector3(1f,-3.5f,-1f))
+      else if (playerYellowBox.transform.position == new Vector3(1f,-3.5f,0f))
       {
         playerYellowBox.transform.position = transform.position;
       }
 
-      transform.position = new Vector3(1f,-3.5f,-1f);
+      transform.position = new Vector3(1f,-3.5f,0f);
     }
     else
     {
-      if (playerRedBox.transform.position == new Vector3(2f,-3.5f,-1f))
+      if (playerRedBox.transform.position == new Vector3(2f,-3.5f,0f))
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if (playerYellowBox.transform.position == new Vector3(2f,-3.5f,-1f))
+      else if (playerYellowBox.transform.position == new Vector3(2f,-3.5f,0f))
       {
         playerYellowBox.transform.position = transform.position;
       }
-      transform.position = new Vector3(2f,-3.5f,-1f);
+      transform.position = new Vector3(2f,-3.5f,0f);
     }
 	}
 

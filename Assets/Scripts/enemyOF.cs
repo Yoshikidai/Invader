@@ -22,7 +22,7 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           i++;
           HitPoint -= gameController.playerOF1Attack;
@@ -47,7 +47,7 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           j++;
           HitPoint -= gameController.playerOF2Attack;
@@ -71,11 +71,11 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 5f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           k++;
           HitPoint -= gameController.playerOF3Attack;
-          Debug.Log("Player3 succeeded");
+          Debug.Log("player3 succeeded");
           yield return new WaitForSeconds(gameController.playerOF3Interval * 0.1f);
         }
         else
@@ -86,6 +86,7 @@ public class enemyOF : MonoBehaviour
           }
           yield return null;
         }
+
       }
     }
 
