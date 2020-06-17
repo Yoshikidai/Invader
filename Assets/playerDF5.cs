@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerOF3 : MonoBehaviour
+public class playerDF5 : MonoBehaviour
 {
   private GameControllerScript gameController;
   public int HitPoint;
-  public int Speed;
-
+  public string Element;
+  private int ElementDamage;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
-
     Vector3 Apos = collision.gameObject.transform.position;
     Vector3 Bpos = transform.position;
     float dis = Vector3.Distance(Apos,Bpos);
@@ -24,11 +23,11 @@ public class playerOF3 : MonoBehaviour
       while(true)
       {
 
-        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
+        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
         {
           i++;
-          HitPoint -= gameController.enemyOF1Attack;
-          Debug.Log("Enemy1 succeeded");
+          HitPoint -= gameController.enemyOF1Attack + ElementDamage;
+          Debug.Log("enemy1 succeeded");
           yield return new WaitForSeconds(gameController.enemyOF1Interval * 0.1f);
         }
         else
@@ -45,20 +44,20 @@ public class playerOF3 : MonoBehaviour
 
     IEnumerator AttackByEnemyOF2()
     {
-      int i = 0;
+      int j = 0;
       while(true)
       {
 
-        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
+        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
         {
-          i++;
-          HitPoint -= gameController.enemyOF2Attack;
-          Debug.Log("Enemy2 succeeded");
+          j++;
+          HitPoint -= gameController.enemyOF2Attack + ElementDamage;
+          Debug.Log("enemy2 succeeded");
           yield return new WaitForSeconds(gameController.enemyOF2Interval * 0.1f);
         }
         else
         {
-          if(i > 0)
+          if(j > 0)
           {
             break;
           }
@@ -69,49 +68,77 @@ public class playerOF3 : MonoBehaviour
 
     IEnumerator AttackByEnemyOF3()
     {
-      int i = 0;
+      int k = 0;
       while(true)
       {
 
-        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
+        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
         {
-          i++;
-          HitPoint -= gameController.enemyOF3Attack;
-          Debug.Log("Enemy3 succeeded");
+          k++;
+          HitPoint -= gameController.enemyOF3Attack + ElementDamage;
+          Debug.Log("enemy3 succeeded");
           yield return new WaitForSeconds(gameController.enemyOF3Interval * 0.1f);
         }
         else
         {
-          if(i > 0)
+          if(k > 0)
           {
             break;
           }
           yield return null;
         }
+
       }
     }
 
 
     if (collision.gameObject.CompareTag("enemyOF1"))
     {
+        if(gameController.enemyOF1Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF1Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
       StartCoroutine(AttackByEnemyOF1());
+
     }
 
     if (collision.gameObject.CompareTag("enemyOF2"))
     {
+      if(gameController.enemyOF2Element == "white")
+      {
+        ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+      }
+
+      if(gameController.enemyOF2Element == "blue")
+      {
+        ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+      }
+
       StartCoroutine(AttackByEnemyOF2());
+
     }
 
-    if (collision.gameObject.CompareTag("enemyOF1"))
+    if (collision.gameObject.CompareTag("enemyOF3"))
     {
+      if(gameController.enemyOF3Element == "white")
+      {
+        ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+      }
+
+      if(gameController.enemyOF3Element == "blue")
+      {
+        ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+      }
+
       StartCoroutine(AttackByEnemyOF3());
-    }
 
-    if(HitPoint <= 0)
-    {
-      Destroy(gameObject);
     }
-
   }
 
     // Start is called before the first frame update
@@ -125,18 +152,17 @@ public class playerOF3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      float dy = Time.deltaTime * Speed * 0.1f;
 
-      transform.position = new Vector3(
-        transform.position.x,
-        transform.position.y + dy,
-        0f
-      );
+      if(HitPoint <= 0)
+      {
+        Destroy(gameObject);
+      }
 
       if(gameController.isDefeat == true)
       {
         Destroy(gameObject);
       }
+
     }
 
 }

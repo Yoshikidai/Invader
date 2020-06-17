@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 9991801}
   - component: {fileID: 9991805}
   - component: {fileID: 9991804}
+  - component: {fileID: 9991806}
   m_Layer: 0
   m_Name: enemyRedDF1
-  m_TagString: Untagged
+  m_TagString: enemyDF4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,12 +256,26 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &9991806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9991800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94222228d5cd24147b042d5fb0ba2c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: red
 --- !u!1 &70752218
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,9 +289,10 @@ GameObject:
   - component: {fileID: 70752219}
   - component: {fileID: 70752223}
   - component: {fileID: 70752222}
+  - component: {fileID: 70752224}
   m_Layer: 0
   m_Name: enemyRedDF2
-  m_TagString: Untagged
+  m_TagString: enemyDF5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,6 +417,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &70752224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70752218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003f3b3b6ee2e418e95e810f139bf396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: red
 --- !u!1 &163399794
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,9 +555,10 @@ GameObject:
   - component: {fileID: 199194589}
   - component: {fileID: 199194593}
   - component: {fileID: 199194592}
+  - component: {fileID: 199194594}
   m_Layer: 0
   m_Name: blueDF1
-  m_TagString: Untagged
+  m_TagString: playerDF6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,6 +683,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &199194594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199194588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39d97d0ca1b448df9e30360516f10cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: blue
 --- !u!1 &237319759
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 282769522}
   - component: {fileID: 282769521}
+  - component: {fileID: 282769523}
   m_Layer: 0
   m_Name: enemyWhiteBox
   m_TagString: Untagged
@@ -797,8 +843,20 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &282769523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282769520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58ba91b46c41a479eba413b46d04836f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &305681777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,9 +1191,10 @@ GameObject:
   - component: {fileID: 765401798}
   - component: {fileID: 765401802}
   - component: {fileID: 765401801}
+  - component: {fileID: 765401803}
   m_Layer: 0
   m_Name: enemyBlackDF3
-  m_TagString: Untagged
+  m_TagString: enemyDF3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1260,6 +1319,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &765401803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765401797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2747a593f2ab747a3bccee38f611a402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: black
 --- !u!1 &787850517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,9 +1346,10 @@ GameObject:
   - component: {fileID: 787850518}
   - component: {fileID: 787850522}
   - component: {fileID: 787850521}
+  - component: {fileID: 787850523}
   m_Layer: 0
   m_Name: whiteDF (1)
-  m_TagString: Untagged
+  m_TagString: playerDF2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1400,6 +1474,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &787850523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787850517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e3ec839575d427798d59ae4ce7d7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: white
 --- !u!1 &816786324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827273893}
   - component: {fileID: 827273892}
+  - component: {fileID: 827273894}
   m_Layer: 0
   m_Name: enemyBlackBox
   m_TagString: Untagged
@@ -1557,8 +1646,20 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &827273894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827273891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc73a78728114e0182e759165b0eeca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &867853769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,52 +1691,94 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOF1: {fileID: 4432889668339283252, guid: 8b3ce25171a3049bfa7084842e2c5870,
     type: 3}
-  playerOF1Attack: 10
+  playerOF1Attack: 3
   playerOF1Interval: 20
-  playerOF1SpawnTime: 5
+  playerOF1SpawnTime: 3
+  playerOF1Element: blue
   playerOF2: {fileID: 2155899002734208476, guid: 25911ceb258314d3fa3ac7cc6f8b68b4,
     type: 3}
-  playerOF2Attack: 10
+  playerOF2Attack: 3
   playerOF2Interval: 20
-  playerOF2SpawnTime: 5
+  playerOF2SpawnTime: 3
+  playerOF2Element: red
   playerOF3: {fileID: 8794107367694020323, guid: 8bb15059531d4434d9c87aabefa214f0,
     type: 3}
-  playerOF3Attack: 10
+  playerOF3Attack: 3
   playerOF3Interval: 20
-  playerOF3SpawnTime: 5
+  playerOF3SpawnTime: 3
+  playerOF3Element: yellow
   playerOFbox1: {fileID: 1890888795}
   playerOFbox2: {fileID: 163399794}
   playerOFbox3: {fileID: 1585065653}
   playerDF1: {fileID: 1917248096}
+  playerDF1Attack: 30
+  playerDF1Interval: 10
+  playerDF1Element: 
   playerDF2: {fileID: 787850517}
+  playerDF2Attack: 30
+  playerDF2Interval: 10
+  playerDF2Element: 
   playerDF3: {fileID: 1370261598}
+  playerDF3Attack: 30
+  playerDF3Interval: 10
+  playerDF3Element: 
   playerDF4: {fileID: 1872653946}
+  playerDF4Attack: 30
+  playerDF4Interval: 10
+  playerDF4Element: 
   playerDF5: {fileID: 1966931325}
+  playerDF5Attack: 30
+  playerDF5Interval: 10
+  playerDF5Element: 
   playerDF6: {fileID: 199194588}
+  playerDF6Attack: 30
+  playerDF6Interval: 10
+  playerDF6Element: 
   enemyOF1: {fileID: 3142577979109561341, guid: a68d71a17fd7646669c3534034e3abb9,
     type: 3}
-  enemyOF1Attack: 10
+  enemyOF1Attack: 3
   enemyOF1Interval: 20
-  enemyOF1SpawnTime: 5
+  enemyOF1SpawnTime: 3
+  enemyOF1Element: red
   enemyOF2: {fileID: 7675457664217798245, guid: bc5cbc957db9e4bb5988c83c6d33dc48,
     type: 3}
-  enemyOF2Attack: 10
+  enemyOF2Attack: 3
   enemyOF2Interval: 20
-  enemyOF2SpawnTime: 5
+  enemyOF2SpawnTime: 3
+  enemyOF2Element: black
   enemyOF3: {fileID: 7545865205280552894, guid: 2d50b720d6101410f9692df839abcfde,
     type: 3}
-  enemyOF3Attack: 10
+  enemyOF3Attack: 3
   enemyOF3Interval: 20
-  enemyOF3SpawnTime: 5
+  enemyOF3SpawnTime: 3
+  enemyOF3Element: white
   enemyOFbox1: {fileID: 1046128184}
   enemyOFbox2: {fileID: 827273891}
   enemyOFbox3: {fileID: 282769520}
   enemyDF1: {fileID: 918291593}
+  enemyDF1Attack: 30
+  enemyDF1Interval: 10
+  enemyDF1Element: 
   enemyDF2: {fileID: 9991800}
+  enemyDF2Attack: 30
+  enemyDF2Interval: 10
+  enemyDF2Element: 
   enemyDF3: {fileID: 70752218}
+  enemyDF3Attack: 30
+  enemyDF3Interval: 10
+  enemyDF3Element: 
   enemyDF4: {fileID: 1639287302}
+  enemyDF4Attack: 30
+  enemyDF4Interval: 10
+  enemyDF4Element: 
   enemyDF5: {fileID: 982686000}
+  enemyDF5Attack: 30
+  enemyDF5Interval: 10
+  enemyDF5Element: 
   enemyDF6: {fileID: 765401797}
+  enemyDF6Attack: 30
+  enemyDF6Interval: 10
+  enemyDF6Element: 
   emptyOFbox1: {fileID: 1261703992240145984}
   emptyOFbox2: {fileID: 7403172984386633027}
   emptyOFbox3: {fileID: 642384653907504244}
@@ -1648,7 +1791,7 @@ MonoBehaviour:
   emptyOFbox10: {fileID: 1675270721}
   ReplayText: {fileID: 816786326}
   ResultText: {fileID: 305681778}
-  isVictory: 1
+  isVictory: 0
   isDefeat: 0
 --- !u!4 &867853771
 Transform:
@@ -1677,9 +1820,10 @@ GameObject:
   - component: {fileID: 918291594}
   - component: {fileID: 918291598}
   - component: {fileID: 918291597}
+  - component: {fileID: 918291599}
   m_Layer: 0
   m_Name: enemyYellowDF1
-  m_TagString: Untagged
+  m_TagString: enemyDF6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1804,6 +1948,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &918291599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918291593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c98d15743f6f477fa4ac073257634aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: yelllow
 --- !u!1 &982686000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,9 +1975,10 @@ GameObject:
   - component: {fileID: 982686001}
   - component: {fileID: 982686005}
   - component: {fileID: 982686004}
+  - component: {fileID: 982686006}
   m_Layer: 0
   m_Name: enemyBlackDF2
-  m_TagString: Untagged
+  m_TagString: enemyDF1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1944,6 +2103,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &982686006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982686000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509a623444ac047399a9a978c20eaf3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: black
 --- !u!1 &1046128184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,6 +2127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046128186}
   - component: {fileID: 1046128185}
+  - component: {fileID: 1046128187}
   m_Layer: 0
   m_Name: enemyRedBox
   m_TagString: Untagged
@@ -2023,8 +2197,20 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1046128187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046128184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bef4d09cca9640149517ae32f87c076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1324893545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,9 +2305,11 @@ GameObject:
   - component: {fileID: 1370261599}
   - component: {fileID: 1370261603}
   - component: {fileID: 1370261602}
+  - component: {fileID: 1370261604}
+  - component: {fileID: 1370261605}
   m_Layer: 0
   m_Name: blackDF1
-  m_TagString: Untagged
+  m_TagString: playerDF3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2246,6 +2434,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &1370261604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370261598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c70bcb0b4c347deacc0464cd9862b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+--- !u!114 &1370261605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370261598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9090bcb3f78414abccb7aeabefbead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: black
 --- !u!1 &1402142763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2551,9 +2766,10 @@ GameObject:
   - component: {fileID: 1639287303}
   - component: {fileID: 1639287307}
   - component: {fileID: 1639287306}
+  - component: {fileID: 1639287308}
   m_Layer: 0
   m_Name: enemyBlackDF1
-  m_TagString: Untagged
+  m_TagString: enemyDF2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2678,6 +2894,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &1639287308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639287302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebec9f671a9f74dbc90585d499680ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: black
 --- !u!1 &1675270721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,9 +3173,10 @@ GameObject:
   - component: {fileID: 1872653947}
   - component: {fileID: 1872653951}
   - component: {fileID: 1872653950}
+  - component: {fileID: 1872653952}
   m_Layer: 0
   m_Name: redDF1
-  m_TagString: Untagged
+  m_TagString: playerDF4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3070,6 +3301,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &1872653952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872653946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4796f7d04cb5043bfba98bcc80859602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: red
 --- !u!1 &1890888795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,9 +3439,10 @@ GameObject:
   - component: {fileID: 1917248097}
   - component: {fileID: 1917248101}
   - component: {fileID: 1917248100}
+  - component: {fileID: 1917248102}
   m_Layer: 0
   m_Name: whiteDF
-  m_TagString: Untagged
+  m_TagString: playerDF1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3321,6 +3567,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &1917248102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917248096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f44e47f5a9249e48df6c786ff26e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: white
 --- !u!1 &1966931325
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,9 +3594,10 @@ GameObject:
   - component: {fileID: 1966931326}
   - component: {fileID: 1966931330}
   - component: {fileID: 1966931329}
+  - component: {fileID: 1966931331}
   m_Layer: 0
   m_Name: blackDF1 (1)
-  m_TagString: Untagged
+  m_TagString: playerDF5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3461,6 +3722,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &1966931331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966931325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc7ddcfcc903f4d6194e56416886e76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 300
+  Element: black
 --- !u!1 &2098923748
 GameObject:
   m_ObjectHideFlags: 0

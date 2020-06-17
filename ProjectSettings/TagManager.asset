@@ -10,6 +10,24 @@ TagManager:
   - playerYellowBox
   - playerRedBox
   - playerBlueBox
+  - playerOF1
+  - playerOF2
+  - playerOF3
+  - enemyOF1
+  - enemyOF2
+  - enemyOF3
+  - playerDF1
+  - playerDF2
+  - playerDF3
+  - playerDF4
+  - playerDF5
+  - playerDF6
+  - enemyDF1
+  - enemyDF2
+  - enemyDF3
+  - enemyDF4
+  - enemyDF5
+  - enemyDF6
   layers:
   - Default
   - TransparentFX

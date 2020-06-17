@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyOF3 : MonoBehaviour
+public class enemyDF2 : MonoBehaviour
 {
   private GameControllerScript gameController;
   public int HitPoint;
-  public int Speed;
+  public string Element;
+  private int ElementDamage;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
@@ -22,11 +23,11 @@ public class enemyOF3 : MonoBehaviour
       while(true)
       {
 
-        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
+        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           i++;
-          HitPoint -= gameController.playerOF1Attack;
-          Debug.Log("player1 succeeded");
+          HitPoint -= gameController.playerOF1Attack + ElementDamage;
+          Debug.Log("Player1 succeeded");
           yield return new WaitForSeconds(gameController.playerOF1Interval * 0.1f);
         }
         else
@@ -43,20 +44,20 @@ public class enemyOF3 : MonoBehaviour
 
     IEnumerator AttackByPlayerOF2()
     {
-      int i = 0;
+      int j = 0;
       while(true)
       {
 
-        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
+        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
-          i++;
-          HitPoint -= gameController.playerOF2Attack;
+          j++;
+          HitPoint -= gameController.playerOF2Attack + ElementDamage;
           Debug.Log("Player2 succeeded");
           yield return new WaitForSeconds(gameController.playerOF2Interval * 0.1f);
         }
         else
         {
-          if(i > 0)
+          if(j > 0)
           {
             break;
           }
@@ -67,47 +68,78 @@ public class enemyOF3 : MonoBehaviour
 
     IEnumerator AttackByPlayerOF3()
     {
-      int i = 0;
+      int k = 0;
       while(true)
       {
 
-        if((dis < 3f) && (disX < 1f) && (Apos.y - Bpos.y > 0f))
+        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
-          i++;
-          HitPoint -= gameController.playerOF3Attack;
+          k++;
+          HitPoint -= gameController.playerOF3Attack + ElementDamage;
           Debug.Log("Player3 succeeded");
           yield return new WaitForSeconds(gameController.playerOF3Interval * 0.1f);
         }
         else
         {
-          if(i > 0)
+          if(k > 0)
           {
             break;
           }
           yield return null;
         }
+
       }
     }
 
+
     if (collision.gameObject.CompareTag("playerOF1"))
     {
+        if(gameController.playerOF1Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.playerOF1Attack * 0.2f);
+        }
+
+        if(gameController.playerOF1Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.playerOF1Attack * 0.2f);
+        }
+
       StartCoroutine(AttackByPlayerOF1());
+
     }
 
     if (collision.gameObject.CompareTag("playerOF2"))
     {
+      if(gameController.playerOF2Element == "white")
+      {
+        ElementDamage = Mathf.FloorToInt(gameController.playerOF2Attack * 0.2f);
+      }
+
+      if(gameController.playerOF2Element == "blue")
+      {
+        ElementDamage = - Mathf.FloorToInt(gameController.playerOF2Attack * 0.2f);
+      }
+
       StartCoroutine(AttackByPlayerOF2());
+
     }
 
     if (collision.gameObject.CompareTag("playerOF3"))
     {
+      if(gameController.playerOF3Element == "white")
+      {
+        ElementDamage = Mathf.FloorToInt(gameController.playerOF3Attack * 0.2f);
+      }
+
+      if(gameController.playerOF3Element == "blue")
+      {
+        ElementDamage = - Mathf.FloorToInt(gameController.playerOF3Attack * 0.2f);
+      }
+
       StartCoroutine(AttackByPlayerOF3());
+
     }
 
-    if(HitPoint <= 0)
-    {
-      Destroy(gameObject);
-    }
   }
 
     // Start is called before the first frame update
@@ -121,49 +153,17 @@ public class enemyOF3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      float dy = Time.deltaTime * Speed * 0.1f;
 
-      transform.position = new Vector3(
-        transform.position.x,
-        transform.position.y - dy,
-        0f
-      );
-
-      if(gameController.isVictory == true)
+      if(HitPoint <= 0)
       {
         Destroy(gameObject);
       }
-    }
 
-    IEnumerator AttackByPlayerOF1()
-    {
-      while(true)
+      if(gameController.isDefeat == true)
       {
-        HitPoint -= gameController.playerOF1Attack;
-        Debug.Log("Player1 succeeded");
-        yield return new WaitForSeconds(gameController.enemyOF1Interval);
+        Destroy(gameObject);
       }
-    }
 
-    IEnumerator AttackByPlayerOF2()
-    {
-      while(true)
-      {
-        HitPoint -= gameController.playerOF2Attack;
-        Debug.Log("Player2 succeeded");
-        yield return new WaitForSeconds(gameController.enemyOF2Interval);
-      }
     }
-
-    IEnumerator AttackByPlayerOF3()
-    {
-      while(true)
-      {
-        HitPoint -= gameController.playerOF3Attack;
-        Debug.Log("Player3 succeeded");
-        yield return new WaitForSeconds(gameController.enemyOF3Interval);
-      }
-    }
-
 
 }

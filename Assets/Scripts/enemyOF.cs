@@ -22,7 +22,7 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           i++;
           HitPoint -= gameController.playerOF1Attack;
@@ -39,6 +39,7 @@ public class enemyOF : MonoBehaviour
         }
 
       }
+
     }
 
     IEnumerator AttackByPlayerOF2()
@@ -47,7 +48,7 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           j++;
           HitPoint -= gameController.playerOF2Attack;
@@ -63,6 +64,7 @@ public class enemyOF : MonoBehaviour
           yield return null;
         }
       }
+
     }
 
     IEnumerator AttackByPlayerOF3()
@@ -71,7 +73,7 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           k++;
           HitPoint -= gameController.playerOF3Attack;
@@ -88,6 +90,163 @@ public class enemyOF : MonoBehaviour
         }
 
       }
+
+    }
+
+    IEnumerator AttackByPlayerDF1()
+    {
+      int A = 0;
+      while(true)
+      {
+
+        if(dis < 3f)
+        {
+          A++;
+          HitPoint -= gameController.playerDF1Attack;
+          Debug.Log("playerDF1 succeeded");
+          yield return new WaitForSeconds(gameController.playerDF1Interval * 0.1f);
+        }
+        else
+        {
+          if(A > 0)
+          {
+            break;
+          }
+          yield return null;
+        }
+
+      }
+
+    }
+
+    IEnumerator AttackByPlayerDF2()
+    {
+      int B = 0;
+      while(true)
+      {
+
+        if(dis < 3f)
+        {
+          B++;
+          HitPoint -= gameController.playerDF2Attack;
+          Debug.Log("playerDF2 succeeded");
+          yield return new WaitForSeconds(gameController.playerDF2Interval * 0.1f);
+        }
+        else
+        {
+          if(B > 0)
+          {
+            break;
+          }
+          yield return null;
+        }
+
+      }
+
+    }
+
+    IEnumerator AttackByPlayerDF3()
+    {
+      int C = 0;
+      while(true)
+      {
+
+        if(dis < 3f)
+        {
+          C++;
+          HitPoint -= gameController.playerDF3Attack;
+          Debug.Log("playerDF3 succeeded");
+          yield return new WaitForSeconds(gameController.playerDF3Interval * 0.1f);
+        }
+        else
+        {
+          if(C > 0)
+          {
+            break;
+          }
+          yield return null;
+        }
+
+      }
+
+    }
+
+    IEnumerator AttackByPlayerDF4()
+    {
+      int D = 0;
+      while(true)
+      {
+
+        if(dis < 3f)
+        {
+          D++;
+          HitPoint -= gameController.playerDF4Attack;
+          Debug.Log("playerDF4 succeeded");
+          yield return new WaitForSeconds(gameController.playerDF4Interval * 0.1f);
+        }
+        else
+        {
+          if(D > 0)
+          {
+            break;
+          }
+          yield return null;
+        }
+
+      }
+
+    }
+
+    IEnumerator AttackByPlayerDF5()
+    {
+      int E = 0;
+      while(true)
+      {
+
+        if(dis < 3f)
+        {
+          E++;
+          HitPoint -= gameController.playerDF5Attack;
+          Debug.Log("playerDF5 succeeded");
+          yield return new WaitForSeconds(gameController.playerDF5Interval * 0.1f);
+        }
+        else
+        {
+          if(E > 0)
+          {
+            break;
+          }
+          yield return null;
+        }
+
+      }
+
+    }
+
+    IEnumerator AttackByPlayerDF6()
+    {
+      int F = 0;
+      while(true)
+      {
+
+        if(dis < 3f)
+        {
+          F++;
+          HitPoint -= gameController.playerDF6Attack;
+          Debug.Log("playerDF6 succeeded");
+          yield return new WaitForSeconds(gameController.playerDF6Interval * 0.1f);
+        }
+        else
+        {
+          if(F > 0)
+          {
+            break;
+          }
+          yield return null;
+        }
+
+      }
+
     }
 
     if (collision.gameObject.CompareTag("playerOF1"))
@@ -105,6 +264,35 @@ public class enemyOF : MonoBehaviour
       StartCoroutine(AttackByPlayerOF3());
     }
 
+    if (collision.gameObject.CompareTag("playerDF1"))
+    {
+      StartCoroutine(AttackByPlayerDF1());
+    }
+
+    if (collision.gameObject.CompareTag("playerDF2"))
+    {
+      StartCoroutine(AttackByPlayerDF2());
+    }
+
+    if (collision.gameObject.CompareTag("playerDF3"))
+    {
+      StartCoroutine(AttackByPlayerDF3());
+    }
+
+    if (collision.gameObject.CompareTag("playerDF4"))
+    {
+      StartCoroutine(AttackByPlayerDF4());
+    }
+
+    if (collision.gameObject.CompareTag("playerDF5"))
+    {
+      StartCoroutine(AttackByPlayerDF5());
+    }
+
+    if (collision.gameObject.CompareTag("playerDF6"))
+    {
+      StartCoroutine(AttackByPlayerDF6());
+    }
 
   }
 
