@@ -8,6 +8,8 @@ public class enemyDF5 : MonoBehaviour
   public int HitPoint;
   public string Element;
   private int ElementDamage;
+  private int PositionCorrectionAttack;
+  private int PositionCorrectionHitPoint;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
@@ -16,6 +18,7 @@ public class enemyDF5 : MonoBehaviour
     float dis = Vector3.Distance(Apos,Bpos);
     float disX = Mathf.Abs(Apos.x - Bpos.x);
     float disY = Mathf.Abs(Apos.y - Bpos.y);
+    ElementDamage = 0;
 
     IEnumerator AttackByPlayerOF1()
     {
@@ -148,6 +151,11 @@ public class enemyDF5 : MonoBehaviour
       gameController = GameObject
           .FindWithTag("GameController")
           .GetComponent<GameControllerScript>();
+          PositionCorrectionAttack = Mathf.FloorToInt(- transform.position.y + 2.5f);
+          PositionCorrectionHitPoint = Mathf.FloorToInt(transform.position.y - 0.5f);
+          gameController.enemyDF5Attack = Mathf.FloorToInt(gameController.enemyDF5Attack * (PositionCorrectionAttack * 0.1f + 1f));
+          HitPoint = Mathf.FloorToInt(HitPoint * (PositionCorrectionHitPoint * 0.1f + 1f));
+
     }
 
     // Update is called once per frame

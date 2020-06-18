@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 282769523}
   m_Layer: 0
   m_Name: enemyWhiteBox
-  m_TagString: Untagged
+  m_TagString: enemyWhiteBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1579,7 +1579,7 @@ GameObject:
   - component: {fileID: 827273894}
   m_Layer: 0
   m_Name: enemyBlackBox
-  m_TagString: Untagged
+  m_TagString: enemyBlackBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2130,7 +2130,7 @@ GameObject:
   - component: {fileID: 1046128187}
   m_Layer: 0
   m_Name: enemyRedBox
-  m_TagString: Untagged
+  m_TagString: enemyRedBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

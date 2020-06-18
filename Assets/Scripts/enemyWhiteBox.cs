@@ -60,7 +60,7 @@ public class enemyWhiteBox : MonoBehaviour
 
         transform.position = new Vector3(X, 3.5f, 0f);
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(9f);
       }
 
     }

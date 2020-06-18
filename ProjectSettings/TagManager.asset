@@ -28,6 +28,9 @@ TagManager:
   - enemyDF4
   - enemyDF5
   - enemyDF6
+  - enemyRedBox
+  - enemyBlackBox
+  - enemyWhiteBox
   layers:
   - Default
   - TransparentFX

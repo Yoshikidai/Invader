@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerDF5 : MonoBehaviour
+public class playerDF4 : MonoBehaviour
 {
   private GameControllerScript gameController;
   public int HitPoint;
   public string Element;
   private int ElementDamage;
+  private int PositionCorrectionAttack;
+  private int PositionCorrectionHitPoint;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
@@ -94,12 +96,12 @@ public class playerDF5 : MonoBehaviour
 
     if (collision.gameObject.CompareTag("enemyOF1"))
     {
-        if(gameController.enemyOF1Element == "white")
+        if(gameController.enemyOF1Element == "blue")
         {
           ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
         }
 
-        if(gameController.enemyOF1Element == "blue")
+        if(gameController.enemyOF1Element == "white")
         {
           ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
         }
@@ -110,12 +112,12 @@ public class playerDF5 : MonoBehaviour
 
     if (collision.gameObject.CompareTag("enemyOF2"))
     {
-      if(gameController.enemyOF2Element == "white")
+      if(gameController.enemyOF2Element == "blue")
       {
         ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
       }
 
-      if(gameController.enemyOF2Element == "blue")
+      if(gameController.enemyOF2Element == "white")
       {
         ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
       }
@@ -126,12 +128,12 @@ public class playerDF5 : MonoBehaviour
 
     if (collision.gameObject.CompareTag("enemyOF3"))
     {
-      if(gameController.enemyOF3Element == "white")
+      if(gameController.enemyOF3Element == "blue")
       {
         ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
       }
 
-      if(gameController.enemyOF3Element == "blue")
+      if(gameController.enemyOF3Element == "white")
       {
         ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
       }
@@ -147,6 +149,12 @@ public class playerDF5 : MonoBehaviour
       gameController = GameObject
           .FindWithTag("GameController")
           .GetComponent<GameControllerScript>();
+
+      PositionCorrectionAttack = Mathf.FloorToInt(transform.position.y + 2.5f);
+      PositionCorrectionHitPoint = Mathf.FloorToInt(- transform.position.y - 0.5f);
+      gameController.playerDF4Attack = Mathf.FloorToInt(gameController.playerDF4Attack * (PositionCorrectionAttack * 0.1f + 1f));
+      HitPoint = Mathf.FloorToInt(HitPoint * (PositionCorrectionHitPoint * 0.1f + 1f));
+
     }
 
     // Update is called once per frame

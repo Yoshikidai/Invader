@@ -21,7 +21,7 @@ public class enemyBlackBox : MonoBehaviour
       enemyWhiteBox = GameObject
                   .FindWithTag("enemyWhiteBox")
                   .GetComponent<enemyWhiteBox>();
-      StartCoroutine(ChangePosition());
+      StartCoroutine("ChangePosition");
     }
 
     // Update is called once per frame
@@ -57,7 +57,7 @@ public class enemyBlackBox : MonoBehaviour
 
         transform.position = new Vector3(X, 3.5f, 0f);
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(9f);
       }
 
     }

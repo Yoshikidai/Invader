@@ -7,6 +7,8 @@ public class playerOF : MonoBehaviour
   private GameControllerScript gameController;
   public int HitPoint;
   public int Speed;
+  public string Element;
+  private int ElementDamage;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
@@ -26,7 +28,7 @@ public class playerOF : MonoBehaviour
         if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
         {
           i++;
-          HitPoint -= gameController.enemyOF1Attack;
+          HitPoint -= gameController.enemyOF1Attack + ElementDamage;
           Debug.Log("Enemy1 succeeded");
           yield return new WaitForSeconds(gameController.enemyOF1Interval * 0.1f);
         }
@@ -51,7 +53,7 @@ public class playerOF : MonoBehaviour
         if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
         {
           j++;
-          HitPoint -= gameController.enemyOF2Attack;
+          HitPoint -= gameController.enemyOF2Attack + ElementDamage;
           Debug.Log("Enemy2 succeeded");
           yield return new WaitForSeconds(gameController.enemyOF2Interval * 0.1f);
         }
@@ -75,7 +77,7 @@ public class playerOF : MonoBehaviour
         if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y > 0f))
         {
           k++;
-          HitPoint -= gameController.enemyOF3Attack;
+          HitPoint -= gameController.enemyOF3Attack + ElementDamage;
           Debug.Log("Enemy3 succeeded");
           yield return new WaitForSeconds(gameController.enemyOF3Interval * 0.1f);
         }
@@ -100,7 +102,7 @@ public class playerOF : MonoBehaviour
         if(dis < 3f)
         {
           A++;
-          HitPoint -= gameController.enemyDF1Attack;
+          HitPoint -= gameController.enemyDF1Attack + ElementDamage;
           Debug.Log("EnemyDF1 succeeded");
           yield return new WaitForSeconds(gameController.enemyDF1Interval * 0.1f);
         }
@@ -126,7 +128,7 @@ public class playerOF : MonoBehaviour
         if(dis < 3f)
         {
           B++;
-          HitPoint -= gameController.enemyDF2Attack;
+          HitPoint -= gameController.enemyDF2Attack + ElementDamage;
           Debug.Log("EnemyDF2 succeeded");
           yield return new WaitForSeconds(gameController.enemyDF2Interval * 0.1f);
         }
@@ -152,7 +154,7 @@ public class playerOF : MonoBehaviour
         if(dis < 3f)
         {
           C++;
-          HitPoint -= gameController.enemyDF3Attack;
+          HitPoint -= gameController.enemyDF3Attack + ElementDamage;
           Debug.Log("EnemyDF3 succeeded");
           yield return new WaitForSeconds(gameController.enemyDF3Interval * 0.1f);
         }
@@ -178,7 +180,7 @@ public class playerOF : MonoBehaviour
         if(dis < 3f)
         {
           D++;
-          HitPoint -= gameController.enemyDF4Attack;
+          HitPoint -= gameController.enemyDF4Attack + ElementDamage;
           Debug.Log("EnemyDF4 succeeded");
           yield return new WaitForSeconds(gameController.enemyDF4Interval * 0.1f);
         }
@@ -204,7 +206,7 @@ public class playerOF : MonoBehaviour
         if(dis < 3f)
         {
           E++;
-          HitPoint -= gameController.enemyDF5Attack;
+          HitPoint -= gameController.enemyDF5Attack + ElementDamage;
           Debug.Log("EnemyDF5 succeeded");
           yield return new WaitForSeconds(gameController.enemyDF5Interval * 0.1f);
         }
@@ -230,7 +232,7 @@ public class playerOF : MonoBehaviour
         if(dis < 3f)
         {
           F++;
-          HitPoint -= gameController.enemyDF6Attack;
+          HitPoint -= gameController.enemyDF6Attack + ElementDamage;
           Debug.Log("EnemyDF6 succeeded");
           yield return new WaitForSeconds(gameController.enemyDF6Interval * 0.1f);
         }
@@ -249,46 +251,550 @@ public class playerOF : MonoBehaviour
 
     if (collision.gameObject.CompareTag("enemyOF1"))
     {
+      if(Element == "black")
+      {
+        if(gameController.enemyOF1Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF1Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "blue")
+      {
+        if(gameController.enemyOF1Element == "black")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF1Element == "red")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "red")
+      {
+        if(gameController.enemyOF1Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF1Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "white")
+      {
+        if(gameController.enemyOF1Element == "red")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF1Element == "black")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+        }
+
+      }
+
       StartCoroutine(AttackByEnemyOF1());
     }
 
     if (collision.gameObject.CompareTag("enemyOF2"))
     {
+      if(Element == "black")
+      {
+        if(gameController.enemyOF2Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF2Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "blue")
+      {
+        if(gameController.enemyOF2Element == "black")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF2Element == "red")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "red")
+      {
+        if(gameController.enemyOF2Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF2Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "white")
+      {
+        if(gameController.enemyOF2Element == "red")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF2Element == "black")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+        }
+
+      }
+
       StartCoroutine(AttackByEnemyOF2());
     }
 
     if (collision.gameObject.CompareTag("enemyOF3"))
     {
+      if(Element == "black")
+      {
+        if(gameController.enemyOF3Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF3Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "blue")
+      {
+        if(gameController.enemyOF3Element == "black")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF3Element == "red")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "red")
+      {
+        if(gameController.enemyOF3Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF3Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "white")
+      {
+        if(gameController.enemyOF3Element == "red")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+        }
+
+        if(gameController.enemyOF3Element == "black")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+        }
+
+      }
+
       StartCoroutine(AttackByEnemyOF3());
     }
 
     if (collision.gameObject.CompareTag("enemyDF1"))
     {
+      if(Element == "black")
+      {
+        if(gameController.enemyDF1Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF1Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "blue")
+      {
+        if(gameController.enemyDF1Element == "black")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF1Element == "red")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "red")
+      {
+        if(gameController.enemyDF1Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF1Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "white")
+      {
+        if(gameController.enemyDF1Element == "red")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF1Element == "black")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+        }
+
+      }
+
       StartCoroutine(AttackByEnemyDF1());
     }
 
     if (collision.gameObject.CompareTag("enemyDF2"))
     {
+      if(Element == "black")
+      {
+        if(gameController.enemyDF2Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF2Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "blue")
+      {
+        if(gameController.enemyDF2Element == "black")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF2Element == "red")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "red")
+      {
+        if(gameController.enemyDF2Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF2Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "white")
+      {
+        if(gameController.enemyDF2Element == "red")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF2Element == "black")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+        }
+
+      }
+
       StartCoroutine(AttackByEnemyDF2());
     }
 
     if (collision.gameObject.CompareTag("enemyDF3"))
     {
+      if(Element == "black")
+      {
+        if(gameController.enemyDF3Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF3Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "blue")
+      {
+        if(gameController.enemyDF3Element == "black")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF3Element == "red")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "red")
+      {
+        if(gameController.enemyDF3Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF3Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "white")
+      {
+        if(gameController.enemyDF3Element == "red")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF3Element == "black")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+        }
+
+      }
+
       StartCoroutine(AttackByEnemyDF3());
     }
 
     if (collision.gameObject.CompareTag("enemyDF4"))
     {
+      if(Element == "black")
+      {
+        if(gameController.enemyDF4Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF4Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "blue")
+      {
+        if(gameController.enemyDF4Element == "black")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF4Element == "red")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "red")
+      {
+        if(gameController.enemyDF4Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF4Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "white")
+      {
+        if(gameController.enemyDF4Element == "red")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF4Element == "black")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+        }
+
+      }
+
       StartCoroutine(AttackByEnemyDF4());
     }
 
     if (collision.gameObject.CompareTag("enemyDF5"))
     {
+      if(Element == "black")
+      {
+        if(gameController.enemyDF5Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF5Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "blue")
+      {
+        if(gameController.enemyDF5Element == "black")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF5Element == "red")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "red")
+      {
+        if(gameController.enemyDF5Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF5Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "white")
+      {
+        if(gameController.enemyDF5Element == "red")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF5Element == "black")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+        }
+
+      }
+
       StartCoroutine(AttackByEnemyDF5());
     }
 
     if (collision.gameObject.CompareTag("enemyDF6"))
     {
+      if(Element == "black")
+      {
+        if(gameController.enemyDF6Element == "white")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF6Element == "blue")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "blue")
+      {
+        if(gameController.enemyDF6Element == "black")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF6Element == "red")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "red")
+      {
+        if(gameController.enemyDF6Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF6Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+        }
+
+      }
+
+      if(Element == "white")
+      {
+        if(gameController.enemyDF6Element == "red")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+        }
+
+        if(gameController.enemyDF6Element == "black")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+        }
+
+      }
+
       StartCoroutine(AttackByEnemyDF6());
     }
 

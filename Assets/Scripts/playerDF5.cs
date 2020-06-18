@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerDF3 : MonoBehaviour
+public class playerDF5 : MonoBehaviour
 {
   private GameControllerScript gameController;
   public int HitPoint;
   public string Element;
   private int ElementDamage;
+  private int PositionCorrectionAttack;
+  private int PositionCorrectionHitPoint;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
@@ -147,6 +149,12 @@ public class playerDF3 : MonoBehaviour
       gameController = GameObject
           .FindWithTag("GameController")
           .GetComponent<GameControllerScript>();
+
+      PositionCorrectionAttack = Mathf.FloorToInt(transform.position.y + 2.5f);
+      PositionCorrectionHitPoint = Mathf.FloorToInt(- transform.position.y - 0.5f);
+      gameController.playerDF5Attack = Mathf.FloorToInt(gameController.playerDF5Attack * (PositionCorrectionAttack * 0.1f + 1f));
+      HitPoint = Mathf.FloorToInt(HitPoint * (PositionCorrectionHitPoint * 0.1f + 1f));
+
     }
 
     // Update is called once per frame

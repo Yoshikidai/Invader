@@ -8,6 +8,8 @@ public class playerDF2 : MonoBehaviour
   public int HitPoint;
   public string Element;
   private int ElementDamage;
+  private int PositionCorrectionAttack;
+  private int PositionCorrectionHitPoint;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
@@ -148,6 +150,12 @@ public class playerDF2 : MonoBehaviour
       gameController = GameObject
           .FindWithTag("GameController")
           .GetComponent<GameControllerScript>();
+
+      PositionCorrectionAttack = Mathf.FloorToInt(transform.position.y + 2.5f);
+      PositionCorrectionHitPoint = Mathf.FloorToInt(- transform.position.y - 0.5f);
+      gameController.playerDF2Attack = Mathf.FloorToInt(gameController.playerDF2Attack * (PositionCorrectionAttack * 0.1f + 1f));
+      HitPoint = Mathf.FloorToInt(HitPoint * (PositionCorrectionHitPoint * 0.1f + 1f));
+
     }
 
     // Update is called once per frame
