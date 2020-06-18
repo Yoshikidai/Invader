@@ -47,12 +47,12 @@ public class enemyBlackBox : MonoBehaviour
 
         if(enemyRedBox.transform.position.x == X)
         {
-          enemyRedBox.transform.position = new Vector3(transform.position.x, 3.5f, 0f);
+          enemyRedBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
         }
 
         if(enemyWhiteBox.transform.position.x == X)
         {
-          enemyWhiteBox.transform.position = new Vector3(transform.position.x, 3.5f, 0f);
+          enemyWhiteBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
         }
 
         transform.position = new Vector3(X, 3.5f, 0f);

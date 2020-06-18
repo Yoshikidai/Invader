@@ -6,7 +6,8 @@ public class playerOF : MonoBehaviour
 {
   private GameControllerScript gameController;
   public int HitPoint;
-  public int Speed;
+  public int beforeSpeed;
+  private float afterSpeed;
   public string Element;
   private int ElementDamage;
 
@@ -248,6 +249,229 @@ public class playerOF : MonoBehaviour
       }
 
     }
+
+    IEnumerator SpeedUpByPlayerDF1()
+    {
+      int a1 = 0;
+      int a2 = 0;
+
+      while(true)
+      {
+        if(dis < 3f)
+        {
+          if(a2 == 0)
+          {
+            if(Element == gameController.playerDF1Element)
+            {
+              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              a2++;
+            }
+
+          }
+          a1++;
+        }
+        else
+        {
+          if(a1 > 0)
+          {
+            if(a2 > 0)
+            {
+              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
+            }
+            break;
+          }
+
+        }
+        yield return null;
+      }
+
+    }
+
+    IEnumerator SpeedUpByPlayerDF2()
+    {
+      int a1 = 0;
+      int a2 = 0;
+
+      while(true)
+      {
+        if(dis < 3f)
+        {
+          if(a2 == 0)
+          {
+            if(Element == gameController.playerDF2Element)
+            {
+              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              a2++;
+            }
+
+          }
+          a1++;
+        }
+        else
+        {
+          if(a1 > 0)
+          {
+            if(a2 > 0)
+            {
+              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
+            }
+            break;
+          }
+
+        }
+        yield return null;
+      }
+
+    }
+
+    IEnumerator SpeedUpByPlayerDF3()
+    {
+      int a1 = 0;
+      int a2 = 0;
+
+      while(true)
+      {
+        if(dis < 3f)
+        {
+          if(a2 == 0)
+          {
+            if(Element == gameController.playerDF3Element)
+            {
+              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              a2++;
+            }
+
+          }
+          a1++;
+        }
+        else
+        {
+          if(a1 > 0)
+          {
+            if(a2 > 0)
+            {
+              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
+            }
+            break;
+          }
+
+        }
+        yield return null;
+      }
+
+    }
+
+    IEnumerator SpeedUpByPlayerDF4()
+    {
+      int a1 = 0;
+      int a2 = 0;
+
+      while(true)
+      {
+        if(dis < 3f)
+        {
+          if(a2 == 0)
+          {
+            if(Element == gameController.playerDF4Element)
+            {
+              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              a2++;
+            }
+
+          }
+          a1++;
+        }
+        else
+        {
+          if(a1 > 0)
+          {
+            if(a2 > 0)
+            {
+              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
+            }
+            break;
+          }
+
+        }
+        yield return null;
+      }
+
+    }
+
+    IEnumerator SpeedUpByPlayerDF5()
+    {
+      int a1 = 0;
+      int a2 = 0;
+
+      while(true)
+      {
+        if(dis < 3f)
+        {
+          if(a2 == 0)
+          {
+            if(Element == gameController.playerDF5Element)
+            {
+              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              a2++;
+            }
+
+          }
+          a1++;
+        }
+        else
+        {
+          if(a1 > 0)
+          {
+            if(a2 > 0)
+            {
+              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
+            }
+            break;
+          }
+
+        }
+        yield return null;
+      }
+
+    }
+
+    IEnumerator SpeedUpByPlayerDF6()
+    {
+      int a1 = 0;
+      int a2 = 0;
+
+      while(true)
+      {
+        if(dis < 3f)
+        {
+          if(a2 == 0)
+          {
+            if(Element == gameController.playerDF6Element)
+            {
+              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              a2++;
+            }
+
+          }
+          a1++;
+        }
+        else
+        {
+          if(a1 > 0)
+          {
+            if(a2 > 0)
+            {
+              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
+            }
+            break;
+          }
+
+        }
+        yield return null;
+      }
+
+    }
+
 
     if (collision.gameObject.CompareTag("enemyOF1"))
     {
@@ -798,11 +1022,38 @@ public class playerOF : MonoBehaviour
       StartCoroutine(AttackByEnemyDF6());
     }
 
+    if (collision.gameObject.CompareTag("playerDF1"))
+    {
+      StartCoroutine(SpeedUpByPlayerDF1());
+    }
+    if (collision.gameObject.CompareTag("playerDF2"))
+    {
+      StartCoroutine(SpeedUpByPlayerDF2());
+    }
+    if (collision.gameObject.CompareTag("playerDF3"))
+    {
+      StartCoroutine(SpeedUpByPlayerDF3());
+    }
+    if (collision.gameObject.CompareTag("playerDF4"))
+    {
+      StartCoroutine(SpeedUpByPlayerDF4());
+    }
+    if (collision.gameObject.CompareTag("playerDF5"))
+    {
+      StartCoroutine(SpeedUpByPlayerDF5());
+    }
+    if (collision.gameObject.CompareTag("playerDF6"))
+    {
+      StartCoroutine(SpeedUpByPlayerDF6());
+    }
+
+
   }
 
     // Start is called before the first frame update
     void Start()
     {
+      afterSpeed = beforeSpeed;
       gameController = GameObject
           .FindWithTag("GameController")
           .GetComponent<GameControllerScript>();
@@ -811,7 +1062,7 @@ public class playerOF : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      float dy = Time.deltaTime * Speed * 0.1f;
+      float dy = Time.deltaTime * afterSpeed * 0.1f;
 
       transform.position = new Vector3(
         transform.position.x,

@@ -171,5 +171,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoint: 150
-  Speed: 5
+  beforeSpeed: 5
   Element: red
