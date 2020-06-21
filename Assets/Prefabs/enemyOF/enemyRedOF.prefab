@@ -173,3 +173,5 @@ MonoBehaviour:
   HitPoint: 100
   beforeSpeed: 5
   Element: red
+  particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
+    type: 3}

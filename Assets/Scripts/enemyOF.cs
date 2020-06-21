@@ -10,6 +10,7 @@ public class enemyOF : MonoBehaviour
   private float afterSpeed;
   public string Element;
   private int ElementDamage;
+  public GameObject particleObjectHit;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
@@ -29,6 +30,11 @@ public class enemyOF : MonoBehaviour
         {
           i++;
           HitPoint -= gameController.playerOF1Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("player1 succeeded");
           yield return new WaitForSeconds(gameController.playerOF1Interval * 0.1f);
         }
@@ -55,6 +61,11 @@ public class enemyOF : MonoBehaviour
         {
           j++;
           HitPoint -= gameController.playerOF2Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("Player2 succeeded");
           yield return new WaitForSeconds(gameController.playerOF2Interval * 0.1f);
         }
@@ -80,6 +91,11 @@ public class enemyOF : MonoBehaviour
         {
           k++;
           HitPoint -= gameController.playerOF3Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("player3 succeeded");
           yield return new WaitForSeconds(gameController.playerOF3Interval * 0.1f);
         }
@@ -106,6 +122,11 @@ public class enemyOF : MonoBehaviour
         {
           A++;
           HitPoint -= gameController.playerDF1Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("playerDF1 succeeded");
           yield return new WaitForSeconds(gameController.playerDF1Interval * 0.1f);
         }
@@ -132,6 +153,11 @@ public class enemyOF : MonoBehaviour
         {
           B++;
           HitPoint -= gameController.playerDF2Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("playerDF2 succeeded");
           yield return new WaitForSeconds(gameController.playerDF2Interval * 0.1f);
         }
@@ -158,6 +184,11 @@ public class enemyOF : MonoBehaviour
         {
           C++;
           HitPoint -= gameController.playerDF3Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("playerDF3 succeeded");
           yield return new WaitForSeconds(gameController.playerDF3Interval * 0.1f);
         }
@@ -184,6 +215,11 @@ public class enemyOF : MonoBehaviour
         {
           D++;
           HitPoint -= gameController.playerDF4Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("playerDF4 succeeded");
           yield return new WaitForSeconds(gameController.playerDF4Interval * 0.1f);
         }
@@ -210,6 +246,11 @@ public class enemyOF : MonoBehaviour
         {
           E++;
           HitPoint -= gameController.playerDF5Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("playerDF5 succeeded");
           yield return new WaitForSeconds(gameController.playerDF5Interval * 0.1f);
         }
@@ -236,6 +277,11 @@ public class enemyOF : MonoBehaviour
         {
           F++;
           HitPoint -= gameController.playerDF6Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("playerDF6 succeeded");
           yield return new WaitForSeconds(gameController.playerDF6Interval * 0.1f);
         }

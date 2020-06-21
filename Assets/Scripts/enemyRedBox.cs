@@ -58,7 +58,7 @@ public class enemyRedBox : MonoBehaviour
           enemyWhiteBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
         }
 
-        transform.position = new Vector3(X, 3.5f, 0f);
+        transform.position = new Vector3(X, 3.5f, 1f);
 
         yield return new WaitForSeconds(9f);
       }

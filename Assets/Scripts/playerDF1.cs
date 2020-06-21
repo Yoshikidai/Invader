@@ -10,6 +10,7 @@ public class playerDF1 : MonoBehaviour
   private int ElementDamage;
   private int PositionCorrectionAttack;
   private int PositionCorrectionHitPoint;
+  public GameObject particleObjectHit;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
@@ -30,6 +31,11 @@ public class playerDF1 : MonoBehaviour
           i++;
           HitPoint -= gameController.enemyOF1Attack + ElementDamage;
           Debug.Log("enemy1 succeeded");
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           yield return new WaitForSeconds(gameController.enemyOF1Interval * 0.1f);
         }
         else
@@ -54,6 +60,11 @@ public class playerDF1 : MonoBehaviour
         {
           j++;
           HitPoint -= gameController.enemyOF2Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("enemy2 succeeded");
           yield return new WaitForSeconds(gameController.enemyOF2Interval * 0.1f);
         }
@@ -78,6 +89,11 @@ public class playerDF1 : MonoBehaviour
         {
           k++;
           HitPoint -= gameController.enemyOF3Attack + ElementDamage;
+          Instantiate(
+              particleObjectHit,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObjectHit.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           Debug.Log("enemy3 succeeded");
           yield return new WaitForSeconds(gameController.enemyOF3Interval * 0.1f);
         }
