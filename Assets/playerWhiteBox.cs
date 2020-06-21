@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 //CameraのProjectionはOrthographicに。
 
-public class playerBlueBox : MonoBehaviour,IDragHandler
+public class playerWhiteBox : MonoBehaviour,IDragHandler
 {
 
   private playerRedBox playerRedBox;
-  private playerWhiteBox playerWhiteBox;
+  private playerBlueBox playerBlueBox;
 
   public void OnDrag(PointerEventData data){
 		Vector3 TargetPos = Camera.main.ScreenToWorldPoint (data.position);
@@ -19,9 +19,9 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if (playerWhiteBox.transform.position.x < -1.5f)
+      else if (playerBlueBox.transform.position.x < -1.5f)
       {
-        playerWhiteBox.transform.position = transform.position;
+        playerBlueBox.transform.position = transform.position;
       }
 
       transform.position = new Vector3(-2f,-3.5f,0f);
@@ -34,9 +34,9 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if ((playerWhiteBox.transform.position.x >= -1.5f)&&(playerWhiteBox.transform.position.x < -0.5f))
+      else if ((playerBlueBox.transform.position.x >= -1.5f)&&(playerBlueBox.transform.position.x < -0.5f))
       {
-        playerWhiteBox.transform.position = transform.position;
+        playerBlueBox.transform.position = transform.position;
       }
 
       transform.position = new Vector3(-1f,-3.5f,0f);
@@ -47,9 +47,9 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if ((playerWhiteBox.transform.position.x >= -0.5f)&&(playerWhiteBox.transform.position.x < 0.5f))
+      else if ((playerBlueBox.transform.position.x >= -0.5f)&&(playerBlueBox.transform.position.x < 0.5f))
       {
-        playerWhiteBox.transform.position = transform.position;
+        playerBlueBox.transform.position = transform.position;
       }
 
       transform.position = new Vector3(0f,-3.5f,0f);
@@ -60,9 +60,9 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if ((playerWhiteBox.transform.position.x >= 0.5f)&&(playerWhiteBox.transform.position.x < 1.5f))
+      else if ((playerBlueBox.transform.position.x >= 0.5f)&&(playerBlueBox.transform.position.x < 1.5f))
       {
-        playerWhiteBox.transform.position = transform.position;
+        playerBlueBox.transform.position = transform.position;
       }
 
       transform.position = new Vector3(1f,-3.5f,0f);
@@ -73,9 +73,9 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       {
         playerRedBox.transform.position = transform.position;
       }
-      else if (playerWhiteBox.transform.position.x >= 1.5f)
+      else if (playerBlueBox.transform.position.x >= 1.5f)
       {
-        playerWhiteBox.transform.position = transform.position;
+        playerBlueBox.transform.position = transform.position;
       }
       transform.position = new Vector3(2f,-3.5f,0f);
     }
@@ -84,13 +84,13 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     // Start is called before the first frame update
     void Start()
     {
-      transform.position = new Vector3(-2f,-3.5f,0f);
+      transform.position = new Vector3(2f,-3.5f,0f);
       playerRedBox = GameObject
                   .FindWithTag("playerBox2")
                   .GetComponent<playerRedBox>();
-      playerWhiteBox = GameObject
-                  .FindWithTag("playerBox3")
-                  .GetComponent<playerWhiteBox>();
+      playerBlueBox = GameObject
+                  .FindWithTag("playerBox1")
+                  .GetComponent<playerBlueBox>();
     }
 
     // Update is called once per frame

@@ -22,6 +22,8 @@ public class GameControllerScript : MonoBehaviour
   public int playerOF3SpawnTime;
   public string playerOF3Element;
 
+  public GameObject particleObject1;
+
   public GameObject playerOFbox1;
   public GameObject playerOFbox2;
   public GameObject playerOFbox3;
@@ -66,6 +68,8 @@ public class GameControllerScript : MonoBehaviour
   public int enemyOF3Interval;
   public int enemyOF3SpawnTime;
   public string enemyOF3Element;
+
+  public GameObject particleObject2;
 
   public GameObject enemyOFbox1;
   public GameObject enemyOFbox2;
@@ -232,6 +236,11 @@ public class GameControllerScript : MonoBehaviour
       return;
     }
 
+    if((isVictory == true)&&(isDefeat == true))
+    {
+      Draw();
+    }
+
     if (Input.GetMouseButtonDown(0))
     {
       SceneManager.LoadScene("Invader");
@@ -259,6 +268,10 @@ public class GameControllerScript : MonoBehaviour
     StopCoroutine("SpawnPlayerOF3");
   }
 
+  public void Draw()
+  {
+    ResultText.text = "Draw Game";
+  }
 
   IEnumerator SpawnPlayerOF1()
   {
@@ -269,6 +282,11 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(playerOFbox1.transform.position.x, transform.position.y, 0f),
               transform.rotation
           );
+          Instantiate(
+              particleObject1,
+              new Vector3(playerOFbox1.transform.position.x, transform.position.y, -3f),
+              particleObject1.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           yield return new WaitForSeconds(playerOF1SpawnTime);
       }
 
@@ -284,6 +302,11 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(playerOFbox2.transform.position.x, transform.position.y, 0f),
               transform.rotation
           );
+          Instantiate(
+              particleObject1,
+              new Vector3(playerOFbox2.transform.position.x, transform.position.y, -3f),
+              particleObject1.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           yield return new WaitForSeconds(playerOF2SpawnTime);
       }
 
@@ -298,6 +321,11 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(playerOFbox3.transform.position.x, transform.position.y, 0f),
               transform.rotation
           );
+          Instantiate(
+              particleObject1,
+              new Vector3(playerOFbox3.transform.position.x, transform.position.y, -3f),
+              particleObject1.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           yield return new WaitForSeconds(playerOF3SpawnTime);
       }
 
@@ -312,6 +340,12 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(enemyOFbox1.transform.position.x, -transform.position.y, 0f),
               transform.rotation
           );
+          Instantiate(
+              particleObject2,
+              new Vector3(enemyOFbox1.transform.position.x, -transform.position.y, -3f),
+              particleObject2.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
           yield return new WaitForSeconds(enemyOF1SpawnTime);
       }
   }
@@ -325,6 +359,11 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(enemyOFbox2.transform.position.x, -transform.position.y, 0f),
               transform.rotation
           );
+          Instantiate(
+              particleObject2,
+              new Vector3(enemyOFbox2.transform.position.x, -transform.position.y, -3f),
+              particleObject2.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           yield return new WaitForSeconds(enemyOF2SpawnTime);
       }
 
@@ -338,6 +377,11 @@ public class GameControllerScript : MonoBehaviour
               new Vector3(enemyOFbox3.transform.position.x, -transform.position.y, 0f),
               transform.rotation
           );
+          Instantiate(
+              particleObject2,
+              new Vector3(enemyOFbox3.transform.position.x, -transform.position.y, -3f),
+              particleObject2.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
           yield return new WaitForSeconds(enemyOF3SpawnTime);
       }
 

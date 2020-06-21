@@ -7,21 +7,21 @@ using UnityEngine.EventSystems;
 public class playerRedBox : MonoBehaviour,IDragHandler
 {
 
-  private playerYellowBox playerYellowBox;
   private playerBlueBox playerBlueBox;
+  private playerWhiteBox playerWhiteBox;
 
   public void OnDrag(PointerEventData data){
 		Vector3 TargetPos = Camera.main.ScreenToWorldPoint (data.position);
     if (TargetPos.x < -1.5f)
     {
 
-      if (playerYellowBox.transform.position == new Vector3(-2f,-3.5f,0f))
-      {
-        playerYellowBox.transform.position = transform.position;
-      }
-      else if (playerBlueBox.transform.position == new Vector3(-2f,-3.5f,0f))
+      if (playerBlueBox.transform.position.x < -1.5f)
       {
         playerBlueBox.transform.position = transform.position;
+      }
+      else if (playerWhiteBox.transform.position.x < -1.5f)
+      {
+        playerWhiteBox.transform.position = transform.position;
       }
 
       transform.position = new Vector3(-2f,-3.5f,0f);
@@ -30,52 +30,52 @@ public class playerRedBox : MonoBehaviour,IDragHandler
     else if (TargetPos.x < -0.5f)
     {
 
-      if (playerYellowBox.transform.position == new Vector3(-1f,-3.5f,0f))
-      {
-        playerYellowBox.transform.position = transform.position;
-      }
-      else if (playerBlueBox.transform.position == new Vector3(-1f,-3.5f,0f))
+      if ((playerBlueBox.transform.position.x >= -1.5f)&&(playerBlueBox.transform.position.x < -0.5f))
       {
         playerBlueBox.transform.position = transform.position;
+      }
+      else if ((playerWhiteBox.transform.position.x >= -1.5f)&&(playerWhiteBox.transform.position.x < -0.5f))
+      {
+        playerWhiteBox.transform.position = transform.position;
       }
 
       transform.position = new Vector3(-1f,-3.5f,0f);
     }
     else if (TargetPos.x < 0.5f)
     {
-      if (playerYellowBox.transform.position == new Vector3(0f,-3.5f,0f))
-      {
-        playerYellowBox.transform.position = transform.position;
-      }
-      else if (playerBlueBox.transform.position == new Vector3(0f,-3.5f,0f))
+      if ((playerBlueBox.transform.position.x >= -0.5f)&&(playerBlueBox.transform.position.x < 0.5f))
       {
         playerBlueBox.transform.position = transform.position;
+      }
+      else if ((playerWhiteBox.transform.position.x >= -0.5f)&&(playerWhiteBox.transform.position.x < 0.5f))
+      {
+        playerWhiteBox.transform.position = transform.position;
       }
 
       transform.position = new Vector3(0f,-3.5f,0f);
     }
     else if (TargetPos.x < 1.5f)
     {
-      if (playerYellowBox.transform.position == new Vector3(1f,-3.5f,0f))
-      {
-        playerYellowBox.transform.position = transform.position;
-      }
-      else if (playerBlueBox.transform.position == new Vector3(1f,-3.5f,0f))
+      if ((playerBlueBox.transform.position.x >= 0.5f)&&(playerBlueBox.transform.position.x < 1.5f))
       {
         playerBlueBox.transform.position = transform.position;
+      }
+      else if ((playerWhiteBox.transform.position.x >= 0.5f)&&(playerWhiteBox.transform.position.x < 1.5f))
+      {
+        playerWhiteBox.transform.position = transform.position;
       }
 
       transform.position = new Vector3(1f,-3.5f,0f);
     }
     else
     {
-      if (playerYellowBox.transform.position == new Vector3(2f,-3.5f,0f))
-      {
-        playerYellowBox.transform.position = transform.position;
-      }
-      else if (playerBlueBox.transform.position == new Vector3(2f,-3.5f,0f))
+      if (playerBlueBox.transform.position.x >= 1.5f)
       {
         playerBlueBox.transform.position = transform.position;
+      }
+      else if (playerWhiteBox.transform.position.x >= 1.5f)
+      {
+        playerWhiteBox.transform.position = transform.position;
       }
       transform.position = new Vector3(2f,-3.5f,0f);
     }
@@ -84,12 +84,13 @@ public class playerRedBox : MonoBehaviour,IDragHandler
     // Start is called before the first frame update
     void Start()
     {
-      playerYellowBox = GameObject
-                  .FindWithTag("playerYellowBox")
-                  .GetComponent<playerYellowBox>();
+      transform.position = new Vector3(0f,-3.5f,0f);
       playerBlueBox = GameObject
-                  .FindWithTag("playerBlueBox")
+                  .FindWithTag("playerBox1")
                   .GetComponent<playerBlueBox>();
+      playerWhiteBox = GameObject
+                  .FindWithTag("playerBox3")
+                  .GetComponent<playerWhiteBox>();
     }
 
     // Update is called once per frame

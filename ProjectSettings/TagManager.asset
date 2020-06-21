@@ -31,6 +31,12 @@ TagManager:
   - enemyRedBox
   - enemyBlackBox
   - enemyWhiteBox
+  - playerBox1
+  - playerBox2
+  - playerBox3
+  - enemyBox1
+  - enemyBox2
+  - enemyBox3
   layers:
   - Default
   - TransparentFX
@@ -40,7 +46,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - post processing
   - 
   - 
   - 

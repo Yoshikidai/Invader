@@ -170,6 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdddbe014b4d4b35ab129d143702818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 150
+  HitPoint: 100
   beforeSpeed: 5
   Element: blue

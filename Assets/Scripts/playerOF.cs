@@ -43,6 +43,7 @@ public class playerOF : MonoBehaviour
         }
 
       }
+
     }
 
     IEnumerator AttackByEnemyOF2()
@@ -66,7 +67,9 @@ public class playerOF : MonoBehaviour
           }
           yield return null;
         }
+
       }
+
     }
 
     IEnumerator AttackByEnemyOF3()
