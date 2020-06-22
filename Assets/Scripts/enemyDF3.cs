@@ -11,6 +11,8 @@ public class enemyDF3 : MonoBehaviour
   private int PositionCorrectionAttack;
   private int PositionCorrectionHitPoint;
   public GameObject particleObjectHit;
+  public GameObject particleObjectExplosion;
+  public AudioClip explosionSE;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
@@ -180,7 +182,16 @@ public class enemyDF3 : MonoBehaviour
 
       if(HitPoint <= 0)
       {
-        Destroy(gameObject);
+        Instantiate(
+            particleObjectExplosion,
+            new Vector3(transform.position.x, transform.position.y, -3f),
+            particleObjectExplosion.transform.rotation
+        ); //パーティクル用ゲームオブジェクト生成
+
+        // オーディオを再生
+        AudioSource.PlayClipAtPoint(explosionSE, transform.position);
+
+        Destroy(gameObject,1.0f);
       }
 
       if(gameController.isDefeat == true)

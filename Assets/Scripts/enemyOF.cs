@@ -11,12 +11,15 @@ public class enemyOF : MonoBehaviour
   public string Element;
   private int ElementDamage;
   public GameObject particleObjectHit;
+  // 爆発効果音
+  public AudioClip explosionSE;
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
     Vector3 Apos = collision.gameObject.transform.position;
     Vector3 Bpos = transform.position;
-    float dis = Vector3.Distance(Apos,Bpos);
+    float dis =
+      Mathf.Sqrt(Mathf.Pow(Apos.x - Bpos.x, 2) + Mathf.Pow(Apos.y - Bpos.y, 2));
     float disX = Mathf.Abs(Apos.x - Bpos.x);
     float disY = Mathf.Abs(Apos.y - Bpos.y);
 
@@ -26,7 +29,7 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           i++;
           HitPoint -= gameController.playerOF1Attack + ElementDamage;
@@ -57,7 +60,7 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           j++;
           HitPoint -= gameController.playerOF2Attack + ElementDamage;
@@ -87,7 +90,7 @@ public class enemyOF : MonoBehaviour
       while(true)
       {
 
-        if((dis < 4f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
+        if((dis < 3f) && (disX < 1.5f) && (Apos.y - Bpos.y < 0f))
         {
           k++;
           HitPoint -= gameController.playerOF3Attack + ElementDamage;
@@ -311,7 +314,7 @@ public class enemyOF : MonoBehaviour
           {
             if(Element == gameController.enemyDF1Element)
             {
-              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              afterSpeed = afterSpeed + beforeSpeed * 0.1f;
               a2++;
             }
 
@@ -322,10 +325,6 @@ public class enemyOF : MonoBehaviour
         {
           if(a1 > 0)
           {
-            if(a2 > 0)
-            {
-              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
-            }
             break;
           }
 
@@ -348,7 +347,7 @@ public class enemyOF : MonoBehaviour
           {
             if(Element == gameController.enemyDF2Element)
             {
-              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              afterSpeed = afterSpeed + beforeSpeed * 0.1f;
               a2++;
             }
 
@@ -359,10 +358,6 @@ public class enemyOF : MonoBehaviour
         {
           if(a1 > 0)
           {
-            if(a2 > 0)
-            {
-              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
-            }
             break;
           }
 
@@ -385,7 +380,7 @@ public class enemyOF : MonoBehaviour
           {
             if(Element == gameController.enemyDF3Element)
             {
-              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              afterSpeed = afterSpeed + beforeSpeed * 0.1f;
               a2++;
             }
 
@@ -396,10 +391,6 @@ public class enemyOF : MonoBehaviour
         {
           if(a1 > 0)
           {
-            if(a2 > 0)
-            {
-              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
-            }
             break;
           }
 
@@ -422,7 +413,7 @@ public class enemyOF : MonoBehaviour
           {
             if(Element == gameController.enemyDF4Element)
             {
-              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              afterSpeed = afterSpeed + beforeSpeed * 0.1f;
               a2++;
             }
 
@@ -433,10 +424,6 @@ public class enemyOF : MonoBehaviour
         {
           if(a1 > 0)
           {
-            if(a2 > 0)
-            {
-              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
-            }
             break;
           }
 
@@ -459,7 +446,7 @@ public class enemyOF : MonoBehaviour
           {
             if(Element == gameController.enemyDF5Element)
             {
-              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              afterSpeed = afterSpeed + beforeSpeed * 0.1f;
               a2++;
             }
 
@@ -470,10 +457,6 @@ public class enemyOF : MonoBehaviour
         {
           if(a1 > 0)
           {
-            if(a2 > 0)
-            {
-              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
-            }
             break;
           }
 
@@ -496,7 +479,7 @@ public class enemyOF : MonoBehaviour
           {
             if(Element == gameController.enemyDF6Element)
             {
-              afterSpeed = afterSpeed + beforeSpeed * 0.2f;
+              afterSpeed = afterSpeed + beforeSpeed * 0.1f;
               a2++;
             }
 
@@ -507,10 +490,6 @@ public class enemyOF : MonoBehaviour
         {
           if(a1 > 0)
           {
-            if(a2 > 0)
-            {
-              afterSpeed = afterSpeed - beforeSpeed * 0.2f;
-            }
             break;
           }
 
@@ -1119,6 +1098,9 @@ public class enemyOF : MonoBehaviour
 
       if(HitPoint <= 0)
       {
+        // オーディオを再生
+        AudioSource.PlayClipAtPoint( explosionSE, transform.position);
+        // ミサイルオブジェクトを破棄
         Destroy(gameObject);
       }
 

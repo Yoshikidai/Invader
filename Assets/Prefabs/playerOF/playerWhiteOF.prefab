@@ -156,7 +156,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 2}
-  m_Size: {x: 3, y: 5}
+  m_Size: {x: 3, y: 4}
   m_Direction: 0
 --- !u!114 &6172613351664931698
 MonoBehaviour:
@@ -170,8 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdddbe014b4d4b35ab129d143702818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 100
+  HitPoint: 30
   beforeSpeed: 5
   Element: white
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
+  explosionSE: {fileID: 8300000, guid: d8366b4d8f4024258abfa7ec0cc2027a, type: 3}

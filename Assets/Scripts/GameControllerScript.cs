@@ -261,7 +261,7 @@ public class GameControllerScript : MonoBehaviour
   public void Lose()
   {
     isDefeat = true;
-    ResultText.text = "You lose!";
+    ResultText.text = "You lose...";
     ReplayText.text = "Tap screen to play again";
     StopCoroutine("SpawnPlayerOF1");
     StopCoroutine("SpawnPlayerOF2");
