@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3098725515028472826}
   - component: {fileID: -8274641599878529693}
   - component: {fileID: 2651337522825187306}
+  - component: {fileID: 4870068675224042000}
   m_Layer: 0
   m_Name: playerBlueOF
   m_TagString: playerOF1
@@ -54,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -176,3 +177,21 @@ MonoBehaviour:
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
   explosionSE: {fileID: 8300000, guid: d8366b4d8f4024258abfa7ec0cc2027a, type: 3}
+--- !u!114 &4870068675224042000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432889668339283252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 0.495283, g: 1, b: 0.9724891, a: 1}
+  glowBrightness: 1
+  outlineWidth: 2
+  alphaThreshold: 0.53
+  drawOutside: 1
+  enableInstancing: 0

@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6482321962574813625}
   - component: {fileID: 1231117344939181058}
   - component: {fileID: 2505485461472850416}
-  - component: {fileID: 1702802706354690280}
   - component: {fileID: 3951219942961890787}
+  - component: {fileID: -1608269261884879386}
+  - component: {fileID: 8320135309922865831}
   m_Layer: 0
   m_Name: enemyWhiteOF1
   m_TagString: enemyOF3
@@ -142,21 +143,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -2}
   m_Size: {x: 3, y: 4}
   m_Direction: 0
---- !u!114 &1702802706354690280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5553188294230739065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f05f4c6129544f00a3c4c43cbc3a442, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HitPoint: 50
-  beforeSpeed: 5
-  Element: white
 --- !u!58 &3951219942961890787
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -173,3 +159,39 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.56
+--- !u!114 &-1608269261884879386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5553188294230739065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 0.495283, g: 1, b: 0.9724891, a: 1}
+  glowBrightness: 1
+  outlineWidth: 2
+  alphaThreshold: 0.53
+  drawOutside: 1
+  enableInstancing: 0
+--- !u!114 &8320135309922865831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5553188294230739065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b02b392b1cdc346b49573512d3803075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoint: 50
+  beforeSpeed: 5
+  Element: white
+  particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
+    type: 3}
+  explosionSE: {fileID: 8300000, guid: d8366b4d8f4024258abfa7ec0cc2027a, type: 3}

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3914419543281321583}
   - component: {fileID: -1512078917932212168}
   - component: {fileID: -7706993309756808278}
+  - component: {fileID: -6567968117661180813}
   m_Layer: 0
   m_Name: enemyBlackOF
   m_TagString: enemyOF2
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoint: 50
-  beforeSpeed: 6
+  beforeSpeed: 5
   Element: black
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -176,3 +177,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.56
+--- !u!114 &-6567968117661180813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675457664217798245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 0.495283, g: 1, b: 0.9724891, a: 1}
+  glowBrightness: 1
+  outlineWidth: 2
+  alphaThreshold: 0.53
+  drawOutside: 1
+  enableInstancing: 0
