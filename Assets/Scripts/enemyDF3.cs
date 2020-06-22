@@ -117,12 +117,12 @@ public class enemyDF3 : MonoBehaviour
     {
         if(gameController.playerOF1Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.playerOF1Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.playerOF1Attack * 0.3f);
         }
 
         if(gameController.playerOF1Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.playerOF1Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.playerOF1Attack * 0.3f);
         }
 
       StartCoroutine(AttackByPlayerOF1());
@@ -133,12 +133,12 @@ public class enemyDF3 : MonoBehaviour
     {
       if(gameController.playerOF2Element == "blue")
       {
-        ElementDamage = Mathf.FloorToInt(gameController.playerOF2Attack * 0.2f);
+        ElementDamage = Mathf.FloorToInt(gameController.playerOF2Attack * 0.3f);
       }
 
       if(gameController.playerOF2Element == "white")
       {
-        ElementDamage = - Mathf.FloorToInt(gameController.playerOF2Attack * 0.2f);
+        ElementDamage = - Mathf.FloorToInt(gameController.playerOF2Attack * 0.3f);
       }
 
       StartCoroutine(AttackByPlayerOF2());
@@ -149,12 +149,12 @@ public class enemyDF3 : MonoBehaviour
     {
       if(gameController.playerOF3Element == "blue")
       {
-        ElementDamage = Mathf.FloorToInt(gameController.playerOF3Attack * 0.2f);
+        ElementDamage = Mathf.FloorToInt(gameController.playerOF3Attack * 0.3f);
       }
 
       if(gameController.playerOF3Element == "white")
       {
-        ElementDamage = - Mathf.FloorToInt(gameController.playerOF3Attack * 0.2f);
+        ElementDamage = - Mathf.FloorToInt(gameController.playerOF3Attack * 0.3f);
       }
 
       StartCoroutine(AttackByPlayerOF3());

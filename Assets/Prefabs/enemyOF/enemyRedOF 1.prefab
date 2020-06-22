@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 7818016248127807378}
   - component: {fileID: 4829006400963578005}
   - component: {fileID: -4771693116501977178}
-  - component: {fileID: 287187727808949395}
   - component: {fileID: -7864722594178449138}
   - component: {fileID: -1467477998839224703}
+  - component: {fileID: -2082591974904893340}
   m_Layer: 0
-  m_Name: enemyRedOF
+  m_Name: enemyRedOF 1
   m_TagString: enemyOF1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,22 +126,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &287187727808949395
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3142577979109561341}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.56
 --- !u!70 &-7864722594178449138
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -170,9 +154,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02b392b1cdc346b49573512d3803075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 30
-  beforeSpeed: 5
+  HitPoint: 50
+  beforeSpeed: 6
   Element: red
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
   explosionSE: {fileID: 8300000, guid: d8366b4d8f4024258abfa7ec0cc2027a, type: 3}
+--- !u!58 &-2082591974904893340
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142577979109561341}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.56

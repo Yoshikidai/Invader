@@ -507,12 +507,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF1Element == "white")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.3f);
         }
 
         if(gameController.enemyOF1Element == "blue")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.3f);
         }
 
       }
@@ -521,12 +521,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF1Element == "black")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.3f);
         }
 
         if(gameController.enemyOF1Element == "red")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.3f);
         }
 
       }
@@ -535,12 +535,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF1Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.3f);
         }
 
         if(gameController.enemyOF1Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.3f);
         }
 
       }
@@ -549,12 +549,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF1Element == "red")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF1Attack * 0.3f);
         }
 
         if(gameController.enemyOF1Element == "black")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF1Attack * 0.3f);
         }
 
       }
@@ -568,12 +568,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF2Element == "white")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.3f);
         }
 
         if(gameController.enemyOF2Element == "blue")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.3f);
         }
 
       }
@@ -582,12 +582,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF2Element == "black")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.3f);
         }
 
         if(gameController.enemyOF2Element == "red")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.3f);
         }
 
       }
@@ -596,12 +596,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF2Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.3f);
         }
 
         if(gameController.enemyOF2Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.3f);
         }
 
       }
@@ -610,12 +610,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF2Element == "red")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF2Attack * 0.3f);
         }
 
         if(gameController.enemyOF2Element == "black")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF2Attack * 0.3f);
         }
 
       }
@@ -629,12 +629,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF3Element == "white")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.3f);
         }
 
         if(gameController.enemyOF3Element == "blue")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.3f);
         }
 
       }
@@ -643,12 +643,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF3Element == "black")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.3f);
         }
 
         if(gameController.enemyOF3Element == "red")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.3f);
         }
 
       }
@@ -657,12 +657,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF3Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.3f);
         }
 
         if(gameController.enemyOF3Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.3f);
         }
 
       }
@@ -671,12 +671,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyOF3Element == "red")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyOF3Attack * 0.3f);
         }
 
         if(gameController.enemyOF3Element == "black")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyOF3Attack * 0.3f);
         }
 
       }
@@ -690,12 +690,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF1Element == "white")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.3f);
         }
 
         if(gameController.enemyDF1Element == "blue")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.3f);
         }
 
       }
@@ -704,12 +704,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF1Element == "black")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.3f);
         }
 
         if(gameController.enemyDF1Element == "red")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.3f);
         }
 
       }
@@ -718,12 +718,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF1Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.3f);
         }
 
         if(gameController.enemyDF1Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.3f);
         }
 
       }
@@ -732,12 +732,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF1Element == "red")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF1Attack * 0.3f);
         }
 
         if(gameController.enemyDF1Element == "black")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF1Attack * 0.3f);
         }
 
       }
@@ -751,12 +751,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF2Element == "white")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.3f);
         }
 
         if(gameController.enemyDF2Element == "blue")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.3f);
         }
 
       }
@@ -765,12 +765,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF2Element == "black")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.3f);
         }
 
         if(gameController.enemyDF2Element == "red")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.3f);
         }
 
       }
@@ -779,12 +779,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF2Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.3f);
         }
 
         if(gameController.enemyDF2Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.3f);
         }
 
       }
@@ -793,12 +793,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF2Element == "red")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF2Attack * 0.3f);
         }
 
         if(gameController.enemyDF2Element == "black")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF2Attack * 0.3f);
         }
 
       }
@@ -812,12 +812,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF3Element == "white")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.3f);
         }
 
         if(gameController.enemyDF3Element == "blue")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.3f);
         }
 
       }
@@ -826,12 +826,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF3Element == "black")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.3f);
         }
 
         if(gameController.enemyDF3Element == "red")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.3f);
         }
 
       }
@@ -840,12 +840,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF3Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.3f);
         }
 
         if(gameController.enemyDF3Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.3f);
         }
 
       }
@@ -854,12 +854,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF3Element == "red")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF3Attack * 0.3f);
         }
 
         if(gameController.enemyDF3Element == "black")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF3Attack * 0.3f);
         }
 
       }
@@ -873,12 +873,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF4Element == "white")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.3f);
         }
 
         if(gameController.enemyDF4Element == "blue")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.3f);
         }
 
       }
@@ -887,12 +887,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF4Element == "black")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.3f);
         }
 
         if(gameController.enemyDF4Element == "red")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.3f);
         }
 
       }
@@ -901,12 +901,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF4Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.3f);
         }
 
         if(gameController.enemyDF4Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.3f);
         }
 
       }
@@ -915,12 +915,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF4Element == "red")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF4Attack * 0.3f);
         }
 
         if(gameController.enemyDF4Element == "black")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF4Attack * 0.3f);
         }
 
       }
@@ -934,12 +934,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF5Element == "white")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.3f);
         }
 
         if(gameController.enemyDF5Element == "blue")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.3f);
         }
 
       }
@@ -948,12 +948,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF5Element == "black")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.3f);
         }
 
         if(gameController.enemyDF5Element == "red")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.3f);
         }
 
       }
@@ -962,12 +962,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF5Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.3f);
         }
 
         if(gameController.enemyDF5Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.3f);
         }
 
       }
@@ -976,12 +976,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF5Element == "red")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF5Attack * 0.3f);
         }
 
         if(gameController.enemyDF5Element == "black")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF5Attack * 0.3f);
         }
 
       }
@@ -995,12 +995,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF6Element == "white")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.3f);
         }
 
         if(gameController.enemyDF6Element == "blue")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.3f);
         }
 
       }
@@ -1009,12 +1009,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF6Element == "black")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.3f);
         }
 
         if(gameController.enemyDF6Element == "red")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.3f);
         }
 
       }
@@ -1023,12 +1023,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF6Element == "blue")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.3f);
         }
 
         if(gameController.enemyDF6Element == "white")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.3f);
         }
 
       }
@@ -1037,12 +1037,12 @@ public class playerOF : MonoBehaviour
       {
         if(gameController.enemyDF6Element == "red")
         {
-          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+          ElementDamage = Mathf.FloorToInt(gameController.enemyDF6Attack * 0.3f);
         }
 
         if(gameController.enemyDF6Element == "black")
         {
-          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.2f);
+          ElementDamage = - Mathf.FloorToInt(gameController.enemyDF6Attack * 0.3f);
         }
 
       }

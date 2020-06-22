@@ -6727,7 +6727,7 @@ MonoBehaviour:
   playerDF6Attack: 30
   playerDF6Interval: 10
   playerDF6Element: blue
-  enemyOF1: {fileID: 3142577979109561341, guid: a68d71a17fd7646669c3534034e3abb9,
+  enemyOF1: {fileID: 3142577979109561341, guid: 24c34e3ec33474376aef9b8046114c1d,
     type: 3}
   enemyOF1Attack: 3
   enemyOF1Interval: 20
@@ -6739,7 +6739,7 @@ MonoBehaviour:
   enemyOF2Interval: 20
   enemyOF2SpawnTime: 3
   enemyOF2Element: black
-  enemyOF3: {fileID: 7545865205280552894, guid: 2d50b720d6101410f9692df839abcfde,
+  enemyOF3: {fileID: 5553188294230739065, guid: 7e5b62032cc984fbeb58b28080f7d4e0,
     type: 3}
   enemyOF3Attack: 3
   enemyOF3Interval: 20

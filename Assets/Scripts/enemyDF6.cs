@@ -115,6 +115,15 @@ public class enemyDF6 : MonoBehaviour
 
     if (collision.gameObject.CompareTag("playerOF1"))
     {
+        if(gameController.playerOF1Element == "blue")
+        {
+          ElementDamage = Mathf.FloorToInt(gameController.playerOF1Attack * 0.3f);
+        }
+
+        if(gameController.playerOF1Element == "white")
+        {
+          ElementDamage = - Mathf.FloorToInt(gameController.playerOF1Attack * 0.3f);
+        }
 
       StartCoroutine(AttackByPlayerOF1());
 
@@ -122,6 +131,15 @@ public class enemyDF6 : MonoBehaviour
 
     if (collision.gameObject.CompareTag("playerOF2"))
     {
+      if(gameController.playerOF2Element == "blue")
+      {
+        ElementDamage = Mathf.FloorToInt(gameController.playerOF2Attack * 0.3f);
+      }
+
+      if(gameController.playerOF2Element == "white")
+      {
+        ElementDamage = - Mathf.FloorToInt(gameController.playerOF2Attack * 0.3f);
+      }
 
       StartCoroutine(AttackByPlayerOF2());
 
@@ -129,6 +147,15 @@ public class enemyDF6 : MonoBehaviour
 
     if (collision.gameObject.CompareTag("playerOF3"))
     {
+      if(gameController.playerOF3Element == "blue")
+      {
+        ElementDamage = Mathf.FloorToInt(gameController.playerOF3Attack * 0.3f);
+      }
+
+      if(gameController.playerOF3Element == "white")
+      {
+        ElementDamage = - Mathf.FloorToInt(gameController.playerOF3Attack * 0.3f);
+      }
 
       StartCoroutine(AttackByPlayerOF3());
 
@@ -144,7 +171,7 @@ public class enemyDF6 : MonoBehaviour
           .GetComponent<GameControllerScript>();
           PositionCorrectionAttack = Mathf.FloorToInt(- transform.position.y + 2.5f);
           PositionCorrectionHitPoint = Mathf.FloorToInt(transform.position.y - 0.5f);
-          gameController.enemyDF6Attack = Mathf.FloorToInt(gameController.enemyDF6Attack * (PositionCorrectionAttack * 0.1f + 1f));
+          gameController.enemyDF4Attack = Mathf.FloorToInt(gameController.enemyDF4Attack * (PositionCorrectionAttack * 0.1f + 1f));
           HitPoint = Mathf.FloorToInt(HitPoint * (PositionCorrectionHitPoint * 0.1f + 1f));
 
     }

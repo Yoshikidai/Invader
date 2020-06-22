@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdddbe014b4d4b35ab129d143702818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 30
+  HitPoint: 50
   beforeSpeed: 5
   Element: white
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
