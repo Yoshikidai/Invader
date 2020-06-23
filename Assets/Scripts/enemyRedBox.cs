@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +7,7 @@ public class enemyRedBox : MonoBehaviour
   private GameControllerScript gameController;
   private enemyBlackBox enemyBlackBox;
   private enemyWhiteBox enemyWhiteBox;
-
+  public GameObject particleObjectChangePosition;
 
     // Start is called before the first frame update
     void Start()
@@ -16,30 +16,26 @@ public class enemyRedBox : MonoBehaviour
           .FindWithTag("GameController")
           .GetComponent<GameControllerScript>();
       enemyBlackBox = GameObject
-                  .FindWithTag("enemyBlackBox")
+                  .FindWithTag("enemyBox2")
                   .GetComponent<enemyBlackBox>();
       enemyWhiteBox = GameObject
-                  .FindWithTag("enemyWhiteBox")
+                  .FindWithTag("enemyBox3")
                   .GetComponent<enemyWhiteBox>();
-      StartCoroutine(ChangePosition());
+      StartCoroutine("ChangePosition");
     }
 
     // Update is called once per frame
     void Update()
     {
-      if(gameController.isVictory)
-      {
-        StopCoroutine("ChangePosition");
-      }
+
     }
 
     IEnumerator ChangePosition()
     {
       yield return new WaitForSeconds(3f);
       int X = 0;
-      Debug.Log("Change1");
 
-      while(true)
+      while(!gameController.isVictory)
       {
         X = Random.Range(-2, 2);
 
@@ -51,14 +47,35 @@ public class enemyRedBox : MonoBehaviour
         if(enemyBlackBox.transform.position.x == X)
         {
           enemyBlackBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
+
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
         }
 
         if(enemyWhiteBox.transform.position.x == X)
         {
           enemyWhiteBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
+
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
         }
 
         transform.position = new Vector3(X, 3.5f, 1f);
+
+        Instantiate(
+            particleObjectChangePosition,
+            new Vector3(transform.position.x, transform.position.y, 3f),
+            particleObjectChangePosition.transform.rotation
+        ); //パーティクル用ゲームオブジェクト生成
+
 
         yield return new WaitForSeconds(9f);
       }

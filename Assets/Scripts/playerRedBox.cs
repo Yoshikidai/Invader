@@ -7,21 +7,61 @@ using UnityEngine.EventSystems;
 public class playerRedBox : MonoBehaviour,IDragHandler
 {
 
-  private playerBlueBox playerBlueBox;
   private playerWhiteBox playerWhiteBox;
+  private playerBlueBox playerBlueBox;
+  public GameObject particleObjectChangePosition;
+  public AudioClip changePositionSE;
 
   public void OnDrag(PointerEventData data){
 		Vector3 TargetPos = Camera.main.ScreenToWorldPoint (data.position);
     if (TargetPos.x < -1.5f)
     {
 
-      if (playerBlueBox.transform.position.x < -1.5f)
+      if (playerWhiteBox.transform.position.x < -1.5f)
       {
+
+        if(transform.position != new Vector3(-2f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
+        playerWhiteBox.transform.position = transform.position;
+      }
+      else if (playerBlueBox.transform.position.x < -1.5f)
+      {
+
+        if(transform.position != new Vector3(-2f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
         playerBlueBox.transform.position = transform.position;
       }
-      else if (playerWhiteBox.transform.position.x < -1.5f)
+
+      if(transform.position != new Vector3(-2f,-3.5f,1f))
       {
-        playerWhiteBox.transform.position = transform.position;
+        Instantiate(
+            particleObjectChangePosition,
+            new Vector3(-2f,-3.5f, 3f),
+            particleObjectChangePosition.transform.rotation
+        ); //パーティクル用ゲームオブジェクト生成
+
+        // オーディオを再生
+        AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
       }
 
       transform.position = new Vector3(-2f,-3.5f,1f);
@@ -30,53 +70,206 @@ public class playerRedBox : MonoBehaviour,IDragHandler
     else if (TargetPos.x < -0.5f)
     {
 
-      if ((playerBlueBox.transform.position.x >= -1.5f)&&(playerBlueBox.transform.position.x < -0.5f))
+      if ((playerWhiteBox.transform.position.x >= -1.5f)&&(playerWhiteBox.transform.position.x < -0.5f))
       {
+
+        if(transform.position != new Vector3(-1f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
+        playerWhiteBox.transform.position = transform.position;
+      }
+      else if ((playerBlueBox.transform.position.x >= -1.5f)&&(playerBlueBox.transform.position.x < -0.5f))
+      {
+
+        if(transform.position != new Vector3(-1f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
         playerBlueBox.transform.position = transform.position;
       }
-      else if ((playerWhiteBox.transform.position.x >= -1.5f)&&(playerWhiteBox.transform.position.x < -0.5f))
+
+      if(transform.position != new Vector3(-1f,-3.5f,1f))
       {
-        playerWhiteBox.transform.position = transform.position;
+        Instantiate(
+            particleObjectChangePosition,
+            new Vector3(-1f,-3.5f, 3f),
+            particleObjectChangePosition.transform.rotation
+        ); //パーティクル用ゲームオブジェクト生成
+
+        // オーディオを再生
+        AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
       }
 
       transform.position = new Vector3(-1f,-3.5f,1f);
     }
     else if (TargetPos.x < 0.5f)
     {
-      if ((playerBlueBox.transform.position.x >= -0.5f)&&(playerBlueBox.transform.position.x < 0.5f))
+      if ((playerWhiteBox.transform.position.x >= -0.5f)&&(playerWhiteBox.transform.position.x < 0.5f))
       {
+
+        if(transform.position != new Vector3(0f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
+        playerWhiteBox.transform.position = transform.position;
+      }
+      else if ((playerBlueBox.transform.position.x >= -0.5f)&&(playerBlueBox.transform.position.x < 0.5f))
+      {
+
+        if(transform.position != new Vector3(0f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
         playerBlueBox.transform.position = transform.position;
       }
-      else if ((playerWhiteBox.transform.position.x >= -0.5f)&&(playerWhiteBox.transform.position.x < 0.5f))
+
+      if(transform.position != new Vector3(0f,-3.5f,1f))
       {
-        playerWhiteBox.transform.position = transform.position;
+        Instantiate(
+            particleObjectChangePosition,
+            new Vector3(0f,-3.5f, 3f),
+            particleObjectChangePosition.transform.rotation
+        ); //パーティクル用ゲームオブジェクト生成
+
+        // オーディオを再生
+        AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
       }
 
       transform.position = new Vector3(0f,-3.5f,1f);
     }
     else if (TargetPos.x < 1.5f)
     {
-      if ((playerBlueBox.transform.position.x >= 0.5f)&&(playerBlueBox.transform.position.x < 1.5f))
+      if ((playerWhiteBox.transform.position.x >= 0.5f)&&(playerWhiteBox.transform.position.x < 1.5f))
       {
+
+        if(transform.position != new Vector3(1f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
+        playerWhiteBox.transform.position = transform.position;
+      }
+      else if ((playerBlueBox.transform.position.x >= 0.5f)&&(playerBlueBox.transform.position.x < 1.5f))
+      {
+
+        if(transform.position != new Vector3(1f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
         playerBlueBox.transform.position = transform.position;
       }
-      else if ((playerWhiteBox.transform.position.x >= 0.5f)&&(playerWhiteBox.transform.position.x < 1.5f))
+
+      if(transform.position != new Vector3(1f,-3.5f,1f))
       {
-        playerWhiteBox.transform.position = transform.position;
+        Instantiate(
+            particleObjectChangePosition,
+            new Vector3(1f,-3.5f, 3f),
+            particleObjectChangePosition.transform.rotation
+        ); //パーティクル用ゲームオブジェクト生成
+
+        // オーディオを再生
+        AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
       }
 
       transform.position = new Vector3(1f,-3.5f,1f);
     }
     else
     {
-      if (playerBlueBox.transform.position.x >= 1.5f)
+      if (playerWhiteBox.transform.position.x >= 1.5f)
       {
-        playerBlueBox.transform.position = transform.position;
-      }
-      else if (playerWhiteBox.transform.position.x >= 1.5f)
-      {
+
+        if(transform.position != new Vector3(2f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
         playerWhiteBox.transform.position = transform.position;
       }
+      else if (playerBlueBox.transform.position.x >= 1.5f)
+      {
+
+        if(transform.position != new Vector3(2f,-3.5f,1f))
+        {
+          Instantiate(
+              particleObjectChangePosition,
+              new Vector3(transform.position.x, transform.position.y, 3f),
+              particleObjectChangePosition.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+
+          // オーディオを再生
+          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+        }
+
+        playerBlueBox.transform.position = transform.position;
+      }
+
+      if(transform.position != new Vector3(2f,-3.5f,1f))
+      {
+        Instantiate(
+            particleObjectChangePosition,
+            new Vector3(2f,-3.5f, 3f),
+            particleObjectChangePosition.transform.rotation
+        ); //パーティクル用ゲームオブジェクト生成
+
+        // オーディオを再生
+        AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
+      }
+
       transform.position = new Vector3(2f,-3.5f,1f);
     }
 	}
@@ -84,13 +277,13 @@ public class playerRedBox : MonoBehaviour,IDragHandler
     // Start is called before the first frame update
     void Start()
     {
-      transform.position = new Vector3(0f,-3.5f,1f);
-      playerBlueBox = GameObject
-                  .FindWithTag("playerBox1")
-                  .GetComponent<playerBlueBox>();
+      transform.position = new Vector3(2f,-3.5f,1f);
       playerWhiteBox = GameObject
                   .FindWithTag("playerBox3")
                   .GetComponent<playerWhiteBox>();
+      playerBlueBox = GameObject
+                  .FindWithTag("playerBox1")
+                  .GetComponent<playerBlueBox>();
     }
 
     // Update is called once per frame

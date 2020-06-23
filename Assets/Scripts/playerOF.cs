@@ -11,6 +11,7 @@ public class playerOF : MonoBehaviour
   public string Element;
   private int ElementDamage;
   public GameObject particleObjectHit;
+  public GameObject particleObjectExplosion;
   // 爆発効果音
   public AudioClip explosionSE;
 
@@ -1100,8 +1101,15 @@ public class playerOF : MonoBehaviour
 
       if(HitPoint <= 0)
       {
+        Instantiate(
+            particleObjectExplosion,
+            new Vector3(transform.position.x, transform.position.y, -3f),
+            particleObjectExplosion.transform.rotation
+        ); //パーティクル用ゲームオブジェクト生成
+
         // オーディオを再生
         AudioSource.PlayClipAtPoint(explosionSE, transform.position);
+        
         // ミサイルオブジェクトを破棄
         Destroy(gameObject);
       }
