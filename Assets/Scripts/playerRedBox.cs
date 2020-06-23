@@ -28,8 +28,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerWhiteBox.transform.position = transform.position;
@@ -45,8 +43,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerBlueBox.transform.position = transform.position;
@@ -81,8 +77,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerWhiteBox.transform.position = transform.position;
@@ -98,8 +92,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerBlueBox.transform.position = transform.position;
@@ -132,8 +124,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerWhiteBox.transform.position = transform.position;
@@ -149,8 +139,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerBlueBox.transform.position = transform.position;
@@ -183,8 +171,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerWhiteBox.transform.position = transform.position;
@@ -200,8 +186,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerBlueBox.transform.position = transform.position;
@@ -234,8 +218,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerWhiteBox.transform.position = transform.position;
@@ -251,8 +233,6 @@ public class playerRedBox : MonoBehaviour,IDragHandler
               particleObjectChangePosition.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
 
-          // オーディオを再生
-          AudioSource.PlayClipAtPoint(changePositionSE, transform.position);
         }
 
         playerBlueBox.transform.position = transform.position;

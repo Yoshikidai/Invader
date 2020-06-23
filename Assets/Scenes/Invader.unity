@@ -538,7 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleObjectChangePosition: {fileID: 4216041968680883850, guid: d1df1a5133bae4710bea0d6079b9306d,
     type: 3}
-  changePositionSE: {fileID: 8300000, guid: 1f95b05b1021c48bd84e0fd0446daec2, type: 3}
+  changePositionSE: {fileID: 8300000, guid: 4cb7d47a81bbf4cebbabd876520458f4, type: 3}
 --- !u!58 &163399798
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5502,7 +5502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleObjectChangePosition: {fileID: 4216041968680883850, guid: d1df1a5133bae4710bea0d6079b9306d,
     type: 3}
-  changePositionSE: {fileID: 8300000, guid: 1f95b05b1021c48bd84e0fd0446daec2, type: 3}
+  changePositionSE: {fileID: 8300000, guid: 4cb7d47a81bbf4cebbabd876520458f4, type: 3}
 --- !u!58 &212583967
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13180,7 +13180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleObjectChangePosition: {fileID: 4216041968680883850, guid: d1df1a5133bae4710bea0d6079b9306d,
     type: 3}
-  changePositionSE: {fileID: 8300000, guid: 1f95b05b1021c48bd84e0fd0446daec2, type: 3}
+  changePositionSE: {fileID: 8300000, guid: 4cb7d47a81bbf4cebbabd876520458f4, type: 3}
 --- !u!58 &1890888799
 CircleCollider2D:
   m_ObjectHideFlags: 0
