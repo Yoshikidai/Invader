@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02b392b1cdc346b49573512d3803075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 50
+  HitPoint: 80
   beforeSpeed: 5
   Element: red
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,

@@ -6715,27 +6715,27 @@ MonoBehaviour:
   playerOFbox3: {fileID: 212583965}
   playerDF1: {fileID: 1917248096}
   playerDF1Attack: 30
-  playerDF1Interval: 10
+  playerDF1Interval: 15
   playerDF1Element: white
   playerDF2: {fileID: 787850517}
   playerDF2Attack: 30
-  playerDF2Interval: 10
+  playerDF2Interval: 15
   playerDF2Element: white
   playerDF3: {fileID: 1370261598}
-  playerDF3Attack: 30
-  playerDF3Interval: 10
+  playerDF3Attack: 20
+  playerDF3Interval: 15
   playerDF3Element: blue
   playerDF4: {fileID: 1872653946}
   playerDF4Attack: 30
-  playerDF4Interval: 10
+  playerDF4Interval: 15
   playerDF4Element: red
   playerDF5: {fileID: 1966931325}
   playerDF5Attack: 30
-  playerDF5Interval: 10
+  playerDF5Interval: 15
   playerDF5Element: blue
   playerDF6: {fileID: 199194588}
   playerDF6Attack: 30
-  playerDF6Interval: 10
+  playerDF6Interval: 15
   playerDF6Element: blue
   enemyOF1: {fileID: 3142577979109561341, guid: 24c34e3ec33474376aef9b8046114c1d,
     type: 3}
@@ -6762,27 +6762,27 @@ MonoBehaviour:
   enemyOFbox3: {fileID: 282769520}
   enemyDF1: {fileID: 918291593}
   enemyDF1Attack: 30
-  enemyDF1Interval: 10
+  enemyDF1Interval: 15
   enemyDF1Element: black
   enemyDF2: {fileID: 9991800}
   enemyDF2Attack: 30
-  enemyDF2Interval: 10
+  enemyDF2Interval: 15
   enemyDF2Element: black
   enemyDF3: {fileID: 70752218}
   enemyDF3Attack: 30
-  enemyDF3Interval: 10
+  enemyDF3Interval: 15
   enemyDF3Element: black
   enemyDF4: {fileID: 1639287302}
   enemyDF4Attack: 30
-  enemyDF4Interval: 10
+  enemyDF4Interval: 15
   enemyDF4Element: red
   enemyDF5: {fileID: 982686000}
   enemyDF5Attack: 30
-  enemyDF5Interval: 10
+  enemyDF5Interval: 15
   enemyDF5Element: red
   enemyDF6: {fileID: 765401797}
   enemyDF6Attack: 30
-  enemyDF6Interval: 10
+  enemyDF6Interval: 15
   enemyDF6Element: red
   emptyOFbox1: {fileID: 1261703992240145984}
   emptyOFbox2: {fileID: 7403172984386633027}
@@ -13663,7 +13663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.16981131, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.21, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
