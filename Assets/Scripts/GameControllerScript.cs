@@ -243,7 +243,7 @@ public class GameControllerScript : MonoBehaviour
 
     if (Input.GetMouseButtonDown(0))
     {
-      SceneManager.LoadScene("Invader");
+      SceneManager.LoadScene("ModeSelectScene");
     }
 
   }

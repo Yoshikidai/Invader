@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Invader.unity
     guid: a943b0a9e5f6b4007af84e3d08311057
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/titleScene.unity
+    guid: b948a0add45a046bfa7fe09d6eeaf378
+  - enabled: 1
+    path: Assets/Scenes/ModeSelectScene.unity
+    guid: 9e2aee54fd2a84ecf85c3cc490a66850
   m_configObjects: {}
