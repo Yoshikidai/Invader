@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94222228d5cd24147b042d5fb0ba2c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: red
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003f3b3b6ee2e418e95e810f139bf396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: red
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -5462,7 +5462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39d97d0ca1b448df9e30360516f10cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: blue
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -6319,7 +6319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2747a593f2ab747a3bccee38f611a402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: black
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -6479,7 +6479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e3ec839575d427798d59ae4ce7d7de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: white
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -7061,7 +7061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c98d15743f6f477fa4ac073257634aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: red
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -7221,7 +7221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509a623444ac047399a9a978c20eaf3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: black
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -7260,7 +7260,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: 67af0ef12083e40e49c0d935a268529c, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 1
+  weight: 0.8
   priority: 0
 --- !u!4 &1152747243
 Transform:
@@ -12264,7 +12264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9090bcb3f78414abccb7aeabefbead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: blue
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -12666,7 +12666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebec9f671a9f74dbc90585d499680ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: black
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -13076,7 +13076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4796f7d04cb5043bfba98bcc80859602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: red
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -13350,7 +13350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f44e47f5a9249e48df6c786ff26e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: white
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
@@ -13510,7 +13510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7ddcfcc903f4d6194e56416886e76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 300
+  HitPoint: 500
   Element: blue
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}

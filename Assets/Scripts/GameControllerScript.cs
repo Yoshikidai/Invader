@@ -243,7 +243,7 @@ public class GameControllerScript : MonoBehaviour
 
     if (Input.GetMouseButtonDown(0))
     {
-      SceneManager.LoadScene("ModeSelectScene");
+      SceneManager.LoadScene("STAGE1");
     }
 
   }
@@ -252,7 +252,7 @@ public class GameControllerScript : MonoBehaviour
   {
     isVictory = true;
     ResultText.text = "You win!";
-    ReplayText.text = "Tap screen to play again";
+    ReplayText.text = "Tap screen to end this game";
     StopCoroutine("SpawnEnemyOF1");
     StopCoroutine("SpawnEnemyOF2");
     StopCoroutine("SpawnEnemyOF3");
@@ -262,7 +262,7 @@ public class GameControllerScript : MonoBehaviour
   {
     isDefeat = true;
     ResultText.text = "You lose...";
-    ReplayText.text = "Tap screen to play again";
+    ReplayText.text = "Tap screen to end this game";
     StopCoroutine("SpawnPlayerOF1");
     StopCoroutine("SpawnPlayerOF2");
     StopCoroutine("SpawnPlayerOF3");

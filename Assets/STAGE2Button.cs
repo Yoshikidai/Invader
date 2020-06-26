@@ -1,11 +1,16 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour
+public class STAGE2Button : MonoBehaviour
 {
+
+    public void OnClick()
+    {
+      SceneManager.LoadScene("STAGE2");
+    }
     // Start is called before the first frame update
     void Start()
     {
