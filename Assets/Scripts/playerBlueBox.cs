@@ -6,11 +6,17 @@ using UnityEngine.EventSystems;
 
 public class playerBlueBox : MonoBehaviour,IDragHandler
 {
-
+  private GameControllerScript gameController;
   private playerRedBox playerRedBox;
   private playerWhiteBox playerWhiteBox;
   public GameObject particleObjectChangePosition;
   public AudioClip changePositionSE;
+  public GameObject playerOF1;
+  public int playerOF1Attack;
+  public int playerOF1Interval;
+  public int playerOF1SpawnTime;
+  public string playerOF1Element;
+  public GameObject particleObject1;
 
   public void OnDrag(PointerEventData data){
 		Vector3 TargetPos = Camera.main.ScreenToWorldPoint (data.position);
@@ -267,10 +273,34 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     }
 	}
 
+  IEnumerator SpawnPlayerOF1()
+  {
+      while (true)
+      {
+          Instantiate(
+              playerOF1,
+              new Vector3(transform.position.x, transform.position.y, 0f),
+              transform.rotation
+          );
+          Instantiate(
+              particleObject1,
+              new Vector3(transform.position.x, transform.position.y, -3f),
+              particleObject1.transform.rotation
+          ); //パーティクル用ゲームオブジェクト生成
+          yield return new WaitForSeconds(playerOF1SpawnTime);
+      }
+
+  }
+
+
     // Start is called before the first frame update
     void Start()
     {
       transform.position = new Vector3(-2f,-3.5f,1f);
+      StartCoroutine("SpawnPlayerOF1");
+      gameController = GameObject
+          .FindWithTag("GameController")
+          .GetComponent<GameControllerScript>();
       playerRedBox = GameObject
                   .FindWithTag("playerBox2")
                   .GetComponent<playerRedBox>();
@@ -282,6 +312,9 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     // Update is called once per frame
     void Update()
     {
-
+      if(gameController.isDefeat)
+      {
+        StopCoroutine("SpawnPlayerOF1");
+      }
     }
 }

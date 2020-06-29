@@ -9,7 +9,7 @@ public class BossBattleButton1 : MonoBehaviour
 
     public void OnClick()
     {
-      SceneManager.LoadScene("Invader");
+      SceneManager.LoadScene("EditPosition");
     }
     // Start is called before the first frame update
     void Start()

@@ -8,6 +8,12 @@ public class enemyRedBox : MonoBehaviour
   private enemyBlackBox enemyBlackBox;
   private enemyWhiteBox enemyWhiteBox;
   public GameObject particleObjectChangePosition;
+  public GameObject enemyOF1;
+  public int enemyOF1Attack;
+  public int enemyOF1Interval;
+  public int enemyOF1SpawnTime;
+  public string enemyOF1Element;
+  public GameObject particleObject2;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +28,16 @@ public class enemyRedBox : MonoBehaviour
                   .FindWithTag("enemyBox3")
                   .GetComponent<enemyWhiteBox>();
       StartCoroutine("ChangePosition");
+      StartCoroutine("SpawnEnemyOF1");
     }
 
     // Update is called once per frame
     void Update()
     {
+      if(gameController.isVictory)
+      {
+        StopCoroutine("SpawnEnemyOF1");
+      }
 
     }
 
@@ -80,6 +91,25 @@ public class enemyRedBox : MonoBehaviour
         yield return new WaitForSeconds(9f);
       }
 
+    }
+
+    IEnumerator SpawnEnemyOF1()
+    {
+        while (true)
+        {
+            Instantiate(
+                enemyOF1,
+                new Vector3(transform.position.x, transform.position.y, 0f),
+                transform.rotation
+            );
+            Instantiate(
+                particleObject2,
+                new Vector3(transform.position.x, transform.position.y, -3f),
+                particleObject2.transform.rotation
+            ); //パーティクル用ゲームオブジェクト生成
+
+            yield return new WaitForSeconds(enemyOF1SpawnTime);
+        }
     }
 
 }

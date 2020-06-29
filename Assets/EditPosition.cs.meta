@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 92f77e6876e154717ba6f463f434c727
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - emptyOFbox: {fileID: 8631277859460856548, guid: a45ef5a9051b04eb9aab723693013a36,
+      type: 3}
+  - DFposition: {fileID: 2163316737682142550, guid: e2004e75d11464577a2daf8842407187,
+      type: 3}
+  - possiblePosition: {fileID: 1162617640007897579, guid: e0417a9fb6c1345c59409308a4d57c6e,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

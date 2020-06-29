@@ -119,109 +119,89 @@ public class GameControllerScript : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    playerOFbox1.transform.position = new Vector3
-    (
-      -2f,
-      transform.position.y,
-      1f
+    Instantiate(
+        playerOFbox1,
+        new Vector3(-2f,transform.position.y,1f),
+        transform.rotation
     );
-    playerOFbox2.transform.position = new Vector3
-    (
-      0f,
-      transform.position.y,
-      1f
+    Instantiate(
+        playerOFbox2,
+        new Vector3(0f,transform.position.y,1f),
+        transform.rotation
     );
-    playerOFbox3.transform.position = new Vector3
-    (
-      2f,
-      transform.position.y,
-      1f
-    );
-    enemyOFbox1.transform.position = new Vector3
-    (
-      -2f,
-      -transform.position.y,
-      1f
-    );
-    enemyOFbox2.transform.position = new Vector3
-    (
-      0f,
-      -transform.position.y,
-      1f
-    );
-    enemyOFbox3.transform.position = new Vector3
-    (
-      2f,
-      -transform.position.y,
-      1f
-    );
-    emptyOFbox1.transform.position = new Vector3
-    (
-      -2f,
-      transform.position.y,
-      2f
-    );
-    emptyOFbox2.transform.position = new Vector3
-    (
-      -1f,
-      transform.position.y,
-      2f
-    );
-    emptyOFbox3.transform.position = new Vector3
-    (
-      0f,
-      transform.position.y,
-      2f
-    );
-    emptyOFbox4.transform.position = new Vector3
-    (
-      1f,
-      transform.position.y,
-      2f
-    );
-    emptyOFbox5.transform.position = new Vector3
-    (
-      2f,
-      transform.position.y,
-      2f
-    );
-    emptyOFbox6.transform.position = new Vector3
-    (
-      -2f,
-      -transform.position.y,
-      2f
-    );
-    emptyOFbox7.transform.position = new Vector3
-    (
-      -1f,
-      -transform.position.y,
-      2f
-    );
-    emptyOFbox8.transform.position = new Vector3
-    (
-      0f,
-      -transform.position.y,
-      2f
-    );
-    emptyOFbox9.transform.position = new Vector3
-    (
-      1f,
-      -transform.position.y,
-      2f
-    );
-    emptyOFbox10.transform.position = new Vector3
-    (
-      2f,
-      -transform.position.y,
-      2f
+    Instantiate(
+        playerOFbox3,
+        new Vector3(2f,transform.position.y,1f),
+        transform.rotation
     );
 
-    StartCoroutine("SpawnPlayerOF1");
-    StartCoroutine("SpawnPlayerOF2");
-    StartCoroutine("SpawnPlayerOF3");
-    StartCoroutine("SpawnEnemyOF1");
-    StartCoroutine("SpawnEnemyOF2");
-    StartCoroutine("SpawnEnemyOF3");
+    Instantiate(
+        enemyOFbox1,
+        new Vector3(-2f,-transform.position.y,1f),
+        transform.rotation
+    );
+    Instantiate(
+        enemyOFbox2,
+        new Vector3(0f,-transform.position.y,1f),
+        transform.rotation
+    );
+    Instantiate(
+        enemyOFbox3,
+        new Vector3(2f,-transform.position.y,1f),
+        transform.rotation
+    );
+
+    Instantiate(
+        emptyOFbox1,
+        new Vector3(-2f,transform.position.y,2f),
+        transform.rotation
+    );
+    Instantiate(
+        emptyOFbox2,
+        new Vector3(-1f,transform.position.y,2f),
+        transform.rotation
+    );
+    Instantiate(
+        emptyOFbox3,
+        new Vector3(0f,transform.position.y,2f),
+        transform.rotation
+    );
+    Instantiate(
+        emptyOFbox4,
+        new Vector3(1f,transform.position.y,2f),
+        transform.rotation
+    );
+    Instantiate(
+        emptyOFbox5,
+        new Vector3(2f,transform.position.y,2f),
+        transform.rotation
+    );
+    Instantiate(
+        emptyOFbox6,
+        new Vector3(-2f,-transform.position.y,2f),
+        transform.rotation
+    );
+    Instantiate(
+        emptyOFbox7,
+        new Vector3(-1f,-transform.position.y,2f),
+        transform.rotation
+    );
+    Instantiate(
+        emptyOFbox8,
+        new Vector3(0f,-transform.position.y,2f),
+        transform.rotation
+    );
+    Instantiate(
+        emptyOFbox9,
+        new Vector3(1f,-transform.position.y,2f),
+        transform.rotation
+    );
+    Instantiate(
+        emptyOFbox10,
+        new Vector3(2f,-transform.position.y,2f),
+        transform.rotation
+    );
+
     ResultText.text = "";
     ReplayText.text = "";
     isVictory = false;
