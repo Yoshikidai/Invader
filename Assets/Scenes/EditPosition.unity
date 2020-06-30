@@ -155,8 +155,6 @@ MonoBehaviour:
     type: 3}
   DFposition: {fileID: 2163316737682142550, guid: e2004e75d11464577a2daf8842407187,
     type: 3}
-  possiblePosition: {fileID: 1162617640007897579, guid: e0417a9fb6c1345c59409308a4d57c6e,
-    type: 3}
 --- !u!4 &61542598
 Transform:
   m_ObjectHideFlags: 0
@@ -840,7 +838,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: EDIT DF POSITION
+  m_Text: DEFENCE POSITION
 --- !u!222 &1733197590
 CanvasRenderer:
   m_ObjectHideFlags: 0
