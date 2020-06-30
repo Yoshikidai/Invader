@@ -8,6 +8,9 @@ public class whiteDFbutton5 : MonoBehaviour
   public GameObject whiteDF;
   GameObject button;
   public GameObject panel;
+  float elapsedtime=0;
+  float timeLimit = 1; //制限時間:1秒
+  bool clicked = false;
 
   public void OnClick()
   {
@@ -18,8 +21,8 @@ public class whiteDFbutton5 : MonoBehaviour
         new Vector3(button.transform.position.x, button.transform.position.y, 2f),
         transform.rotation
     ); //パーティクル用ゲームオブジェクト生成
-    panel.SetActive(false);
 
+    clicked = true;
   }
 
     // Start is called before the first frame update
@@ -29,9 +32,20 @@ public class whiteDFbutton5 : MonoBehaviour
         whiteDF.tag = "playerDF5";
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if(clicked)
+        {
+          elapsedtime += Time.deltaTime; //経過時間
+        }
+        if (timeLimit < elapsedtime)
+        {
+          elapsedtime = 0;
+          clicked = false;
+          panel.SetActive(false);
 
+        }
     }
+
+
 }

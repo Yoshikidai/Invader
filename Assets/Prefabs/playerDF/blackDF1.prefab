@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -279862126225837518}
   m_Layer: 0
   m_Name: blackDF1
-  m_TagString: playerDF2
+  m_TagString: playerDF6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

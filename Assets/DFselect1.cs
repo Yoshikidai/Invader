@@ -6,12 +6,14 @@ public class DFselect1 : MonoBehaviour
 {
   GameObject[] objects;
   public GameObject panel;
-  GameObject otherDF;
+  GameObject[] otherDFs;
 
   public void OnClick()
   {
-    otherDF = GameObject.FindWithTag("playerDF1");
-    Destroy(otherDF);
+    for(int i = 0; i < otherDFs.Length; ++i)
+    {
+      Destroy(otherDFs[i].gameObject);
+    }
 
     panel.SetActive(true);
   }
@@ -19,6 +21,7 @@ public class DFselect1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      otherDFs = GameObject.FindGameObjectsWithTag("playerDF1");
       objects = GameObject.FindGameObjectsWithTag("DFposition");
       transform.position = new Vector3
       (
