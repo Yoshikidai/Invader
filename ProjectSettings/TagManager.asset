@@ -56,10 +56,10 @@ TagManager:
   - 
   - post processing
   - 
-  - 
-  - 
-  - 
-  - 
+  - playerOF
+  - enemyOF
+  - playerDF
+  - enemyDF
   - 
   - 
   - 

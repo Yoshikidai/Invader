@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 70752223}
   - component: {fileID: 70752222}
   - component: {fileID: 70752224}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: enemyRedDF2
   m_TagString: enemyDF5
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70752218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1.5, z: 2}
+  m_LocalPosition: {x: 0.5, y: 1.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5299,7 +5299,7 @@ GameObject:
   - component: {fileID: 765401802}
   - component: {fileID: 765401801}
   - component: {fileID: 765401803}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: enemyBlackDF3
   m_TagString: enemyDF3
   m_Icon: {fileID: 0}
@@ -5383,7 +5383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765401797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 2.5, z: 2}
+  m_LocalPosition: {x: 1.5, y: 2.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5801,7 +5801,7 @@ GameObject:
   - component: {fileID: 918291598}
   - component: {fileID: 918291597}
   - component: {fileID: 918291599}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: enemyRedDF3
   m_TagString: enemyDF6
   m_Icon: {fileID: 0}
@@ -5885,7 +5885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918291593}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 2}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5961,7 +5961,7 @@ GameObject:
   - component: {fileID: 982686005}
   - component: {fileID: 982686004}
   - component: {fileID: 982686006}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: enemyBlackDF2
   m_TagString: enemyDF1
   m_Icon: {fileID: 0}
@@ -6045,7 +6045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982686000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 2.5, z: 2}
+  m_LocalPosition: {x: -1.5, y: 2.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11295,7 +11295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.21, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.05, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11339,7 +11339,7 @@ PrefabInstance:
     - target: {fileID: 1145325623051966512, guid: 5ad60819ca6c548cabc8f652517f4e94,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1145325623051966512, guid: 5ad60819ca6c548cabc8f652517f4e94,
         type: 3}
@@ -11413,7 +11413,7 @@ PrefabInstance:
     - target: {fileID: 2670327446202929507, guid: e217a8947e4474b42941044d2ce36731,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2670327446202929507, guid: e217a8947e4474b42941044d2ce36731,
         type: 3}

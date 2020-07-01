@@ -22,6 +22,18 @@ public class DFposition : MonoBehaviour,IDragHandler {
     void Start()
     {
       DontDestroyOnLoad(this);
+			
     }
+
+		void Update()
+		{
+			transform.position = new Vector3
+	    (
+	      Mathf.Clamp(transform.position.x, -2f, 2f),
+	      Mathf.Clamp(transform.position.y, -2.5f, -0.5f),
+	      3f
+	    );
+
+		}
 
 }
