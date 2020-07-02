@@ -301,7 +301,7 @@ public class playerWhiteBox : MonoBehaviour,IDragHandler
     {
       if(gameController.isDefeat)
       {
-        StopCoroutine("SpawnPlayerOF2");
+        StopCoroutine("SpawnPlayerOF3");
       }
 
     }

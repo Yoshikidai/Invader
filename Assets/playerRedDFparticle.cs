@@ -15,9 +15,13 @@ public class playerRedDFparticle : MonoBehaviour
     {
       obj.GetComponent<DamageScript>().Damage(weakPower);
     }
-    if(obj.GetComponent<DamageScript>().Element == "white")
+    else if(obj.GetComponent<DamageScript>().Element == "white")
     {
       obj.GetComponent<DamageScript>().Damage(strongPower);
+    }
+    else
+    {
+      obj.GetComponent<DamageScript>().Damage(normalPower);
     }
 
   }

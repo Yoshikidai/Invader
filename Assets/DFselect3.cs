@@ -7,6 +7,9 @@ public class DFselect3 : MonoBehaviour
   GameObject[] objects;
   public GameObject panel;
   GameObject[] otherDFs;
+  float elapsedtime = 0;
+  float timeLimit = 0.3f; //制限時間:1秒
+  bool clicked = false;
 
   public void OnClick()
   {
@@ -15,7 +18,7 @@ public class DFselect3 : MonoBehaviour
       Destroy(otherDFs[i].gameObject);
     }
 
-    panel.SetActive(true);
+    clicked = true;
   }
 
     // Start is called before the first frame update
@@ -34,6 +37,18 @@ public class DFselect3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if(clicked)
+      {
+        elapsedtime += Time.deltaTime; //経過時間
+      }
+
+      if (timeLimit < elapsedtime)
+      {
+        panel.SetActive(true);
+        elapsedtime = 0;
+        clicked = false;
+
+      }
 
     }
 }

@@ -9,7 +9,7 @@ public class blackDFbutton : MonoBehaviour
   GameObject button;
   public GameObject panel;
   float elapsedtime=0;
-  float timeLimit = 1; //制限時間:1秒
+  float timeLimit = 0.6f; //制限時間:1秒
   bool clicked = false;
 
   public void OnClick()
@@ -18,7 +18,7 @@ public class blackDFbutton : MonoBehaviour
     Destroy(otherDF);
     Instantiate(
         blackDF,
-        new Vector3(button.transform.position.x, button.transform.position.y, 2f),
+        new Vector3(button.transform.position.x, button.transform.position.y, 0f),
         transform.rotation
     ); //パーティクル用ゲームオブジェクト生成
 

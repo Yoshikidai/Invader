@@ -15,11 +15,14 @@ public class playerBlackDFparticle : MonoBehaviour
         {
           obj.GetComponent<DamageScript>().Damage(weakPower);
         }
-        if(obj.GetComponent<DamageScript>().Element == "blue")
+        else if(obj.GetComponent<DamageScript>().Element == "blue")
         {
           obj.GetComponent<DamageScript>().Damage(strongPower);
         }
-
+        else
+        {
+          obj.GetComponent<DamageScript>().Damage(normalPower);
+        }
     }
 
     // Start is called before the first frame update

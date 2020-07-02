@@ -45,6 +45,7 @@ TagManager:
   - button5
   - button6
   - panel
+  - unablePanel
   layers:
   - Default
   - TransparentFX

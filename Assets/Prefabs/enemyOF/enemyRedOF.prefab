@@ -18,9 +18,10 @@ GameObject:
   - component: {fileID: 693456267041126700}
   - component: {fileID: 4565550059120822408}
   - component: {fileID: 4340012128424242387}
+  - component: {fileID: 7291493225145358591}
   m_Layer: 11
   m_Name: enemyRedOF
-  m_TagString: enemyOF1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,6 +233,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
+--- !u!114 &7291493225145358591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142577979109561341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea02af6e209a4ce4b7f5a28074df8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5910149154986536589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785bc8a20894b40aabe380d8edc0210a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalPower: 3
+  normalPower: 1
 --- !u!1001 &2416454332465311743
 PrefabInstance:
   m_ObjectHideFlags: 0

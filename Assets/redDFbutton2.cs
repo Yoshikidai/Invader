@@ -9,7 +9,7 @@ public class redDFbutton2 : MonoBehaviour
   GameObject button;
   public GameObject panel;
   float elapsedtime=0;
-  float timeLimit = 1; //制限時間:1秒
+  float timeLimit = 0.6f; //制限時間:1秒
   bool clicked = false;
 
   public void OnClick()

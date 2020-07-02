@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347f272f3aaf84056b81af83a2a8d790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalPower: 10
+  normalPower: 1
 --- !u!1 &6466883506734369335
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 2456692666936941}
   - component: {fileID: 5003803510076352445}
   - component: {fileID: -3520616918047185192}
+  - component: {fileID: 2373271079186298012}
   m_Layer: 10
   m_Name: playerWhiteOF
   m_TagString: Untagged
@@ -245,6 +246,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &2373271079186298012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466883506734369335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd31d06945be047189916db865920961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6450718810673678931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265,7 +278,7 @@ PrefabInstance:
     - target: {fileID: 7464967054402643510, guid: bb35acba9770441db9ec9a526587b137,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7464967054402643510, guid: bb35acba9770441db9ec9a526587b137,
         type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c04c22f99bc6448f2b68df55349ce3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalPower: 3
+  normalPower: 1
 --- !u!1 &5553188294230739065
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,9 +31,10 @@ GameObject:
   - component: {fileID: 8320135309922865831}
   - component: {fileID: 8659990081044000227}
   - component: {fileID: -53064835145113060}
+  - component: {fileID: 2830318110086068397}
   m_Layer: 11
   m_Name: enemyWhiteOF
-  m_TagString: enemyOF3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,6 +246,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
+--- !u!114 &2830318110086068397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5553188294230739065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea02af6e209a4ce4b7f5a28074df8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5190390683285155559
 PrefabInstance:
   m_ObjectHideFlags: 0

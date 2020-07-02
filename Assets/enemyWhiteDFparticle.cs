@@ -15,9 +15,13 @@ public class enemyWhiteDFparticle : MonoBehaviour
     {
       obj.GetComponent<DamageScript>().Damage(weakPower);
     }
-    if(obj.GetComponent<DamageScript>().Element == "black")
+    else if(obj.GetComponent<DamageScript>().Element == "black")
     {
       obj.GetComponent<DamageScript>().Damage(strongPower);
+    }
+    else
+    {
+      obj.GetComponent<DamageScript>().Damage(normalPower);
     }
 
   }
