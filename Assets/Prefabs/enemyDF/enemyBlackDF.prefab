@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1145325623051966514}
   - component: {fileID: 8298702604083744223}
   - component: {fileID: 1145325623051966515}
-  - component: {fileID: 1145325623051966517}
   - component: {fileID: 1452053350312282828}
   m_Layer: 13
   m_Name: enemyBlackDF
@@ -160,25 +159,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1145325623051966517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145325623051966527}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebec9f671a9f74dbc90585d499680ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HitPoint: 500
-  Element: black
-  particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
-    type: 3}
-  particleObjectExplosion: {fileID: 8073077066717164463, guid: d5ebea9638f504d6f9783c592ed5e31f,
-    type: 3}
-  explosionSE: {fileID: 8300000, guid: 5fc3a248069c5484caec1757e8722f22, type: 3}
 --- !u!114 &1452053350312282828
 MonoBehaviour:
   m_ObjectHideFlags: 0
