@@ -153,7 +153,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emptyOFbox: {fileID: 8631277859460856548, guid: a45ef5a9051b04eb9aab723693013a36,
     type: 3}
-  DFposition: {fileID: 2163316737682142550, guid: e2004e75d11464577a2daf8842407187,
+  DFposition1: {fileID: 2163316737682142550, guid: de7f518da9202483ba98bf4508fa5db6,
+    type: 3}
+  DFposition2: {fileID: 2163316737682142550, guid: 5f0c4076147a64e86aae5fc18755f3ba,
+    type: 3}
+  DFposition3: {fileID: 2163316737682142550, guid: ee977fa90894e4f6b808f46184639cbc,
+    type: 3}
+  DFposition4: {fileID: 2163316737682142550, guid: 42edf042418f9441f809743b4f700b73,
+    type: 3}
+  DFposition5: {fileID: 2163316737682142550, guid: bebbb659b229c4d5083fd1e2c0bc9b82,
+    type: 3}
+  DFposition6: {fileID: 2163316737682142550, guid: 6c5bb9422528c4e4db8ac24c278ecfb7,
     type: 3}
 --- !u!4 &61542598
 Transform:
@@ -193,8 +203,8 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2

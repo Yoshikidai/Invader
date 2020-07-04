@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DFselect3 : MonoBehaviour
 {
-  GameObject[] objects;
+  GameObject DFposition;
   public GameObject panel;
   GameObject[] otherDFs;
   float elapsedtime = 0;
-  float timeLimit = 0.3f; //制限時間:1秒
+  float timeLimit = 0.3f; //制限時間:3秒
   bool clicked = false;
 
   public void OnClick()
@@ -25,13 +25,15 @@ public class DFselect3 : MonoBehaviour
     void Start()
     {
       otherDFs = GameObject.FindGameObjectsWithTag("playerDF3");
-      objects = GameObject.FindGameObjectsWithTag("DFposition");
+      DFposition = GameObject.FindWithTag("DFposition3");
       transform.position = new Vector3
       (
-        objects[2].transform.position.x,
-        objects[2].transform.position.y,
+        DFposition.transform.position.x,
+        DFposition.transform.position.y,
         -3f
       );
+      DFposition.SetActive(false);
+
     }
 
     // Update is called once per frame

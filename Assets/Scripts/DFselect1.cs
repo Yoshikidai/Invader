@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DFselect1 : MonoBehaviour
 {
-  GameObject[] objects;
+  GameObject DFposition;
   public GameObject panel;
   GameObject[] otherDFs;
   float elapsedtime = 0;
@@ -25,13 +25,15 @@ public class DFselect1 : MonoBehaviour
     void Start()
     {
       otherDFs = GameObject.FindGameObjectsWithTag("playerDF1");
-      objects = GameObject.FindGameObjectsWithTag("DFposition");
+      DFposition = GameObject.FindWithTag("DFposition1");
       transform.position = new Vector3
       (
-        objects[0].transform.position.x,
-        objects[0].transform.position.y,
+        DFposition.transform.position.x,
+        DFposition.transform.position.y,
         -3f
       );
+      DFposition.SetActive(false);
+
     }
 
     // Update is called once per frame

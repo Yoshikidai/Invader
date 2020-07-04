@@ -48,6 +48,13 @@ TagManager:
   - unablePanel
   - playerBox4
   - enemyBox4
+  - enemyOF4
+  - DFposition1
+  - DFposition2
+  - DFposition3
+  - DFposition4
+  - DFposition5
+  - DFposition6
   layers:
   - Default
   - TransparentFX
