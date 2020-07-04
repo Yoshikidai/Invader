@@ -46,6 +46,8 @@ TagManager:
   - button6
   - panel
   - unablePanel
+  - playerBox4
+  - enemyBox4
   layers:
   - Default
   - TransparentFX

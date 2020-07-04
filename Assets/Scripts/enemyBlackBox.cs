@@ -7,10 +7,9 @@ public class enemyBlackBox : MonoBehaviour
   private GameControllerScript gameController;
   private enemyRedBox enemyRedBox;
   private enemyWhiteBox enemyWhiteBox;
+  private enemyBlueBox enemyBlueBox;
   public GameObject particleObjectChangePosition;
   public GameObject enemyOF2;
-  public int enemyOF2Attack;
-  public int enemyOF2Interval;
   public int enemyOF2SpawnTime;
   public string enemyOF2Element;
   public GameObject particleObject2;
@@ -18,15 +17,39 @@ public class enemyBlackBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      gameController = GameObject
-          .FindWithTag("GameController")
-          .GetComponent<GameControllerScript>();
-      enemyRedBox = GameObject
-                  .FindWithTag("enemyBox1")
-                  .GetComponent<enemyRedBox>();
-      enemyWhiteBox = GameObject
-                  .FindWithTag("enemyBox3")
-                  .GetComponent<enemyWhiteBox>();
+      gameController = GameObject.FindWithTag("GameController").GetComponent<GameControllerScript>();
+
+      if(gameController.enemyBoxNumber == 1)
+      {
+        enemyWhiteBox = GameObject
+                    .FindWithTag("enemyBox3")
+                    .GetComponent<enemyWhiteBox>();
+        enemyBlueBox = GameObject
+                    .FindWithTag("enemyBox4")
+                    .GetComponent<enemyBlueBox>();
+
+      }
+      else if(gameController.enemyBoxNumber == 3)
+      {
+        enemyRedBox = GameObject
+                    .FindWithTag("enemyBox1")
+                    .GetComponent<enemyRedBox>();
+        enemyBlueBox = GameObject
+                    .FindWithTag("enemyBox4")
+                    .GetComponent<enemyBlueBox>();
+
+      }
+      else if(gameController.enemyBoxNumber == 4)
+      {
+        enemyRedBox = GameObject
+                    .FindWithTag("enemyBox1")
+                    .GetComponent<enemyRedBox>();
+        enemyWhiteBox = GameObject
+                    .FindWithTag("enemyBox3")
+                    .GetComponent<enemyWhiteBox>();
+
+      }
+
       StartCoroutine("ChangePosition");
       StartCoroutine("SpawnEnemyOF2");
 
@@ -44,7 +67,7 @@ public class enemyBlackBox : MonoBehaviour
 
     IEnumerator ChangePosition()
     {
-      yield return new WaitForSeconds(6f);
+      yield return new WaitForSeconds(4f);
       int X = 0;
 
       while(!gameController.isVictory)
@@ -56,27 +79,86 @@ public class enemyBlackBox : MonoBehaviour
           X++;
         }
 
-        if(enemyRedBox.transform.position.x == X)
+        if(gameController.enemyBoxNumber == 1)
         {
-          enemyRedBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
 
-          Instantiate(
-              particleObjectChangePosition,
-              new Vector3(transform.position.x, transform.position.y, 3f),
-              particleObjectChangePosition.transform.rotation
-          ); //パーティクル用ゲームオブジェクト生成
+          if(enemyWhiteBox.transform.position.x == X)
+          {
+            enemyWhiteBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
+
+            Instantiate(
+                particleObjectChangePosition,
+                new Vector3(transform.position.x, transform.position.y, 3f),
+                particleObjectChangePosition.transform.rotation
+            ); //パーティクル用ゲームオブジェクト生成
+
+          }
+
+          if(enemyBlueBox.transform.position.x == X)
+          {
+            enemyBlueBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
+
+            Instantiate(
+                particleObjectChangePosition,
+                new Vector3(transform.position.x, transform.position.y, 3f),
+                particleObjectChangePosition.transform.rotation
+            ); //パーティクル用ゲームオブジェクト生成
+
+          }
 
         }
-
-        if(enemyWhiteBox.transform.position.x == X)
+        else if(gameController.enemyBoxNumber == 3)
         {
-          enemyWhiteBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
+          if(enemyRedBox.transform.position.x == X)
+          {
+            enemyRedBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
 
-          Instantiate(
-              particleObjectChangePosition,
-              new Vector3(transform.position.x, transform.position.y, 3f),
-              particleObjectChangePosition.transform.rotation
-          ); //パーティクル用ゲームオブジェクト生成
+            Instantiate(
+                particleObjectChangePosition,
+                new Vector3(transform.position.x, transform.position.y, 3f),
+                particleObjectChangePosition.transform.rotation
+            ); //パーティクル用ゲームオブジェクト生成
+
+          }
+
+          if(enemyBlueBox.transform.position.x == X)
+          {
+            enemyBlueBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
+
+            Instantiate(
+                particleObjectChangePosition,
+                new Vector3(transform.position.x, transform.position.y, 3f),
+                particleObjectChangePosition.transform.rotation
+            ); //パーティクル用ゲームオブジェクト生成
+
+          }
+
+        }
+        else if(gameController.enemyBoxNumber == 4)
+        {
+          if(enemyRedBox.transform.position.x == X)
+          {
+            enemyRedBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
+
+            Instantiate(
+                particleObjectChangePosition,
+                new Vector3(transform.position.x, transform.position.y, 3f),
+                particleObjectChangePosition.transform.rotation
+            ); //パーティクル用ゲームオブジェクト生成
+
+          }
+
+          if(enemyWhiteBox.transform.position.x == X)
+          {
+            enemyWhiteBox.transform.position = new Vector3(transform.position.x, 3.5f, 1f);
+
+            Instantiate(
+                particleObjectChangePosition,
+                new Vector3(transform.position.x, transform.position.y, 3f),
+                particleObjectChangePosition.transform.rotation
+            ); //パーティクル用ゲームオブジェクト生成
+
+          }
 
         }
 
@@ -89,7 +171,7 @@ public class enemyBlackBox : MonoBehaviour
         ); //パーティクル用ゲームオブジェクト生成
 
 
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(8f);
       }
 
     }
@@ -112,6 +194,5 @@ public class enemyBlackBox : MonoBehaviour
         }
 
     }
-
 
 }

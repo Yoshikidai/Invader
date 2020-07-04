@@ -98,8 +98,6 @@ MonoBehaviour:
     type: 3}
   enemyOF3: {fileID: 5553188294230739065, guid: 7e5b62032cc984fbeb58b28080f7d4e0,
     type: 3}
-  enemyOF3Attack: 3
-  enemyOF3Interval: 20
   enemyOF3SpawnTime: 3
   enemyOF3Element: white
   particleObject2: {fileID: 7598464978954858523, guid: 124a8eb7b69d8466f8f5b14dfe4a7c63,

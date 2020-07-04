@@ -27,6 +27,7 @@ public class GameControllerScript : MonoBehaviour
   public GameObject playerOFbox1;
   public GameObject playerOFbox2;
   public GameObject playerOFbox3;
+  public GameObject playerOFbox4;
 
   public GameObject playerDF1;
   public int playerDF1Attack;
@@ -74,6 +75,7 @@ public class GameControllerScript : MonoBehaviour
   public GameObject enemyOFbox1;
   public GameObject enemyOFbox2;
   public GameObject enemyOFbox3;
+  public GameObject enemyOFbox4;
 
   public GameObject enemyDF1;
   public int enemyDF1Attack;
@@ -122,41 +124,169 @@ public class GameControllerScript : MonoBehaviour
   GameObject[] DF5;
   GameObject[] DF6;
 
+  public int playerBoxNumber;
+  public int enemyBoxNumber;
 
   // Start is called before the first frame update
   void Start()
   {
-    Instantiate(
-        playerOFbox1,
-        new Vector3(-2f,transform.position.y,1f),
-        transform.rotation
-    );
-    Instantiate(
-        playerOFbox2,
-        new Vector3(0f,transform.position.y,1f),
-        transform.rotation
-    );
-    Instantiate(
-        playerOFbox3,
-        new Vector3(2f,transform.position.y,1f),
-        transform.rotation
-    );
+    playerBoxNumber = Random.Range(1, 5);
+    enemyBoxNumber = Random.Range(1, 5);
 
-    Instantiate(
-        enemyOFbox1,
-        new Vector3(-2f,-transform.position.y,1f),
-        transform.rotation
-    );
-    Instantiate(
-        enemyOFbox2,
-        new Vector3(0f,-transform.position.y,1f),
-        transform.rotation
-    );
-    Instantiate(
-        enemyOFbox3,
-        new Vector3(2f,-transform.position.y,1f),
-        transform.rotation
-    );
+    if(playerBoxNumber == 1)
+    {
+      Instantiate(
+          playerOFbox2,
+          new Vector3(-2f,transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          playerOFbox3,
+          new Vector3(0f,transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          playerOFbox4,
+          new Vector3(2f,transform.position.y,1f),
+          transform.rotation
+      );
+
+    }
+    else if(playerBoxNumber == 2)
+    {
+      Instantiate(
+          playerOFbox1,
+          new Vector3(-2f,transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          playerOFbox3,
+          new Vector3(0f,transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          playerOFbox4,
+          new Vector3(2f,transform.position.y,1f),
+          transform.rotation
+      );
+
+    }
+    else if(playerBoxNumber == 3)
+    {
+      Instantiate(
+          playerOFbox1,
+          new Vector3(-2f,transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          playerOFbox2,
+          new Vector3(0f,transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          playerOFbox4,
+          new Vector3(2f,transform.position.y,1f),
+          transform.rotation
+      );
+
+    }
+    else if(playerBoxNumber == 4)
+    {
+      Instantiate(
+          playerOFbox1,
+          new Vector3(-2f,transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          playerOFbox2,
+          new Vector3(0f,transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          playerOFbox3,
+          new Vector3(2f,transform.position.y,1f),
+          transform.rotation
+      );
+
+    }
+
+    if(enemyBoxNumber == 1)
+    {
+      Instantiate(
+          enemyOFbox2,
+          new Vector3(-2f,-transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          enemyOFbox3,
+          new Vector3(0f,-transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          enemyOFbox4,
+          new Vector3(2f,-transform.position.y,1f),
+          transform.rotation
+      );
+
+    }
+    else if(enemyBoxNumber == 2)
+    {
+      Instantiate(
+          enemyOFbox1,
+          new Vector3(-2f,-transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          enemyOFbox3,
+          new Vector3(0f,-transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          enemyOFbox4,
+          new Vector3(2f,-transform.position.y,1f),
+          transform.rotation
+      );
+
+    }
+    else if(enemyBoxNumber == 3)
+    {
+      Instantiate(
+          enemyOFbox1,
+          new Vector3(-2f,-transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          enemyOFbox2,
+          new Vector3(0f,-transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          enemyOFbox4,
+          new Vector3(2f,-transform.position.y,1f),
+          transform.rotation
+      );
+
+    }
+    else if(enemyBoxNumber == 4)
+    {
+      Instantiate(
+          enemyOFbox1,
+          new Vector3(-2f,-transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          enemyOFbox2,
+          new Vector3(0f,-transform.position.y,1f),
+          transform.rotation
+      );
+      Instantiate(
+          enemyOFbox3,
+          new Vector3(2f,-transform.position.y,1f),
+          transform.rotation
+      );
+
+    }
+
 
     Instantiate(
         emptyOFbox1,
@@ -274,9 +404,6 @@ public class GameControllerScript : MonoBehaviour
     isVictory = true;
     ResultText.text = "You win!";
     ReplayText.text = "Tap screen to end this game";
-    StopCoroutine("SpawnEnemyOF1");
-    StopCoroutine("SpawnEnemyOF2");
-    StopCoroutine("SpawnEnemyOF3");
   }
 
   public void Lose()
@@ -284,128 +411,10 @@ public class GameControllerScript : MonoBehaviour
     isDefeat = true;
     ResultText.text = "You lose...";
     ReplayText.text = "Tap screen to end this game";
-    StopCoroutine("SpawnPlayerOF1");
-    StopCoroutine("SpawnPlayerOF2");
-    StopCoroutine("SpawnPlayerOF3");
   }
 
   public void Draw()
   {
     ResultText.text = "Draw Game";
   }
-
-  IEnumerator SpawnPlayerOF1()
-  {
-      while (true)
-      {
-          Instantiate(
-              playerOF1,
-              new Vector3(playerOFbox1.transform.position.x, transform.position.y, 0f),
-              transform.rotation
-          );
-          Instantiate(
-              particleObject1,
-              new Vector3(playerOFbox1.transform.position.x, transform.position.y, -3f),
-              particleObject1.transform.rotation
-          ); //パーティクル用ゲームオブジェクト生成
-          yield return new WaitForSeconds(playerOF1SpawnTime);
-      }
-
-  }
-
-
-  IEnumerator SpawnPlayerOF2()
-  {
-      while (true)
-      {
-          Instantiate(
-              playerOF2,
-              new Vector3(playerOFbox2.transform.position.x, transform.position.y, 0f),
-              transform.rotation
-          );
-          Instantiate(
-              particleObject1,
-              new Vector3(playerOFbox2.transform.position.x, transform.position.y, -3f),
-              particleObject1.transform.rotation
-          ); //パーティクル用ゲームオブジェクト生成
-          yield return new WaitForSeconds(playerOF2SpawnTime);
-      }
-
-  }
-
-  IEnumerator SpawnPlayerOF3()
-  {
-      while (true)
-      {
-          Instantiate(
-              playerOF3,
-              new Vector3(playerOFbox3.transform.position.x, transform.position.y, 0f),
-              transform.rotation
-          );
-          Instantiate(
-              particleObject1,
-              new Vector3(playerOFbox3.transform.position.x, transform.position.y, -3f),
-              particleObject1.transform.rotation
-          ); //パーティクル用ゲームオブジェクト生成
-          yield return new WaitForSeconds(playerOF3SpawnTime);
-      }
-
-  }
-
-  IEnumerator SpawnEnemyOF1()
-  {
-      while (true)
-      {
-          Instantiate(
-              enemyOF1,
-              new Vector3(enemyOFbox1.transform.position.x, -transform.position.y, 0f),
-              transform.rotation
-          );
-          Instantiate(
-              particleObject2,
-              new Vector3(enemyOFbox1.transform.position.x, -transform.position.y, -3f),
-              particleObject2.transform.rotation
-          ); //パーティクル用ゲームオブジェクト生成
-
-          yield return new WaitForSeconds(enemyOF1SpawnTime);
-      }
-  }
-
-  IEnumerator SpawnEnemyOF2()
-  {
-      while (true)
-      {
-          Instantiate(
-              enemyOF2,
-              new Vector3(enemyOFbox2.transform.position.x, -transform.position.y, 0f),
-              transform.rotation
-          );
-          Instantiate(
-              particleObject2,
-              new Vector3(enemyOFbox2.transform.position.x, -transform.position.y, -3f),
-              particleObject2.transform.rotation
-          ); //パーティクル用ゲームオブジェクト生成
-          yield return new WaitForSeconds(enemyOF2SpawnTime);
-      }
-
-  }
-  IEnumerator SpawnEnemyOF3()
-  {
-      while (true)
-      {
-          Instantiate(
-              enemyOF3,
-              new Vector3(enemyOFbox3.transform.position.x, -transform.position.y, 0f),
-              transform.rotation
-          );
-          Instantiate(
-              particleObject2,
-              new Vector3(enemyOFbox3.transform.position.x, -transform.position.y, -3f),
-              particleObject2.transform.rotation
-          ); //パーティクル用ゲームオブジェクト生成
-          yield return new WaitForSeconds(enemyOF3SpawnTime);
-      }
-
-  }
-
 }

@@ -5579,27 +5579,35 @@ MonoBehaviour:
     type: 3}
   playerOFbox3: {fileID: 8272163253857010739, guid: 28a8994d3d58b4184a06e887ba3cd712,
     type: 3}
-  playerDF1: {fileID: 0}
+  playerOFbox4: {fileID: 8272163253857010739, guid: 5e02a4819f3ad4ba0ad9b5182a794e39,
+    type: 3}
+  playerDF1: {fileID: 1841328421408898606, guid: de913e78231b4456396606cca864870a,
+    type: 3}
   playerDF1Attack: 30
   playerDF1Interval: 15
   playerDF1Element: white
-  playerDF2: {fileID: 0}
+  playerDF2: {fileID: 1841328421408898606, guid: de913e78231b4456396606cca864870a,
+    type: 3}
   playerDF2Attack: 30
   playerDF2Interval: 15
   playerDF2Element: white
-  playerDF3: {fileID: 0}
+  playerDF3: {fileID: 1841328421408898606, guid: de913e78231b4456396606cca864870a,
+    type: 3}
   playerDF3Attack: 20
   playerDF3Interval: 15
   playerDF3Element: blue
-  playerDF4: {fileID: 0}
+  playerDF4: {fileID: 3977333440293344446, guid: 23bcd1469625f44da94c8a041fab9e7a,
+    type: 3}
   playerDF4Attack: 30
   playerDF4Interval: 15
   playerDF4Element: red
-  playerDF5: {fileID: 0}
+  playerDF5: {fileID: 3977333440293344446, guid: 23bcd1469625f44da94c8a041fab9e7a,
+    type: 3}
   playerDF5Attack: 30
   playerDF5Interval: 15
   playerDF5Element: blue
-  playerDF6: {fileID: 0}
+  playerDF6: {fileID: 3977333440293344446, guid: 23bcd1469625f44da94c8a041fab9e7a,
+    type: 3}
   playerDF6Attack: 30
   playerDF6Interval: 15
   playerDF6Element: blue
@@ -5623,11 +5631,13 @@ MonoBehaviour:
   enemyOF3Element: white
   particleObject2: {fileID: 7598464978954858523, guid: 124a8eb7b69d8466f8f5b14dfe4a7c63,
     type: 3}
-  enemyOFbox1: {fileID: 6580345282743121634, guid: 241e4bd580b0445b4affcaa7a3495433,
+  enemyOFbox1: {fileID: 3861945973389011657, guid: 682bf212dcd9f4434998d721bcf9b0d2,
     type: 3}
-  enemyOFbox2: {fileID: 3861945973389011657, guid: 682bf212dcd9f4434998d721bcf9b0d2,
+  enemyOFbox2: {fileID: 6580345282743121634, guid: 241e4bd580b0445b4affcaa7a3495433,
     type: 3}
   enemyOFbox3: {fileID: 7556018070584833591, guid: edc51d7e1cf1d48eeb1cbb575aedfbc7,
+    type: 3}
+  enemyOFbox4: {fileID: 7556018070584833591, guid: b02700ccff97243b3847fedbfc98883f,
     type: 3}
   enemyDF1: {fileID: 918291593}
   enemyDF1Attack: 30
@@ -5677,6 +5687,8 @@ MonoBehaviour:
   ResultText: {fileID: 305681778}
   isVictory: 0
   isDefeat: 0
+  playerBoxNumber: 0
+  enemyBoxNumber: 0
 --- !u!4 &867853771
 Transform:
   m_ObjectHideFlags: 0

@@ -4,24 +4,24 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 //CameraのProjectionはOrthographicに。
 
-public class playerBlueBox : MonoBehaviour,IDragHandler
+public class playerBlackBox : MonoBehaviour,IDragHandler
 {
   private GameControllerScript gameController;
   private playerRedBox playerRedBox;
-  private playerBlackBox playerBlackBox;
+  private playerBlueBox playerBlueBox;
   private playerWhiteBox playerWhiteBox;
   public GameObject particleObjectChangePosition;
   public AudioClip changePositionSE;
-  public GameObject playerOF1;
-  public int playerOF1SpawnTime;
-  public string playerOF1Element;
+  public GameObject playerOF4;
+  public int playerOF4SpawnTime;
+  public string playerOF4Element;
   public GameObject particleObject1;
 
   public void OnDrag(PointerEventData data){
 		Vector3 TargetPos = Camera.main.ScreenToWorldPoint (data.position);
     if (TargetPos.x < -1.5f)
     {
-      if(gameController.playerBoxNumber == 4)
+      if(gameController.playerBoxNumber == 1)
       {
         if (playerRedBox.transform.position.x < -1.5f)
         {
@@ -57,7 +57,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       }
       else if(gameController.playerBoxNumber == 2)
       {
-        if (playerBlackBox.transform.position.x < -1.5f)
+        if (playerBlueBox.transform.position.x < -1.5f)
         {
 
           if(transform.position != new Vector3(-2f,-3.5f,1f))
@@ -70,7 +70,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
         else if (playerWhiteBox.transform.position.x < -1.5f)
         {
@@ -106,7 +106,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           playerRedBox.transform.position = transform.position;
         }
-        else if (playerBlackBox.transform.position.x < -1.5f)
+        else if (playerBlueBox.transform.position.x < -1.5f)
         {
 
           if(transform.position != new Vector3(-2f,-3.5f,1f))
@@ -119,7 +119,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
 
       }
@@ -141,7 +141,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     }
     else if (TargetPos.x < -0.5f)
     {
-      if(gameController.playerBoxNumber == 4)
+      if(gameController.playerBoxNumber == 1)
       {
         if ((playerRedBox.transform.position.x >= -1.5f)&&(playerRedBox.transform.position.x < -0.5f))
         {
@@ -177,7 +177,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       }
       else if(gameController.playerBoxNumber == 2)
       {
-        if ((playerBlackBox.transform.position.x >= -1.5f)&&(playerBlackBox.transform.position.x < -0.5f))
+        if ((playerBlueBox.transform.position.x >= -1.5f)&&(playerBlueBox.transform.position.x < -0.5f))
         {
 
           if(transform.position != new Vector3(-1f,-3.5f,1f))
@@ -190,7 +190,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
         else if ((playerWhiteBox.transform.position.x >= -1.5f)&&(playerWhiteBox.transform.position.x < -0.5f))
         {
@@ -226,7 +226,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           playerRedBox.transform.position = transform.position;
         }
-        else if ((playerBlackBox.transform.position.x >= -1.5f)&&(playerBlackBox.transform.position.x < -0.5f))
+        else if ((playerBlueBox.transform.position.x >= -1.5f)&&(playerBlueBox.transform.position.x < -0.5f))
         {
 
           if(transform.position != new Vector3(-1f,-3.5f,1f))
@@ -239,7 +239,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
 
       }
@@ -260,7 +260,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     }
     else if (TargetPos.x < 0.5f)
     {
-      if(gameController.playerBoxNumber == 4)
+      if(gameController.playerBoxNumber == 1)
       {
         if ((playerRedBox.transform.position.x >= -0.5f)&&(playerRedBox.transform.position.x < 0.5f))
         {
@@ -296,7 +296,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       }
       else if(gameController.playerBoxNumber == 2)
       {
-        if ((playerBlackBox.transform.position.x >= -0.5f)&&(playerBlackBox.transform.position.x < 0.5f))
+        if ((playerBlueBox.transform.position.x >= -0.5f)&&(playerBlueBox.transform.position.x < 0.5f))
         {
 
           if(transform.position != new Vector3(0f,-3.5f,1f))
@@ -309,7 +309,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
         else if ((playerWhiteBox.transform.position.x >= -0.5f)&&(playerWhiteBox.transform.position.x < 0.5f))
         {
@@ -345,7 +345,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           playerRedBox.transform.position = transform.position;
         }
-        else if ((playerBlackBox.transform.position.x >= -0.5f)&&(playerBlackBox.transform.position.x < 0.5f))
+        else if ((playerBlueBox.transform.position.x >= -0.5f)&&(playerBlueBox.transform.position.x < 0.5f))
         {
 
           if(transform.position != new Vector3(0f,-3.5f,1f))
@@ -358,7 +358,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
 
       }
@@ -380,7 +380,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     }
     else if (TargetPos.x < 1.5f)
     {
-      if(gameController.playerBoxNumber == 4)
+      if(gameController.playerBoxNumber == 1)
       {
         if ((playerRedBox.transform.position.x >= 0.5f)&&(playerRedBox.transform.position.x < 1.5f))
         {
@@ -416,7 +416,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       }
       else if(gameController.playerBoxNumber == 2)
       {
-        if ((playerBlackBox.transform.position.x >= 0.5f)&&(playerBlackBox.transform.position.x < 1.5f))
+        if ((playerBlueBox.transform.position.x >= 0.5f)&&(playerBlueBox.transform.position.x < 1.5f))
         {
 
           if(transform.position != new Vector3(1f,-3.5f,1f))
@@ -429,7 +429,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
         else if ((playerWhiteBox.transform.position.x >= 0.5f)&&(playerWhiteBox.transform.position.x < 1.5f))
         {
@@ -465,7 +465,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           playerRedBox.transform.position = transform.position;
         }
-        else if ((playerBlackBox.transform.position.x >= 0.5f)&&(playerBlackBox.transform.position.x < 1.5f))
+        else if ((playerBlueBox.transform.position.x >= 0.5f)&&(playerBlueBox.transform.position.x < 1.5f))
         {
 
           if(transform.position != new Vector3(1f,-3.5f,1f))
@@ -478,7 +478,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
 
       }
@@ -500,7 +500,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     }
     else
     {
-      if(gameController.playerBoxNumber == 4)
+      if(gameController.playerBoxNumber == 1)
       {
         if (playerRedBox.transform.position.x >= 1.5f)
         {
@@ -536,7 +536,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       }
       else if(gameController.playerBoxNumber == 2)
       {
-        if (playerBlackBox.transform.position.x >= 1.5f)
+        if (playerBlueBox.transform.position.x >= 1.5f)
         {
 
           if(transform.position != new Vector3(2f,-3.5f,1f))
@@ -549,7 +549,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
         else if (playerWhiteBox.transform.position.x >= 1.5f)
         {
@@ -585,7 +585,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           playerRedBox.transform.position = transform.position;
         }
-        else if (playerBlackBox.transform.position.x >= 1.5f)
+        else if (playerBlueBox.transform.position.x >= 1.5f)
         {
 
           if(transform.position != new Vector3(2f,-3.5f,1f))
@@ -598,7 +598,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
 
           }
 
-          playerBlackBox.transform.position = transform.position;
+          playerBlueBox.transform.position = transform.position;
         }
 
       }
@@ -619,12 +619,12 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     }
 	}
 
-  IEnumerator SpawnplayerOF1()
+  IEnumerator SpawnplayerOF4()
   {
       while (true)
       {
           Instantiate(
-              playerOF1,
+              playerOF4,
               new Vector3(transform.position.x, transform.position.y, 0f),
               transform.rotation
           );
@@ -633,7 +633,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
               new Vector3(transform.position.x, transform.position.y, -3f),
               particleObject1.transform.rotation
           ); //パーティクル用ゲームオブジェクト生成
-          yield return new WaitForSeconds(playerOF1SpawnTime);
+          yield return new WaitForSeconds(playerOF4SpawnTime);
       }
 
   }
@@ -642,10 +642,10 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     // Start is called before the first frame update
     void Start()
     {
-      StartCoroutine("SpawnplayerOF1");
+      StartCoroutine("SpawnplayerOF4");
       gameController = GameObject.FindWithTag("GameController").GetComponent<GameControllerScript>();
 
-      if(gameController.playerBoxNumber == 4)
+      if(gameController.playerBoxNumber == 1)
       {
         playerRedBox = GameObject
                     .FindWithTag("playerBox2")
@@ -657,9 +657,9 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
       }
       else if(gameController.playerBoxNumber == 2)
       {
-                    playerBlackBox = GameObject
-                                .FindWithTag("playerBox4")
-                                .GetComponent<playerBlackBox>();
+                    playerBlueBox = GameObject
+                                .FindWithTag("playerBox1")
+                                .GetComponent<playerBlueBox>();
                                 playerWhiteBox = GameObject
                                             .FindWithTag("playerBox3")
                                             .GetComponent<playerWhiteBox>();
@@ -670,9 +670,9 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
         playerRedBox = GameObject
                     .FindWithTag("playerBox2")
                     .GetComponent<playerRedBox>();
-                    playerBlackBox = GameObject
-                                .FindWithTag("playerBox4")
-                                .GetComponent<playerBlackBox>();
+                    playerBlueBox = GameObject
+                                .FindWithTag("playerBox1")
+                                .GetComponent<playerBlueBox>();
 
       }
 
@@ -683,7 +683,7 @@ public class playerBlueBox : MonoBehaviour,IDragHandler
     {
       if(gameController.isDefeat)
       {
-        StopCoroutine("SpawnplayerOF1");
+        StopCoroutine("SpawnplayerOF4");
       }
 
     }
