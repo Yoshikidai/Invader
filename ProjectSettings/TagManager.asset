@@ -55,6 +55,7 @@ TagManager:
   - DFposition4
   - DFposition5
   - DFposition6
+  - SceneController
   layers:
   - Default
   - TransparentFX

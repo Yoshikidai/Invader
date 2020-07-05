@@ -20,8 +20,7 @@ public class whiteDFbutton : MonoBehaviour
         whiteDF,
         new Vector3(button.transform.position.x, button.transform.position.y, 0f),
         transform.rotation
-    ); //パーティクル用ゲームオブジェクト生成
-
+    ); 
     clicked = true;
   }
 

@@ -32,7 +32,7 @@ public class DFselect2 : MonoBehaviour
         DFposition.transform.position.y,
         -3f
       );
-      DFposition.SetActive(false);
+      Destroy(DFposition);
 
     }
 
