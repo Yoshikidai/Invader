@@ -5207,7 +5207,6 @@ GameObject:
   m_Component:
   - component: {fileID: 867853771}
   - component: {fileID: 867853770}
-  - component: {fileID: 867853772}
   - component: {fileID: 867853779}
   - component: {fileID: 867853773}
   - component: {fileID: 867853778}
@@ -5215,6 +5214,7 @@ GameObject:
   - component: {fileID: 867853776}
   - component: {fileID: 867853775}
   - component: {fileID: 867853774}
+  - component: {fileID: 867853772}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -5395,15 +5395,15 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 185502e57847d42e2a877cf0bfa21b8f, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.75
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 2
+  DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -5440,7 +5440,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.5
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5455,7 +5455,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.22222222
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5470,7 +5470,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -10431,6 +10431,7 @@ GameObject:
   - component: {fileID: 1402142765}
   - component: {fileID: 1402142767}
   - component: {fileID: 1402142768}
+  - component: {fileID: 1402142769}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10579,6 +10580,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1402142769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402142763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d2a9bbf9e0a44e5b76bd716b1bb12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1729615429
 GameObject:
   m_ObjectHideFlags: 0

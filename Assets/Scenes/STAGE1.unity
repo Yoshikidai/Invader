@@ -356,7 +356,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 169272270}
+      - m_Target: {fileID: 169272271}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -1361,6 +1361,7 @@ GameObject:
   - component: {fileID: 1259897172}
   - component: {fileID: 1259897171}
   - component: {fileID: 1259897174}
+  - component: {fileID: 1259897175}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1493,6 +1494,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1259897175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259897170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d2a9bbf9e0a44e5b76bd716b1bb12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1296698376
 GameObject:
   m_ObjectHideFlags: 0

@@ -116,7 +116,7 @@ MonoBehaviour:
   changePositionSE: {fileID: 8300000, guid: 4cb7d47a81bbf4cebbabd876520458f4, type: 3}
   playerOF3: {fileID: 6466883506734369335, guid: b835016a7a1834e21b8ae4034320ca26,
     type: 3}
-  playerOF3SpawnTime: 3
+  playerOF3SpawnTime: 5
   playerOF3Element: white
   particleObject1: {fileID: 7598464978954858523, guid: 611c7cb8b5da24ec18fb7469cc143c7f,
     type: 3}

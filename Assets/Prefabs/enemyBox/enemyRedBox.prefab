@@ -98,9 +98,7 @@ MonoBehaviour:
     type: 3}
   enemyOF1: {fileID: 3142577979109561341, guid: 24c34e3ec33474376aef9b8046114c1d,
     type: 3}
-  enemyOF1Attack: 3
-  enemyOF1Interval: 20
-  enemyOF1SpawnTime: 3
+  enemyOF1SpawnTime: 5
   enemyOF1Element: red
   particleObject2: {fileID: 7598464978954858523, guid: 124a8eb7b69d8466f8f5b14dfe4a7c63,
     type: 3}
