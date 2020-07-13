@@ -113,6 +113,10 @@ public class GameControllerScript : MonoBehaviour
   public GameObject emptyOFbox9;
   public GameObject emptyOFbox10;
 
+  public GameObject FogParticle1;
+  public GameObject FogParticle2;
+  public GameObject AudioObject;
+
   public Text ReplayText;
   public Text ResultText;
   public bool isVictory;
@@ -127,9 +131,13 @@ public class GameControllerScript : MonoBehaviour
   public int playerBoxNumber;
   public int enemyBoxNumber;
 
+  private string stageName;
+
   // Start is called before the first frame update
   void Start()
   {
+    stageName = SceneController.getStage();
+
     playerBoxNumber = Random.Range(1, 5);
     enemyBoxNumber = Random.Range(1, 5);
 
@@ -394,7 +402,46 @@ public class GameControllerScript : MonoBehaviour
         Destroy(DF6[i].gameObject);
       }
 
-      SceneManager.LoadScene("STAGE1");
+      Instantiate(
+          FogParticle1,
+          new Vector3(4f, -4f, -5f),
+          transform.rotation
+      );
+      Instantiate(
+          FogParticle2,
+          new Vector3(-4f, -4f, -5f),
+          transform.rotation
+      );
+      Instantiate(
+          AudioObject,
+          new Vector3(0f, 0f, -5f),
+          transform.rotation
+      );
+
+      if(stageName == "1_1" || stageName == "1_2" || stageName == "1_3" || stageName == "1_4" || stageName == "1_5"
+      || stageName == "1_boss")
+      {
+        SceneManager.LoadScene("STAGE1");
+      }
+
+      if(stageName == "2_1" || stageName == "2_2" || stageName == "2_3" || stageName == "2_4" || stageName == "2_5"
+      || stageName == "2_boss")
+      {
+        SceneManager.LoadScene("STAGE2");
+      }
+
+      if(stageName == "3_1" || stageName == "3_2" || stageName == "3_3" || stageName == "3_4" || stageName == "3_5"
+      || stageName == "3_boss")
+      {
+        SceneManager.LoadScene("STAGE3");
+      }
+
+      if(stageName == "4_1" || stageName == "4_2" || stageName == "4_3" || stageName == "4_4" || stageName == "4_5"
+      || stageName == "4_boss")
+      {
+        SceneManager.LoadScene("STAGE4");
+      }
+
     }
 
   }

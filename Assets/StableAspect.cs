@@ -6,8 +6,8 @@ public class StableAspect : MonoBehaviour
 {
   private Camera cam;
   // 画像のサイズ
-  private float width = 540f;
-  private float height = 960f;
+  private float width = 810f;
+  private float height = 1440f;
   // 画像のPixel Per Unit
   private float pixelPerUnit = 100f;
 
