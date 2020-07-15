@@ -57,6 +57,7 @@ TagManager:
   - DFposition6
   - SceneController
   - background
+  - emptyBox
   layers:
   - Default
   - TransparentFX

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3806497363739599494}
   - component: {fileID: 7144212899692313271}
   - component: {fileID: 1651606916477657568}
-  - component: {fileID: 6238088403599731504}
   - component: {fileID: 2405777988481648870}
   - component: {fileID: 5450602132128536915}
+  - component: {fileID: 4610271408497436310}
   m_Layer: 0
   m_Name: DFposition 5
   m_TagString: DFposition5
@@ -102,18 +102,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.35
---- !u!114 &6238088403599731504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2163316737682142550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b15813b0d47b4ecfb437c6e355d697a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2405777988481648870
 Rigidbody2D:
   serializedVersion: 4
@@ -151,6 +139,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &4610271408497436310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2163316737682142550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b8f805623ef4324beb316eeb10d8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4755721846072996668
 PrefabInstance:
   m_ObjectHideFlags: 0

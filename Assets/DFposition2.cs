@@ -4,10 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 //CameraのProjectionはOrthographicに。
 
-public class DFposition : MonoBehaviour,IDragHandler
+public class DFposition2 : MonoBehaviour,IDragHandler
 {
 	GameObject DFposition1;
-	GameObject DFposition2;
 	GameObject DFposition3;
 	GameObject DFposition4;
 	GameObject DFposition5;
@@ -17,24 +16,12 @@ public class DFposition : MonoBehaviour,IDragHandler
 		Vector3 TargetPos = Camera.main.ScreenToWorldPoint (data.position);
 		TargetPos.z = 0f;
 
-		if
+		transform.position = new Vector3
 		(
-			(Vector3.Distance(transform.position, DFposition1.transform.position) > 0.3f)
-			&& (Vector3.Distance(transform.position, DFposition2.transform.position) > 0.3f)
-			&& (Vector3.Distance(transform.position, DFposition3.transform.position) > 0.3f)
-			&& (Vector3.Distance(transform.position, DFposition4.transform.position) > 0.3f)
-			&& (Vector3.Distance(transform.position, DFposition5.transform.position) > 0.3f)
-			&& (Vector3.Distance(transform.position, DFposition6.transform.position) > 0.3f)
-		)
-		{
-			transform.position = new Vector3
-			(
-				Mathf.Clamp(TargetPos.x, -2f, 2f),
-				Mathf.Clamp(TargetPos.y, -2.5f, -0.5f),
-				3f
-			);
-
-		}
+			Mathf.Clamp(TargetPos.x, -2f, 2f),
+			Mathf.Clamp(TargetPos.y, -2.5f, -0.5f),
+			3f
+		);
 
 	}
 
@@ -42,7 +29,6 @@ public class DFposition : MonoBehaviour,IDragHandler
     {
       DontDestroyOnLoad(this);
 			DFposition1 = GameObject.FindWithTag("DFposition1");
-			DFposition2 = GameObject.FindWithTag("DFposition2");
 			DFposition3 = GameObject.FindWithTag("DFposition3");
 			DFposition4 = GameObject.FindWithTag("DFposition4");
 			DFposition5 = GameObject.FindWithTag("DFposition5");
@@ -57,6 +43,27 @@ public class DFposition : MonoBehaviour,IDragHandler
 	      Mathf.Clamp(transform.position.y, -2.5f, -0.5f),
 	      3f
 	    );
+
+      if(transform.position == DFposition1.transform.position)
+      {
+        transform.position = new Vector3(1f,-1f,3f);
+      }
+      if(transform.position == DFposition3.transform.position)
+      {
+        transform.position = new Vector3(1f,-1f,3f);
+      }
+      if(transform.position == DFposition4.transform.position)
+      {
+        transform.position = new Vector3(1f,-1f,3f);
+      }
+      if(transform.position == DFposition5.transform.position)
+      {
+        transform.position = new Vector3(1f,-1f,3f);
+      }
+      if(transform.position == DFposition6.transform.position)
+      {
+        transform.position = new Vector3(1f,-1f,3f);
+      }
 
 		}
 

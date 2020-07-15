@@ -6,69 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
-  public GameObject playerOF1;
-  public int playerOF1Attack;
-  public int playerOF1Interval;
-  public int playerOF1SpawnTime;
-  public string playerOF1Element;
-  public GameObject playerOF2;
-  public int playerOF2Attack;
-  public int playerOF2Interval;
-  public int playerOF2SpawnTime;
-  public string playerOF2Element;
-  public GameObject playerOF3;
-  public int playerOF3Attack;
-  public int playerOF3Interval;
-  public int playerOF3SpawnTime;
-  public string playerOF3Element;
-
   public GameObject particleObject1;
 
   public GameObject playerOFbox1;
   public GameObject playerOFbox2;
   public GameObject playerOFbox3;
   public GameObject playerOFbox4;
-
-  public GameObject playerDF1;
-  public int playerDF1Attack;
-  public int playerDF1Interval;
-  public string playerDF1Element;
-  public GameObject playerDF2;
-  public int playerDF2Attack;
-  public int playerDF2Interval;
-  public string playerDF2Element;
-  public GameObject playerDF3;
-  public int playerDF3Attack;
-  public int playerDF3Interval;
-  public string playerDF3Element;
-  public GameObject playerDF4;
-  public int playerDF4Attack;
-  public int playerDF4Interval;
-  public string playerDF4Element;
-  public GameObject playerDF5;
-  public int playerDF5Attack;
-  public int playerDF5Interval;
-  public string playerDF5Element;
-  public GameObject playerDF6;
-  public int playerDF6Attack;
-  public int playerDF6Interval;
-  public string playerDF6Element;
-
-  public GameObject enemyOF1;
-  public int enemyOF1Attack;
-  public int enemyOF1Interval;
-  public int enemyOF1SpawnTime;
-  public string enemyOF1Element;
-  public GameObject enemyOF2;
-  public int enemyOF2Attack;
-  public int enemyOF2Interval;
-  public int enemyOF2SpawnTime;
-  public string enemyOF2Element;
-  public GameObject enemyOF3;
-  public int enemyOF3Attack;
-  public int enemyOF3Interval;
-  public int enemyOF3SpawnTime;
-  public string enemyOF3Element;
 
   public GameObject particleObject2;
 
@@ -77,41 +20,7 @@ public class GameControllerScript : MonoBehaviour
   public GameObject enemyOFbox3;
   public GameObject enemyOFbox4;
 
-  public GameObject enemyDF1;
-  public int enemyDF1Attack;
-  public int enemyDF1Interval;
-  public string enemyDF1Element;
-  public GameObject enemyDF2;
-  public int enemyDF2Attack;
-  public int enemyDF2Interval;
-  public string enemyDF2Element;
-  public GameObject enemyDF3;
-  public int enemyDF3Attack;
-  public int enemyDF3Interval;
-  public string enemyDF3Element;
-  public GameObject enemyDF4;
-  public int enemyDF4Attack;
-  public int enemyDF4Interval;
-  public string enemyDF4Element;
-  public GameObject enemyDF5;
-  public int enemyDF5Attack;
-  public int enemyDF5Interval;
-  public string enemyDF5Element;
-  public GameObject enemyDF6;
-  public int enemyDF6Attack;
-  public int enemyDF6Interval;
-  public string enemyDF6Element;
-
-  public GameObject emptyOFbox1;
-  public GameObject emptyOFbox2;
-  public GameObject emptyOFbox3;
-  public GameObject emptyOFbox4;
-  public GameObject emptyOFbox5;
-  public GameObject emptyOFbox6;
-  public GameObject emptyOFbox7;
-  public GameObject emptyOFbox8;
-  public GameObject emptyOFbox9;
-  public GameObject emptyOFbox10;
+  GameObject[] emptyOFbox;
 
   public GameObject FogParticle1;
   public GameObject FogParticle2;
@@ -295,62 +204,12 @@ public class GameControllerScript : MonoBehaviour
 
     }
 
-
-    Instantiate(
-        emptyOFbox1,
-        new Vector3(-2f,transform.position.y,2f),
-        transform.rotation
-    );
-    Instantiate(
-        emptyOFbox2,
-        new Vector3(-1f,transform.position.y,2f),
-        transform.rotation
-    );
-    Instantiate(
-        emptyOFbox3,
-        new Vector3(0f,transform.position.y,2f),
-        transform.rotation
-    );
-    Instantiate(
-        emptyOFbox4,
-        new Vector3(1f,transform.position.y,2f),
-        transform.rotation
-    );
-    Instantiate(
-        emptyOFbox5,
-        new Vector3(2f,transform.position.y,2f),
-        transform.rotation
-    );
-    Instantiate(
-        emptyOFbox6,
-        new Vector3(-2f,-transform.position.y,2f),
-        transform.rotation
-    );
-    Instantiate(
-        emptyOFbox7,
-        new Vector3(-1f,-transform.position.y,2f),
-        transform.rotation
-    );
-    Instantiate(
-        emptyOFbox8,
-        new Vector3(0f,-transform.position.y,2f),
-        transform.rotation
-    );
-    Instantiate(
-        emptyOFbox9,
-        new Vector3(1f,-transform.position.y,2f),
-        transform.rotation
-    );
-    Instantiate(
-        emptyOFbox10,
-        new Vector3(2f,-transform.position.y,2f),
-        transform.rotation
-    );
-
     ResultText.text = "";
     ReplayText.text = "";
     isVictory = false;
     isDefeat = false;
+
+    emptyOFbox = GameObject.FindGameObjectsWithTag("emptyBox");
 
     DF1 = GameObject.FindGameObjectsWithTag("playerDF1");
     DF2 = GameObject.FindGameObjectsWithTag("playerDF2");
@@ -376,6 +235,12 @@ public class GameControllerScript : MonoBehaviour
 
     if (Input.GetMouseButtonDown(0))
     {
+
+      for(int i = 0; i < emptyOFbox.Length; ++i)
+      {
+        Destroy(emptyOFbox[i].gameObject);
+      }
+
       // 指定したオブジェクトを削除
       for(int i = 0; i < DF1.Length; ++i)
       {

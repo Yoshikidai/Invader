@@ -79,32 +79,32 @@ public class EditPosition : MonoBehaviour
 
       Instantiate(
           DFposition1,
-          new Vector3(-0.5f,-0.5f,3f),
+          new Vector3(-0.5f,-0.5f,0f),
           transform.rotation
       );
       Instantiate(
           DFposition2,
-          new Vector3(0.5f,-0.5f,3f),
+          new Vector3(0.5f,-0.5f,0f),
           transform.rotation
       );
       Instantiate(
           DFposition3,
-          new Vector3(0f,-1.5f,3f),
+          new Vector3(0f,-1.5f,0f),
           transform.rotation
       );
       Instantiate(
           DFposition4,
-          new Vector3(-1.5f,-2.5f,3f),
+          new Vector3(-1.5f,-2.5f,0f),
           transform.rotation
       );
       Instantiate(
           DFposition5,
-          new Vector3(0f,-2.5f,3f),
+          new Vector3(0f,-2.5f,0f),
           transform.rotation
       );
       Instantiate(
           DFposition6,
-          new Vector3(1.5f,-2.5f,3f),
+          new Vector3(1.5f,-2.5f,0f),
           transform.rotation
       );
 
