@@ -42,6 +42,9 @@ public class GameControllerScript : MonoBehaviour
 
   private string stageName;
 
+  public GameObject unablePanel;
+
+
   // Start is called before the first frame update
   void Start()
   {
@@ -314,6 +317,7 @@ public class GameControllerScript : MonoBehaviour
   public void Win()
   {
     isVictory = true;
+    unablePanel.SetActive(true);
     ResultText.text = "You win!";
     ReplayText.text = "Tap screen to end this game";
   }
@@ -321,6 +325,7 @@ public class GameControllerScript : MonoBehaviour
   public void Lose()
   {
     isDefeat = true;
+    unablePanel.SetActive(true);
     ResultText.text = "You lose...";
     ReplayText.text = "Tap screen to end this game";
   }
