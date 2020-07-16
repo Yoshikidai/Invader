@@ -13,6 +13,12 @@ public class ExitGame : MonoBehaviour
   GameObject[] DF5;
   GameObject[] DF6;
 
+  GameObject enemyOFbox1;
+  GameObject enemyOFbox2;
+  GameObject enemyOFbox3;
+  GameObject enemyOFbox4;
+  private int enemyBoxNumber;
+
   public GameObject FogParticle1;
   public GameObject FogParticle2;
   public GameObject AudioObject;
@@ -31,6 +37,53 @@ public class ExitGame : MonoBehaviour
     DF4 = GameObject.FindGameObjectsWithTag("playerDF4");
     DF5 = GameObject.FindGameObjectsWithTag("playerDF5");
     DF6 = GameObject.FindGameObjectsWithTag("playerDF6");
+
+    enemyBoxNumber = EditPosition.getEnemyBoxNumber();
+
+    if(enemyBoxNumber == 1)
+    {
+      enemyOFbox2 = GameObject.FindWithTag("enemyBox2");
+      enemyOFbox3 = GameObject.FindWithTag("enemyBox3");
+      enemyOFbox4 = GameObject.FindWithTag("enemyBox4");
+
+      Destroy(enemyOFbox2);
+      Destroy(enemyOFbox3);
+      Destroy(enemyOFbox4);
+
+    }
+    else if(enemyBoxNumber == 2)
+    {
+      enemyOFbox1 = GameObject.FindWithTag("enemyBox1");
+      enemyOFbox3 = GameObject.FindWithTag("enemyBox3");
+      enemyOFbox4 = GameObject.FindWithTag("enemyBox4");
+
+      Destroy(enemyOFbox1);
+      Destroy(enemyOFbox3);
+      Destroy(enemyOFbox4);
+
+    }
+    else if(enemyBoxNumber == 3)
+    {
+      enemyOFbox1 = GameObject.FindWithTag("enemyBox1");
+      enemyOFbox2 = GameObject.FindWithTag("enemyBox2");
+      enemyOFbox4 = GameObject.FindWithTag("enemyBox4");
+
+      Destroy(enemyOFbox1);
+      Destroy(enemyOFbox2);
+      Destroy(enemyOFbox4);
+
+    }
+    else if(enemyBoxNumber == 4)
+    {
+      enemyOFbox1 = GameObject.FindWithTag("enemyBox1");
+      enemyOFbox2 = GameObject.FindWithTag("enemyBox2");
+      enemyOFbox3 = GameObject.FindWithTag("enemyBox3");
+
+      Destroy(enemyOFbox1);
+      Destroy(enemyOFbox2);
+      Destroy(enemyOFbox3);
+
+    }
 
 
     for(int i = 0; i < emptyOFbox.Length; ++i)

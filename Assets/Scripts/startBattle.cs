@@ -16,6 +16,8 @@ public class startBattle : MonoBehaviour
     	Destroy(objects[i].gameObject);
     }
 
+    setDFscene.isBack = false;
+
     SceneManager.LoadScene("Invader");
   }
 

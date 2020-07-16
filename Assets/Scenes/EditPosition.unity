@@ -172,7 +172,6 @@ MonoBehaviour:
     type: 3}
   enemyOFbox4: {fileID: 7556018070584833591, guid: b02700ccff97243b3847fedbfc98883f,
     type: 3}
-  enemyBoxNumber: 0
 --- !u!4 &61542598
 Transform:
   m_ObjectHideFlags: 0
@@ -423,6 +422,8 @@ GameObject:
   - component: {fileID: 1080373727}
   - component: {fileID: 1080373731}
   - component: {fileID: 1080373732}
+  - component: {fileID: 1080373733}
+  - component: {fileID: 1080373734}
   m_Layer: 5
   m_Name: backButton
   m_TagString: Untagged
@@ -538,6 +539,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1080373733}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1080373734}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1080373729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,6 +622,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a56b381ac2e294cf8a38b6ef7c7198f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1080373733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080373725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52d9ef544ad74bfd9dadb00161b28ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1080373734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080373725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73276017f2056429cac46654c437ef25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FogParticle1: {fileID: 2222130335430883348, guid: c4e33ce783f504be8a3b5f5bf3dd2d06,
+    type: 3}
+  FogParticle2: {fileID: 8640441537305496588, guid: 07506d4f3752f44ec84e06a560f2c1ea,
+    type: 3}
+  AudioObject: {fileID: 8293652317597853657, guid: 3893d66a77b0744d1a4552bd1c07309d,
+    type: 3}
 --- !u!1 &1178128788
 GameObject:
   m_ObjectHideFlags: 0

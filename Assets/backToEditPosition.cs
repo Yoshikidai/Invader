@@ -9,8 +9,10 @@ public class backToEditPosition : MonoBehaviour
 
     public void OnClick()
     {
+      setDFscene.isBack = true;
       SceneManager.LoadScene("EditPosition");
     }
+    
     // Start is called before the first frame update
     void Start()
     {

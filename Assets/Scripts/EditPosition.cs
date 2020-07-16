@@ -20,6 +20,8 @@ public class EditPosition : MonoBehaviour
   public GameObject enemyOFbox3;
   public GameObject enemyOFbox4;
 
+  private bool isBack;
+
   public static int enemyBoxNumber;
 
   public static int getEnemyBoxNumber()
@@ -30,6 +32,8 @@ public class EditPosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      isBack = setDFscene.getBack();
+
       DFposition1.SetActive(true);
       DFposition2.SetActive(true);
       DFposition3.SetActive(true);
@@ -37,182 +41,186 @@ public class EditPosition : MonoBehaviour
       DFposition5.SetActive(true);
       DFposition6.SetActive(true);
 
-      enemyBoxNumber = Random.Range(1, 5);
-
-      if(enemyBoxNumber == 1)
+      if(!isBack)
       {
-        Instantiate(
-            enemyOFbox2,
-            new Vector3(-2f,-transform.position.y,1f),
-            transform.rotation
-        );
-        Instantiate(
-            enemyOFbox3,
-            new Vector3(0f,-transform.position.y,1f),
-            transform.rotation
-        );
-        Instantiate(
-            enemyOFbox4,
-            new Vector3(2f,-transform.position.y,1f),
-            transform.rotation
-        );
+        enemyBoxNumber = Random.Range(1, 5);
 
-        enemyOFbox2.GetComponent<enemyBlackBox>().enabled = false;
-        enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = false;
-        enemyOFbox4.GetComponent<enemyBlueBox>().enabled = false;
+        if(enemyBoxNumber == 1)
+        {
+          Instantiate(
+              enemyOFbox2,
+              new Vector3(-2f,-transform.position.y,1f),
+              transform.rotation
+          );
+          Instantiate(
+              enemyOFbox3,
+              new Vector3(0f,-transform.position.y,1f),
+              transform.rotation
+          );
+          Instantiate(
+              enemyOFbox4,
+              new Vector3(2f,-transform.position.y,1f),
+              transform.rotation
+          );
+
+          enemyOFbox2.GetComponent<enemyBlackBox>().enabled = false;
+          enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = false;
+          enemyOFbox4.GetComponent<enemyBlueBox>().enabled = false;
+
+        }
+        else if(enemyBoxNumber == 2)
+        {
+          Instantiate(
+              enemyOFbox1,
+              new Vector3(-2f,-transform.position.y,1f),
+              transform.rotation
+          );
+          Instantiate(
+              enemyOFbox3,
+              new Vector3(0f,-transform.position.y,1f),
+              transform.rotation
+          );
+          Instantiate(
+              enemyOFbox4,
+              new Vector3(2f,-transform.position.y,1f),
+              transform.rotation
+          );
+
+          enemyOFbox1.GetComponent<enemyRedBox>().enabled = false;
+          enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = false;
+          enemyOFbox4.GetComponent<enemyBlueBox>().enabled = false;
+
+        }
+        else if(enemyBoxNumber == 3)
+        {
+          Instantiate(
+              enemyOFbox1,
+              new Vector3(-2f,-transform.position.y,1f),
+              transform.rotation
+          );
+          Instantiate(
+              enemyOFbox2,
+              new Vector3(0f,-transform.position.y,1f),
+              transform.rotation
+          );
+          Instantiate(
+              enemyOFbox4,
+              new Vector3(2f,-transform.position.y,1f),
+              transform.rotation
+          );
+
+          enemyOFbox1.GetComponent<enemyRedBox>().enabled = false;
+          enemyOFbox2.GetComponent<enemyBlackBox>().enabled = false;
+          enemyOFbox4.GetComponent<enemyBlueBox>().enabled = false;
+
+        }
+        else if(enemyBoxNumber == 4)
+        {
+          Instantiate(
+              enemyOFbox1,
+              new Vector3(-2f,-transform.position.y,1f),
+              transform.rotation
+          );
+          Instantiate(
+              enemyOFbox2,
+              new Vector3(0f,-transform.position.y,1f),
+              transform.rotation
+          );
+          Instantiate(
+              enemyOFbox3,
+              new Vector3(2f,-transform.position.y,1f),
+              transform.rotation
+          );
+
+          enemyOFbox1.GetComponent<enemyRedBox>().enabled = false;
+          enemyOFbox2.GetComponent<enemyBlackBox>().enabled = false;
+          enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = false;
+
+        }
+
+
+        Instantiate(
+            emptyOFbox,
+            new Vector3(-2f,transform.position.y,2f),
+            transform.rotation
+        );
+        Instantiate(
+            emptyOFbox,
+            new Vector3(-1f,transform.position.y,2f),
+            transform.rotation
+        );
+        Instantiate(
+            emptyOFbox,
+            new Vector3(0f,transform.position.y,2f),
+            transform.rotation
+        );
+        Instantiate(
+            emptyOFbox,
+            new Vector3(1f,transform.position.y,2f),
+            transform.rotation
+        );
+        Instantiate(
+            emptyOFbox,
+            new Vector3(2f,transform.position.y,2f),
+            transform.rotation
+        );
+        Instantiate(
+            emptyOFbox,
+            new Vector3(-2f,-transform.position.y,2f),
+            transform.rotation
+        );
+        Instantiate(
+            emptyOFbox,
+            new Vector3(-1f,-transform.position.y,2f),
+            transform.rotation
+        );
+        Instantiate(
+            emptyOFbox,
+            new Vector3(0f,-transform.position.y,2f),
+            transform.rotation
+        );
+        Instantiate(
+            emptyOFbox,
+            new Vector3(1f,-transform.position.y,2f),
+            transform.rotation
+        );
+        Instantiate(
+            emptyOFbox,
+            new Vector3(2f,-transform.position.y,2f),
+            transform.rotation
+        );
 
       }
-      else if(enemyBoxNumber == 2)
-      {
-        Instantiate(
-            enemyOFbox1,
-            new Vector3(-2f,-transform.position.y,1f),
-            transform.rotation
-        );
-        Instantiate(
-            enemyOFbox3,
-            new Vector3(0f,-transform.position.y,1f),
-            transform.rotation
-        );
-        Instantiate(
-            enemyOFbox4,
-            new Vector3(2f,-transform.position.y,1f),
-            transform.rotation
-        );
-
-        enemyOFbox1.GetComponent<enemyRedBox>().enabled = false;
-        enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = false;
-        enemyOFbox4.GetComponent<enemyBlueBox>().enabled = false;
-
-      }
-      else if(enemyBoxNumber == 3)
-      {
-        Instantiate(
-            enemyOFbox1,
-            new Vector3(-2f,-transform.position.y,1f),
-            transform.rotation
-        );
-        Instantiate(
-            enemyOFbox2,
-            new Vector3(0f,-transform.position.y,1f),
-            transform.rotation
-        );
-        Instantiate(
-            enemyOFbox4,
-            new Vector3(2f,-transform.position.y,1f),
-            transform.rotation
-        );
-
-        enemyOFbox1.GetComponent<enemyRedBox>().enabled = false;
-        enemyOFbox2.GetComponent<enemyBlackBox>().enabled = false;
-        enemyOFbox4.GetComponent<enemyBlueBox>().enabled = false;
-
-      }
-      else if(enemyBoxNumber == 4)
-      {
-        Instantiate(
-            enemyOFbox1,
-            new Vector3(-2f,-transform.position.y,1f),
-            transform.rotation
-        );
-        Instantiate(
-            enemyOFbox2,
-            new Vector3(0f,-transform.position.y,1f),
-            transform.rotation
-        );
-        Instantiate(
-            enemyOFbox3,
-            new Vector3(2f,-transform.position.y,1f),
-            transform.rotation
-        );
-
-        enemyOFbox1.GetComponent<enemyRedBox>().enabled = false;
-        enemyOFbox2.GetComponent<enemyBlackBox>().enabled = false;
-        enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = false;
-
-      }
-
-
-      Instantiate(
-          emptyOFbox,
-          new Vector3(-2f,transform.position.y,2f),
-          transform.rotation
-      );
-      Instantiate(
-          emptyOFbox,
-          new Vector3(-1f,transform.position.y,2f),
-          transform.rotation
-      );
-      Instantiate(
-          emptyOFbox,
-          new Vector3(0f,transform.position.y,2f),
-          transform.rotation
-      );
-      Instantiate(
-          emptyOFbox,
-          new Vector3(1f,transform.position.y,2f),
-          transform.rotation
-      );
-      Instantiate(
-          emptyOFbox,
-          new Vector3(2f,transform.position.y,2f),
-          transform.rotation
-      );
-      Instantiate(
-          emptyOFbox,
-          new Vector3(-2f,-transform.position.y,2f),
-          transform.rotation
-      );
-      Instantiate(
-          emptyOFbox,
-          new Vector3(-1f,-transform.position.y,2f),
-          transform.rotation
-      );
-      Instantiate(
-          emptyOFbox,
-          new Vector3(0f,-transform.position.y,2f),
-          transform.rotation
-      );
-      Instantiate(
-          emptyOFbox,
-          new Vector3(1f,-transform.position.y,2f),
-          transform.rotation
-      );
-      Instantiate(
-          emptyOFbox,
-          new Vector3(2f,-transform.position.y,2f),
-          transform.rotation
-      );
 
 
       Instantiate(
           DFposition1,
-          new Vector3(-0.5f,-0.5f,0f),
+          new Vector3(PlayerPrefs.GetFloat("x1", -0.5f), PlayerPrefs.GetFloat("y1", -0.5f), 0f),
           transform.rotation
       );
       Instantiate(
           DFposition2,
-          new Vector3(0.5f,-0.5f,0f),
+          new Vector3(PlayerPrefs.GetFloat("x2", 0.5f), PlayerPrefs.GetFloat("y2", -0.5f), 0f),
           transform.rotation
       );
       Instantiate(
           DFposition3,
-          new Vector3(0f,-1.5f,0f),
+          new Vector3(PlayerPrefs.GetFloat("x3", 0f), PlayerPrefs.GetFloat("y3", -1.5f), 0f),
           transform.rotation
       );
       Instantiate(
           DFposition4,
-          new Vector3(-1.5f,-2.5f,0f),
+          new Vector3(PlayerPrefs.GetFloat("x4", -1.5f), PlayerPrefs.GetFloat("y4", -2.5f), 0f),
           transform.rotation
       );
       Instantiate(
           DFposition5,
-          new Vector3(0f,-2.5f,0f),
+          new Vector3(PlayerPrefs.GetFloat("x5", 0f), PlayerPrefs.GetFloat("y5", -2.5f), 0f),
           transform.rotation
       );
       Instantiate(
           DFposition6,
-          new Vector3(1.5f,-2.5f,0f),
+          new Vector3(PlayerPrefs.GetFloat("x6", 1.5f), PlayerPrefs.GetFloat("y6", -2.5f), 0f),
           transform.rotation
       );
 
