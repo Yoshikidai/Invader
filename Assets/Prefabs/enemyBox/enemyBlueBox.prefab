@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7556018070584833589}
   - component: {fileID: 7556018070584833590}
   - component: {fileID: 8434612804470148299}
+  - component: {fileID: 6403008787169947456}
   m_Layer: 0
   m_Name: enemyBlueBox
   m_TagString: enemyBox4
@@ -89,7 +90,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7556018070584833591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81d573991b9f84d59b12fa8b4ecf2dc0, type: 3}
   m_Name: 
@@ -102,3 +103,15 @@ MonoBehaviour:
   enemyOF4Element: blue
   particleObject2: {fileID: 7598464978954858523, guid: 124a8eb7b69d8466f8f5b14dfe4a7c63,
     type: 3}
+--- !u!114 &6403008787169947456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7556018070584833591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7834422e7ee544080915d686d012b394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

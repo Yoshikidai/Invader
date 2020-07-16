@@ -15,6 +15,18 @@ public class EditPosition : MonoBehaviour
   public GameObject DFposition5;
   public GameObject DFposition6;
 
+  public GameObject enemyOFbox1;
+  public GameObject enemyOFbox2;
+  public GameObject enemyOFbox3;
+  public GameObject enemyOFbox4;
+
+  public static int enemyBoxNumber;
+
+  public static int getEnemyBoxNumber()
+  {
+    return enemyBoxNumber;
+  }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +36,102 @@ public class EditPosition : MonoBehaviour
       DFposition4.SetActive(true);
       DFposition5.SetActive(true);
       DFposition6.SetActive(true);
+
+      enemyBoxNumber = Random.Range(1, 5);
+
+      if(enemyBoxNumber == 1)
+      {
+        Instantiate(
+            enemyOFbox2,
+            new Vector3(-2f,-transform.position.y,1f),
+            transform.rotation
+        );
+        Instantiate(
+            enemyOFbox3,
+            new Vector3(0f,-transform.position.y,1f),
+            transform.rotation
+        );
+        Instantiate(
+            enemyOFbox4,
+            new Vector3(2f,-transform.position.y,1f),
+            transform.rotation
+        );
+
+        enemyOFbox2.GetComponent<enemyBlackBox>().enabled = false;
+        enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = false;
+        enemyOFbox4.GetComponent<enemyBlueBox>().enabled = false;
+
+      }
+      else if(enemyBoxNumber == 2)
+      {
+        Instantiate(
+            enemyOFbox1,
+            new Vector3(-2f,-transform.position.y,1f),
+            transform.rotation
+        );
+        Instantiate(
+            enemyOFbox3,
+            new Vector3(0f,-transform.position.y,1f),
+            transform.rotation
+        );
+        Instantiate(
+            enemyOFbox4,
+            new Vector3(2f,-transform.position.y,1f),
+            transform.rotation
+        );
+
+        enemyOFbox1.GetComponent<enemyRedBox>().enabled = false;
+        enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = false;
+        enemyOFbox4.GetComponent<enemyBlueBox>().enabled = false;
+
+      }
+      else if(enemyBoxNumber == 3)
+      {
+        Instantiate(
+            enemyOFbox1,
+            new Vector3(-2f,-transform.position.y,1f),
+            transform.rotation
+        );
+        Instantiate(
+            enemyOFbox2,
+            new Vector3(0f,-transform.position.y,1f),
+            transform.rotation
+        );
+        Instantiate(
+            enemyOFbox4,
+            new Vector3(2f,-transform.position.y,1f),
+            transform.rotation
+        );
+
+        enemyOFbox1.GetComponent<enemyRedBox>().enabled = false;
+        enemyOFbox2.GetComponent<enemyBlackBox>().enabled = false;
+        enemyOFbox4.GetComponent<enemyBlueBox>().enabled = false;
+
+      }
+      else if(enemyBoxNumber == 4)
+      {
+        Instantiate(
+            enemyOFbox1,
+            new Vector3(-2f,-transform.position.y,1f),
+            transform.rotation
+        );
+        Instantiate(
+            enemyOFbox2,
+            new Vector3(0f,-transform.position.y,1f),
+            transform.rotation
+        );
+        Instantiate(
+            enemyOFbox3,
+            new Vector3(2f,-transform.position.y,1f),
+            transform.rotation
+        );
+
+        enemyOFbox1.GetComponent<enemyRedBox>().enabled = false;
+        enemyOFbox2.GetComponent<enemyBlackBox>().enabled = false;
+        enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = false;
+
+      }
+
 
       Instantiate(
           emptyOFbox,

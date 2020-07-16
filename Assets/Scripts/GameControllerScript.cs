@@ -15,10 +15,10 @@ public class GameControllerScript : MonoBehaviour
 
   public GameObject particleObject2;
 
-  public GameObject enemyOFbox1;
-  public GameObject enemyOFbox2;
-  public GameObject enemyOFbox3;
-  public GameObject enemyOFbox4;
+  GameObject enemyOFbox1;
+  GameObject enemyOFbox2;
+  GameObject enemyOFbox3;
+  GameObject enemyOFbox4;
 
   GameObject[] emptyOFbox;
 
@@ -43,6 +43,7 @@ public class GameControllerScript : MonoBehaviour
   private string stageName;
 
   public GameObject unablePanel;
+  public GameObject pausePanel;
 
 
   // Start is called before the first frame update
@@ -50,8 +51,55 @@ public class GameControllerScript : MonoBehaviour
   {
     stageName = SceneController.getStage();
 
+    enemyBoxNumber = EditPosition.getEnemyBoxNumber();
+
+    if(enemyBoxNumber == 1)
+    {
+      enemyOFbox2 = GameObject.FindWithTag("enemyBox2");
+      enemyOFbox3 = GameObject.FindWithTag("enemyBox3");
+      enemyOFbox4 = GameObject.FindWithTag("enemyBox4");
+
+      enemyOFbox2.GetComponent<enemyBlackBox>().enabled = true;
+      enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = true;
+      enemyOFbox4.GetComponent<enemyBlueBox>().enabled = true;
+
+    }
+    else if(enemyBoxNumber == 2)
+    {
+      enemyOFbox1 = GameObject.FindWithTag("enemyBox1");
+      enemyOFbox3 = GameObject.FindWithTag("enemyBox3");
+      enemyOFbox4 = GameObject.FindWithTag("enemyBox4");
+
+      enemyOFbox1.GetComponent<enemyRedBox>().enabled = true;
+      enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = true;
+      enemyOFbox4.GetComponent<enemyBlueBox>().enabled = true;
+
+    }
+    else if(enemyBoxNumber == 3)
+    {
+      enemyOFbox1 = GameObject.FindWithTag("enemyBox1");
+      enemyOFbox2 = GameObject.FindWithTag("enemyBox2");
+      enemyOFbox4 = GameObject.FindWithTag("enemyBox4");
+
+      enemyOFbox1.GetComponent<enemyRedBox>().enabled = true;
+      enemyOFbox2.GetComponent<enemyBlackBox>().enabled = true;
+      enemyOFbox4.GetComponent<enemyBlueBox>().enabled = true;
+
+    }
+    else if(enemyBoxNumber == 4)
+    {
+      enemyOFbox1 = GameObject.FindWithTag("enemyBox1");
+      enemyOFbox2 = GameObject.FindWithTag("enemyBox2");
+      enemyOFbox3 = GameObject.FindWithTag("enemyBox3");
+
+      enemyOFbox1.GetComponent<enemyRedBox>().enabled = true;
+      enemyOFbox2.GetComponent<enemyBlackBox>().enabled = true;
+      enemyOFbox3.GetComponent<enemyWhiteBox>().enabled = true;
+
+    }
+
+
     playerBoxNumber = Random.Range(1, 5);
-    enemyBoxNumber = Random.Range(1, 5);
 
     if(playerBoxNumber == 1)
     {
@@ -130,82 +178,6 @@ public class GameControllerScript : MonoBehaviour
 
     }
 
-    if(enemyBoxNumber == 1)
-    {
-      Instantiate(
-          enemyOFbox2,
-          new Vector3(-2f,-transform.position.y,1f),
-          transform.rotation
-      );
-      Instantiate(
-          enemyOFbox3,
-          new Vector3(0f,-transform.position.y,1f),
-          transform.rotation
-      );
-      Instantiate(
-          enemyOFbox4,
-          new Vector3(2f,-transform.position.y,1f),
-          transform.rotation
-      );
-
-    }
-    else if(enemyBoxNumber == 2)
-    {
-      Instantiate(
-          enemyOFbox1,
-          new Vector3(-2f,-transform.position.y,1f),
-          transform.rotation
-      );
-      Instantiate(
-          enemyOFbox3,
-          new Vector3(0f,-transform.position.y,1f),
-          transform.rotation
-      );
-      Instantiate(
-          enemyOFbox4,
-          new Vector3(2f,-transform.position.y,1f),
-          transform.rotation
-      );
-
-    }
-    else if(enemyBoxNumber == 3)
-    {
-      Instantiate(
-          enemyOFbox1,
-          new Vector3(-2f,-transform.position.y,1f),
-          transform.rotation
-      );
-      Instantiate(
-          enemyOFbox2,
-          new Vector3(0f,-transform.position.y,1f),
-          transform.rotation
-      );
-      Instantiate(
-          enemyOFbox4,
-          new Vector3(2f,-transform.position.y,1f),
-          transform.rotation
-      );
-
-    }
-    else if(enemyBoxNumber == 4)
-    {
-      Instantiate(
-          enemyOFbox1,
-          new Vector3(-2f,-transform.position.y,1f),
-          transform.rotation
-      );
-      Instantiate(
-          enemyOFbox2,
-          new Vector3(0f,-transform.position.y,1f),
-          transform.rotation
-      );
-      Instantiate(
-          enemyOFbox3,
-          new Vector3(2f,-transform.position.y,1f),
-          transform.rotation
-      );
-
-    }
 
     ResultText.text = "";
     ReplayText.text = "";
@@ -270,6 +242,11 @@ public class GameControllerScript : MonoBehaviour
         Destroy(DF6[i].gameObject);
       }
 
+      Destroy(enemyOFbox1);
+      Destroy(enemyOFbox2);
+      Destroy(enemyOFbox3);
+      Destroy(enemyOFbox4);
+
       Instantiate(
           FogParticle1,
           new Vector3(4f, -4f, -5f),
@@ -318,6 +295,7 @@ public class GameControllerScript : MonoBehaviour
   {
     isVictory = true;
     unablePanel.SetActive(true);
+    pausePanel.SetActive(false);
     ResultText.text = "You win!";
     ReplayText.text = "Tap screen to end this game";
   }
@@ -326,6 +304,7 @@ public class GameControllerScript : MonoBehaviour
   {
     isDefeat = true;
     unablePanel.SetActive(true);
+    pausePanel.SetActive(false);
     ResultText.text = "You lose...";
     ReplayText.text = "Tap screen to end this game";
   }

@@ -5595,14 +5595,6 @@ MonoBehaviour:
     type: 3}
   particleObject2: {fileID: 7598464978954858523, guid: 124a8eb7b69d8466f8f5b14dfe4a7c63,
     type: 3}
-  enemyOFbox1: {fileID: 3861945973389011657, guid: 682bf212dcd9f4434998d721bcf9b0d2,
-    type: 3}
-  enemyOFbox2: {fileID: 6580345282743121634, guid: 241e4bd580b0445b4affcaa7a3495433,
-    type: 3}
-  enemyOFbox3: {fileID: 7556018070584833591, guid: edc51d7e1cf1d48eeb1cbb575aedfbc7,
-    type: 3}
-  enemyOFbox4: {fileID: 7556018070584833591, guid: b02700ccff97243b3847fedbfc98883f,
-    type: 3}
   FogParticle1: {fileID: 8640441537305496588, guid: 07506d4f3752f44ec84e06a560f2c1ea,
     type: 3}
   FogParticle2: {fileID: 2222130335430883348, guid: c4e33ce783f504be8a3b5f5bf3dd2d06,
@@ -5616,6 +5608,7 @@ MonoBehaviour:
   playerBoxNumber: 0
   enemyBoxNumber: 0
   unablePanel: {fileID: 646877106}
+  pausePanel: {fileID: 1547251774}
 --- !u!4 &867853771
 Transform:
   m_ObjectHideFlags: 0
@@ -5642,7 +5635,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 185502e57847d42e2a877cf0bfa21b8f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -164,6 +164,15 @@ MonoBehaviour:
     type: 3}
   DFposition6: {fileID: 2163316737682142550, guid: 6c5bb9422528c4e4db8ac24c278ecfb7,
     type: 3}
+  enemyOFbox1: {fileID: 3861945973389011657, guid: 682bf212dcd9f4434998d721bcf9b0d2,
+    type: 3}
+  enemyOFbox2: {fileID: 6580345282743121634, guid: 241e4bd580b0445b4affcaa7a3495433,
+    type: 3}
+  enemyOFbox3: {fileID: 7556018070584833591, guid: edc51d7e1cf1d48eeb1cbb575aedfbc7,
+    type: 3}
+  enemyOFbox4: {fileID: 7556018070584833591, guid: b02700ccff97243b3847fedbfc98883f,
+    type: 3}
+  enemyBoxNumber: 0
 --- !u!4 &61542598
 Transform:
   m_ObjectHideFlags: 0

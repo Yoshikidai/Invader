@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class fadeController : MonoBehaviour
 {
   private bool start;
-  float speed = 0.01f;  //透明化の速さ
+  float speed = 0.03f;  //透明化の速さ
   float alfa;    //A値を操作するための変数
   float red, green, blue;    //RGBを操作するための変数
   public GameObject panel;
@@ -39,7 +39,7 @@ public class fadeController : MonoBehaviour
     {
       panel.GetComponent<Image>().color = new Color(red, green, blue, alfa);
       alfa -= speed;
-      
+
       if(alfa < 0)
       {
         panel.SetActive(false);

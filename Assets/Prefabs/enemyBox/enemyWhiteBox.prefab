@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7556018070584833589}
   - component: {fileID: 7556018070584833590}
   - component: {fileID: 7556018070584833588}
+  - component: {fileID: 5857849398532680948}
   m_Layer: 0
   m_Name: enemyWhiteBox
   m_TagString: enemyBox3
@@ -89,7 +90,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7556018070584833591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58ba91b46c41a479eba413b46d04836f, type: 3}
   m_Name: 
@@ -102,3 +103,15 @@ MonoBehaviour:
   enemyOF3Element: white
   particleObject2: {fileID: 7598464978954858523, guid: 124a8eb7b69d8466f8f5b14dfe4a7c63,
     type: 3}
+--- !u!114 &5857849398532680948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7556018070584833591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7834422e7ee544080915d686d012b394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
