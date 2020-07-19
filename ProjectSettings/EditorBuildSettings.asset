@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/ModeSelectScene.unity
     guid: 9e2aee54fd2a84ecf85c3cc490a66850
   - enabled: 1
+    path: Assets/Scenes/Setting.unity
+    guid: ae04bce63cbf041bda97698baba8da2a
+  - enabled: 1
+    path: Assets/Scenes/Status.unity
+    guid: adf59c8a316a94e719702584676f474f
+  - enabled: 1
+    path: Assets/Scenes/Results.unity
+    guid: 50614da0933f84596a8eb7aef538ba51
+  - enabled: 1
     path: Assets/Scenes/STAGE/STAGE1.unity
     guid: a176ddc05ec9742c6b8e06d977566b6f
   - enabled: 1

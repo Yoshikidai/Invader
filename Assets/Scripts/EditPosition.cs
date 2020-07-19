@@ -20,6 +20,8 @@ public class EditPosition : MonoBehaviour
   public GameObject enemyOFbox3;
   public GameObject enemyOFbox4;
 
+  public GameObject AudioObject;
+
   private bool isBack;
 
   public static int enemyBoxNumber;
@@ -190,7 +192,14 @@ public class EditPosition : MonoBehaviour
             transform.rotation
         );
 
+        Instantiate(
+            AudioObject,
+            transform.position,
+            transform.rotation
+        );
+
       }
+
 
 
       Instantiate(
