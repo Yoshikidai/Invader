@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -6303232093228562627}
   - component: {fileID: 8271627136244462738}
   m_Layer: 12
-  m_Name: redDF
+  m_Name: redDF1
   m_TagString: playerDF1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

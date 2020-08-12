@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using NCMB;
+using System.Linq;
+
 
 public class GameControllerScript : MonoBehaviour
 {
@@ -45,6 +48,14 @@ public class GameControllerScript : MonoBehaviour
   public GameObject unablePanel;
   public GameObject pausePanel;
 
+  int beforePossession;
+  int afterPossession;
+  NCMBObject obj1;
+  NCMBObject obj2;
+  public Text Possession1;
+  public Text Possession2;
+  public Text PossessionText;
+  public Text right;
 
   // Start is called before the first frame update
   void Start()
@@ -181,6 +192,10 @@ public class GameControllerScript : MonoBehaviour
 
     ResultText.text = "";
     ReplayText.text = "";
+    Possession1.text = "";
+    Possession2.text = "";
+    PossessionText.text = "";
+    right.text = "";
     isVictory = false;
     isDefeat = false;
 
@@ -192,6 +207,60 @@ public class GameControllerScript : MonoBehaviour
     DF4 = GameObject.FindGameObjectsWithTag("playerDF4");
     DF5 = GameObject.FindGameObjectsWithTag("playerDF5");
     DF6 = GameObject.FindGameObjectsWithTag("playerDF6");
+
+    //TestClassからデータを取得する
+    NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject> ("possession");
+
+    //データを検索し取得
+    query.FindAsync ((List<NCMBObject> objectList, NCMBException e) => {
+
+      //取得失敗
+      if(e != null){
+        //エラーコード表示
+        Debug.Log(e.ToString());
+        return;
+      }
+
+      //取得した全データのmessageを表示
+      foreach (NCMBObject ncmbObject in objectList) {
+        beforePossession = System.Convert.ToInt32(ncmbObject["Point"]);
+      }
+      foreach (NCMBObject ncmbObject in objectList) {
+        obj1 = ncmbObject;
+      }
+    });
+
+
+    if(stageName == "1_1" || stageName == "2_1" || stageName == "3_1" || stageName == "4_1")
+    {
+      afterPossession = beforePossession + 50;
+
+    }
+    if(stageName == "1_2" || stageName == "2_2" || stageName == "3_2" || stageName == "4_2")
+    {
+      afterPossession = beforePossession + 100;
+
+    }
+    if(stageName == "1_3" || stageName == "2_3" || stageName == "3_3" || stageName == "4_3")
+    {
+      afterPossession = beforePossession + 150;
+
+    }
+    if(stageName == "1_4" || stageName == "2_4" || stageName == "3_4" || stageName == "4_4")
+    {
+      afterPossession = beforePossession + 200;
+
+    }
+    if(stageName == "1_5" || stageName == "2_5" || stageName == "3_5" || stageName == "4_5")
+    {
+      afterPossession = beforePossession + 250;
+
+    }
+    if(stageName == "1_boss" || stageName == "2_boss" || stageName == "3_boss" || stageName == "4_boss")
+    {
+      afterPossession = beforePossession + 300;
+
+    }
 
   }
 
@@ -298,6 +367,17 @@ public class GameControllerScript : MonoBehaviour
     pausePanel.SetActive(false);
     ResultText.text = "You win!";
     ReplayText.text = "Tap screen to end this game";
+
+    obj2 = new NCMBObject ("possession");
+    obj2.ObjectId = obj1.ObjectId;
+    obj2["Point"] = afterPossession;
+    obj2.SaveAsync();
+
+    PossessionText.text = "POSSESSION";
+    right.text = "→";
+    Possession1.text = string.Format("{0:#,0}", beforePossession);
+    Possession2.text = string.Format("{0:#,0}", afterPossession);
+
   }
 
   public void Lose()
