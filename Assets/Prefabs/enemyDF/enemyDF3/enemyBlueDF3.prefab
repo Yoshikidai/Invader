@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fbee02c6b5454899b394f136d4e6442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalPower: 20
+  normalPower: 500
 --- !u!1 &2670327446202929504
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Element: blue
-  HitPoint: 500
+  HitPoint: 300
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
   particleObjectExplosion: {fileID: 8073077066717164463, guid: d5ebea9638f504d6f9783c592ed5e31f,

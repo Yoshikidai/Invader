@@ -208,28 +208,7 @@ public class GameControllerScript : MonoBehaviour
     DF5 = GameObject.FindGameObjectsWithTag("playerDF5");
     DF6 = GameObject.FindGameObjectsWithTag("playerDF6");
 
-    //TestClassからデータを取得する
-    NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject> ("possession");
-
-    //データを検索し取得
-    query.FindAsync ((List<NCMBObject> objectList, NCMBException e) => {
-
-      //取得失敗
-      if(e != null){
-        //エラーコード表示
-        Debug.Log(e.ToString());
-        return;
-      }
-
-      //取得した全データのmessageを表示
-      foreach (NCMBObject ncmbObject in objectList) {
-        beforePossession = System.Convert.ToInt32(ncmbObject["Point"]);
-      }
-      foreach (NCMBObject ncmbObject in objectList) {
-        obj1 = ncmbObject;
-      }
-    });
-
+    beforePossession = PlayerPrefs.GetInt ("possession", 0);
 
     if(stageName == "1_1" || stageName == "2_1" || stageName == "3_1" || stageName == "4_1")
     {
@@ -368,10 +347,8 @@ public class GameControllerScript : MonoBehaviour
     ResultText.text = "You win!";
     ReplayText.text = "Tap screen to end this game";
 
-    obj2 = new NCMBObject ("possession");
-    obj2.ObjectId = obj1.ObjectId;
-    obj2["Point"] = afterPossession;
-    obj2.SaveAsync();
+    PlayerPrefs.SetInt ("possession", afterPossession);
+    PlayerPrefs.Save ();
 
     PossessionText.text = "POSSESSION";
     right.text = "→";

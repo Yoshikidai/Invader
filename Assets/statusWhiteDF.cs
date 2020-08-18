@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using NCMB;
-using System.Linq;
 
 public class statusWhiteDF : MonoBehaviour
 {
@@ -38,31 +36,14 @@ public class statusWhiteDF : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //TestClassからデータを取得する
-      NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject> ("WhiteDFstatus");
-
-      //データを検索し取得
-      query.FindAsync ((List<NCMBObject> objectList, NCMBException e) => {
-
-        //取得失敗
-        if(e != null){
-          //エラーコード表示
-          Debug.Log(e.ToString());
-          return;
-        }
-
-        //取得した全データのmessageを表示
-        foreach (NCMBObject ncmbObject in objectList) {
-          HP1 = System.Convert.ToInt32(ncmbObject["HP"]);
-          ATK1 = System.Convert.ToInt32(ncmbObject["ATK"]);
-          ITV1 = System.Convert.ToInt32(ncmbObject["ITV"]);
-          Point = System.Convert.ToInt32(ncmbObject["Point"]);
-        }
-      });
+      HP1 = PlayerPrefs.GetInt("WhiteDefenceHP", 300);
+      ATK1 = PlayerPrefs.GetInt("WhiteDefenceATK", 300);
+      ITV1 = PlayerPrefs.GetInt("WhiteDefenceITV", 300);
+      Point = PlayerPrefs.GetInt("WhiteDefencePoint", 100);
 
       HP2 = Mathf.FloorToInt(HP1 * 1.1f);
-      ATK2 = Mathf.FloorToInt(ATK1 * 1.05f);
-      ITV2 = Mathf.FloorToInt(ITV1 * 0.95f);
+      ATK2 = Mathf.RoundToInt(ATK1 * 1.05f);
+      ITV2 = Mathf.RoundToInt(ITV1 * 0.95f);
 
       beforeHP.text = string.Format("{0:#,0}", HP1);
       beforeATK.text = string.Format("{0:#,0}", ATK1);
@@ -79,23 +60,42 @@ public class statusWhiteDF : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      HP1 = PlayerPrefs.GetInt("WhiteDefenceHP", 300);
+      ATK1 = PlayerPrefs.GetInt("WhiteDefenceATK", 300);
+      ITV1 = PlayerPrefs.GetInt("WhiteDefenceITV", 300);
+      Point = PlayerPrefs.GetInt("WhiteDefencePoint", 100);
+
+      HP2 = Mathf.FloorToInt(HP1 * 1.1f);
+      ATK2 = Mathf.RoundToInt(ATK1 * 1.05f);
+      ITV2 = Mathf.RoundToInt(ITV1 * 0.95f);
+
+      beforeHP.text = string.Format("{0:#,0}", HP1);
+      beforeATK.text = string.Format("{0:#,0}", ATK1);
+      beforeITV.text = string.Format("{0:#,0}", ITV1);
+
+      afterHP.text = string.Format("{0:#,0}", HP2);
+      afterATK.text = string.Format("{0:#,0}", ATK2);
+      afterITV.text = string.Format("{0:#,0}", ITV2);
+
+      point.text = string.Format("{0:#,0}", Point);
 
       possession = Possession.getPossession();
 
       if(possession >= Point)
       {
         HPButton.SetActive(true);
-        ATKButton.SetActive(true);
         ITVButton.SetActive(true);
+        ATKButton.SetActive(true);
 
       }
       else
       {
         HPButton.SetActive(false);
-        ATKButton.SetActive(false);
         ITVButton.SetActive(false);
+        ATKButton.SetActive(false);
 
       }
+
 
     }
 }

@@ -11,10 +11,10 @@ public class DamageScript : MonoBehaviour
   public GameObject particleObjectExplosion;
   public AudioClip explosionSE;
 
-  
+
   public void Damage(float damage)
   {
-    HitPoint -= damage;
+    HitPoint -= damage * 0.03f;
 
     Instantiate(
         particleObjectHit,

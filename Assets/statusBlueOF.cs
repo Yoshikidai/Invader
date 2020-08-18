@@ -5,96 +5,94 @@ using UnityEngine.UI;
 
 public class statusBlueOF : MonoBehaviour
 {
-  public Text beforeHitPoint;
-  public Text afterHitPoint;
-  public Text beforeAttack;
-  public Text afterAttack;
-  public Text beforeInterval;
-  public Text afterInterval;
-  public Text point1;
-  public Text point2;
-  public Text point3;
+  public Text beforeHP;
+  public Text afterHP;
+  public Text beforeATK;
+  public Text afterATK;
+  public Text beforeITV;
+  public Text afterITV;
+  public Text point;
 
-  public GameObject HitPointButton;
-  public GameObject AttackButton;
-  public GameObject IntervalButton;
+  public GameObject HPButton;
+  public GameObject ATKButton;
+  public GameObject ITVButton;
   int possession;
 
-  int HitPoint1;
-  int HitPoint2;
-  int Attack1;
-  int Attack2;
-  int Interval1;
-  int Interval2;
-  int Point1;
-  int Point2;
-  int Point3;
+  int HP1;
+  int HP2;
+  int ATK1;
+  int ATK2;
+  int ITV1;
+  int ITV2;
+  public static int Point;
+
+
+  public static int getPoint()
+  {
+    return Point;
+
+  }
 
     // Start is called before the first frame update
     void Start()
     {
+      HP1 = PlayerPrefs.GetInt("BlueOffenceHP", 50);
+      ATK1 = PlayerPrefs.GetInt("BlueOffenceATK", 50);
+      ITV1 = PlayerPrefs.GetInt("BlueOffenceITV", 50);
+      Point = PlayerPrefs.GetInt("BlueOffencePoint", 100);
+
+      HP2 = Mathf.FloorToInt(HP1 * 1.1f);
+      ATK2 = Mathf.RoundToInt(ATK1 * 1.05f);
+      ITV2 = Mathf.RoundToInt(ITV1 * 0.95f);
+
+      beforeHP.text = string.Format("{0:#,0}", HP1);
+      beforeATK.text = string.Format("{0:#,0}", ATK1);
+      beforeITV.text = string.Format("{0:#,0}", ITV1);
+
+      afterHP.text = string.Format("{0:#,0}", HP2);
+      afterATK.text = string.Format("{0:#,0}", ATK2);
+      afterITV.text = string.Format("{0:#,0}", ITV2);
+
+      point.text = string.Format("{0:#,0}", Point);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-      HitPoint1 = CryptoPlayerPrefs.GetInt ("blueOFHitPoint", 300);
-      Attack1 = CryptoPlayerPrefs.GetInt ("blueOFAttack", 300);
-      Interval1 = CryptoPlayerPrefs.GetInt ("blueOFInterval", 300);
+      HP1 = PlayerPrefs.GetInt("BlueOffenceHP", 50);
+      ATK1 = PlayerPrefs.GetInt("BlueOffenceATK", 50);
+      ITV1 = PlayerPrefs.GetInt("BlueOffenceITV", 50);
+      Point = PlayerPrefs.GetInt("BlueOffencePoint", 100);
 
-      HitPoint2 = Mathf.FloorToInt(HitPoint1 * 1.1f);
-      Attack2 = Mathf.FloorToInt(Attack1 * 1.05f);
-      Interval2 = Mathf.FloorToInt(Interval1 * 0.95f);
+      HP2 = Mathf.FloorToInt(HP1 * 1.1f);
+      ATK2 = Mathf.RoundToInt(ATK1 * 1.05f);
+      ITV2 = Mathf.RoundToInt(ITV1 * 0.95f);
 
-      beforeHitPoint.text = string.Format("{0:#,0}", HitPoint1);
-      beforeAttack.text = string.Format("{0:#,0}", Attack1);
-      beforeInterval.text = string.Format("{0:#,0}", Interval1);
+      beforeHP.text = string.Format("{0:#,0}", HP1);
+      beforeATK.text = string.Format("{0:#,0}", ATK1);
+      beforeITV.text = string.Format("{0:#,0}", ITV1);
 
-      afterHitPoint.text = string.Format("{0:#,0}", HitPoint2);
-      afterAttack.text = string.Format("{0:#,0}", Attack2);
-      afterInterval.text = string.Format("{0:#,0}", Interval2);
+      afterHP.text = string.Format("{0:#,0}", HP2);
+      afterATK.text = string.Format("{0:#,0}", ATK2);
+      afterITV.text = string.Format("{0:#,0}", ITV2);
 
-      Point1 = CryptoPlayerPrefs.GetInt ("blueOFpoint1", 50);
-      Point2 = CryptoPlayerPrefs.GetInt ("blueOFpoint2", 50);
-      Point3 = CryptoPlayerPrefs.GetInt ("blueOFpoint3", 50);
-
-      point1.text = string.Format("{0:#,0}", Point1);
-      point2.text = string.Format("{0:#,0}", Point2);
-      point3.text = string.Format("{0:#,0}", Point3);
+      point.text = string.Format("{0:#,0}", Point);
 
       possession = Possession.getPossession();
 
-      if(possession >= Point1)
+      if(possession >= Point)
       {
-        HitPointButton.SetActive(true);
+        HPButton.SetActive(true);
+        ITVButton.SetActive(true);
+        ATKButton.SetActive(true);
 
       }
       else
       {
-        HitPointButton.SetActive(false);
-
-      }
-
-      if(possession >= Point2)
-      {
-        AttackButton.SetActive(true);
-
-      }
-      else
-      {
-        AttackButton.SetActive(false);
-
-      }
-
-      if(possession >= Point3)
-      {
-        IntervalButton.SetActive(true);
-
-      }
-      else
-      {
-        IntervalButton.SetActive(false);
+        HPButton.SetActive(false);
+        ITVButton.SetActive(false);
+        ATKButton.SetActive(false);
 
       }
 

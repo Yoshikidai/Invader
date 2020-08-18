@@ -15,69 +15,24 @@ public class BlackDFATKbutton : MonoBehaviour
   public Text pointText;
   int possession;
   public Text possessionText;
-  NCMBObject obj1;
-  NCMBObject obj2;
 
   public void OnClick()
   {
-      //TestClassからデータを取得する
-      NCMBQuery<NCMBObject> query1 = new NCMBQuery<NCMBObject> ("possession");
-
-      //データを検索し取得
-      query1.FindAsync ((List<NCMBObject> objectList, NCMBException e) => {
-
-        //取得失敗
-        if(e != null){
-          //エラーコード表示
-          Debug.Log(e.ToString());
-          return;
-        }
-
-        //取得した全データのmessageを表示
-        foreach (NCMBObject ncmbObject in objectList) {
-          possession = System.Convert.ToInt32(ncmbObject["Point"]);
-        }
-      });
-
-
-      //TestClassからデータを取得する
-      NCMBQuery<NCMBObject> query2 = new NCMBQuery<NCMBObject> ("BlackDFstatus");
-
-      //データを検索し取得
-      query2.FindAsync ((List<NCMBObject> objectList, NCMBException e) => {
-
-        //取得失敗
-        if(e != null){
-          //エラーコード表示
-          Debug.Log(e.ToString());
-          return;
-        }
-
-        //取得した全データのmessageを表示
-        foreach (NCMBObject ncmbObject in objectList) {
-          ATK = System.Convert.ToInt32(ncmbObject["ATK"]);
-        }
-        foreach (NCMBObject ncmbObject in objectList) {
-          Point = System.Convert.ToInt32(ncmbObject["Point"]);
-        }
-
-        foreach (NCMBObject ncmbObject in objectList) {
-          obj1 = ncmbObject;
-        }
-      });
+      possession = PlayerPrefs.GetInt("possession", 0);
+      ATK = PlayerPrefs.GetInt("BlackDefenceATK", 300);
+      Point = PlayerPrefs.GetInt("BlackDefencePoint", 100);
 
       possession = possession - Point;
 
-      obj2 = new NCMBObject ("BlackDFstatus");
-      obj2.ObjectId = obj1.ObjectId;
-      obj2["ATK"] = Mathf.FloorToInt(ATK * 1.05f);
-      obj2["Point"] = Mathf.FloorToInt(Point * 1.5f);
+      PlayerPrefs.SetInt("BlackDefenceATK", Mathf.FloorToInt(ATK * 1.05f));
+      PlayerPrefs.SetInt("BlackDefencePoint", Mathf.FloorToInt(Point * 1.5f));
+      PlayerPrefs.SetInt("possession", possession);
 
-      obj2.SaveAsync();
+      PlayerPrefs.Save();
 
       beforeATKText.text = string.Format("{0:#,0}", ATK);
       afterATKText.text = string.Format("{0:#,0}", Mathf.FloorToInt(ATK * 1.05f));
-      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.5f));
+      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.2f));
 
       Possession.possession = possession;
       possessionText.text = string.Format("{0:#,0}", possession);

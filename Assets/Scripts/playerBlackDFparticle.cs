@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerBlackDFparticle : MonoBehaviour
 {
 
-  public float normalPower;
+  float normalPower;
   private float weakPower;
   private float strongPower;
 
@@ -28,6 +28,7 @@ public class playerBlackDFparticle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      normalPower = PlayerPrefs.GetInt("BlackDefenceATK", 300);
       weakPower = normalPower * 0.8f;
       strongPower = normalPower * 1.2f;
     }

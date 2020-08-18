@@ -19,33 +19,15 @@ public class Possession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //TestClassからデータを取得する
-      NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject> ("possession");
-
-      //データを検索し取得
-      query.FindAsync ((List<NCMBObject> objectList, NCMBException e) => {
-
-        //取得失敗
-        if(e != null){
-          //エラーコード表示
-          Debug.Log(e.ToString());
-          return;
-        }
-
-        //取得した全データのmessageを表示
-        foreach (NCMBObject ncmbObject in objectList) {
-          possession = System.Convert.ToInt32(ncmbObject["Point"]);
-        }
-      });
-
-      possessionString = string.Format("{0:#,0}", possession);
-      possessionText.text = possessionString;
+      possession = PlayerPrefs.GetInt("possession", 0);
 
     }
 
     // Update is called once per frame
     void Update()
     {
+      possessionString = string.Format("{0:#,0}", possession);
+      possessionText.text = possessionString;
 
     }
 }
