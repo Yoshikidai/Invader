@@ -19,7 +19,7 @@ public class BlackDFHPbutton : MonoBehaviour
   public void OnClick()
   {
       possession = PlayerPrefs.GetInt("possession", 0);
-      HP = PlayerPrefs.GetInt("BlackDefenceHP", 300);
+      HP = PlayerPrefs.GetInt("BlackDefenceHP", 500);
       Point = PlayerPrefs.GetInt("BlackDefencePoint", 100);
 
       possession = possession - Point;
@@ -32,7 +32,7 @@ public class BlackDFHPbutton : MonoBehaviour
 
       beforeHPText.text = string.Format("{0:#,0}", HP);
       afterHPText.text = string.Format("{0:#,0}", Mathf.FloorToInt(HP * 1.05f));
-      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.2f));
+      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.5f));
 
       Possession.possession = possession;
       possessionText.text = string.Format("{0:#,0}", possession);

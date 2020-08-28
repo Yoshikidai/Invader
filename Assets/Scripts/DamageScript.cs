@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DamageScript : MonoBehaviour
 {
-
+  public string Position;
   public string Element;
-  public float HitPoint;
+  private float HitPoint;
   public GameObject particleObjectHit;
   public GameObject particleObjectExplosion;
   public AudioClip explosionSE;
@@ -24,6 +24,26 @@ public class DamageScript : MonoBehaviour
 
     if(HitPoint <= 0)
     {
+      if(Position == "OF")
+      {
+        PlayerPrefs.SetInt("destroyPlayer", PlayerPrefs.GetInt("destroyPlayer", 0) + 1);
+      }
+      if(Position == "DF")
+      {
+        PlayerPrefs.SetInt("destroyPlayer", PlayerPrefs.GetInt("destroyPlayer", 0) + 1);
+      }
+
+      if(Position == "enemyOF")
+      {
+        PlayerPrefs.SetInt("destroyEnemy", PlayerPrefs.GetInt("destroyEnemy", 0) + 1);
+      }
+      if(Position == "enemyDF")
+      {
+        PlayerPrefs.SetInt("destroyEnemy", PlayerPrefs.GetInt("destroyEnemy", 0) + 1);
+      }
+
+      PlayerPrefs.Save();
+
       Instantiate(
           particleObjectExplosion,
           new Vector3(transform.position.x, transform.position.y, -3f),
@@ -41,6 +61,54 @@ public class DamageScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      if(Position == "DF")
+      {
+        if(Element == "white")
+        {
+          HitPoint = PlayerPrefs.GetInt("WhiteDefenceHP", 500);
+        }
+        if(Element == "black")
+        {
+          HitPoint = PlayerPrefs.GetInt("BlackDefenceHP", 500);
+        }
+        if(Element == "blue")
+        {
+          HitPoint = PlayerPrefs.GetInt("BlueDefenceHP", 500);
+        }
+        if(Element == "red")
+        {
+          HitPoint = PlayerPrefs.GetInt("RedDefenceHP", 500);
+        }
+
+      }
+      if(Position == "enemyDF")
+      {
+        HitPoint = 500;
+      }
+      if(Position == "OF")
+      {
+        if(Element == "white")
+        {
+          HitPoint = PlayerPrefs.GetInt("WhiteOffenceHP", 50);
+        }
+        if(Element == "black")
+        {
+          HitPoint = PlayerPrefs.GetInt("BlackOffenceHP", 50);
+        }
+        if(Element == "blue")
+        {
+          HitPoint = PlayerPrefs.GetInt("BlueOffenceHP", 50);
+        }
+        if(Element == "red")
+        {
+          HitPoint = PlayerPrefs.GetInt("RedOffenceHP", 50);
+        }
+
+      }
+      if(Position == "enemyOF")
+      {
+        HitPoint = 50;
+      }
 
     }
 

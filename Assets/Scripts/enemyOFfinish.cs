@@ -5,10 +5,12 @@ using UnityEngine;
 public class enemyOFfinish : MonoBehaviour
 {
   private GameControllerScript gameController;
+  bool goal;
 
     // Start is called before the first frame update
     void Start()
     {
+      goal = false;
       gameController = GameObject
           .FindWithTag("GameController")
           .GetComponent<GameControllerScript>();
@@ -20,7 +22,12 @@ public class enemyOFfinish : MonoBehaviour
     {
       if(transform.position.y < gameController.transform.position.y)
       {
-        gameController.Lose();
+        if(goal == false)
+        {
+          gameController.Lose();
+          goal = true;
+
+        }
       }
 
       if(gameController.isVictory == true)

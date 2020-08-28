@@ -19,7 +19,7 @@ public class RedDFHPbutton : MonoBehaviour
   public void OnClick()
   {
       possession = PlayerPrefs.GetInt("possession", 0);
-      HP = PlayerPrefs.GetInt("RedDefenceHP", 300);
+      HP = PlayerPrefs.GetInt("RedDefenceHP", 500);
       Point = PlayerPrefs.GetInt("RedDefencePoint", 100);
 
       possession = possession - Point;
@@ -32,7 +32,7 @@ public class RedDFHPbutton : MonoBehaviour
 
       beforeHPText.text = string.Format("{0:#,0}", HP);
       afterHPText.text = string.Format("{0:#,0}", Mathf.FloorToInt(HP * 1.05f));
-      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.2f));
+      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.5f));
 
       Possession.possession = possession;
       possessionText.text = string.Format("{0:#,0}", possession);

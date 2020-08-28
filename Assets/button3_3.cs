@@ -27,6 +27,14 @@ public class button3_3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      string clear = PlayerPrefs.GetString("3_3");
+      if(clear == "clear")
+      {
+        Button button = this.GetComponent<Button>();
+        ColorBlock cb = button.colors;
+        cb.normalColor = new Color(0f, 1f, 0f, 0.5f);
+        button.colors = cb;
+      }
 
     }
 }

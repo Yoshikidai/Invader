@@ -41,7 +41,7 @@ public class statusRedOF : MonoBehaviour
       ITV1 = PlayerPrefs.GetInt("RedOffenceITV", 50);
       Point = PlayerPrefs.GetInt("RedOffencePoint", 100);
 
-      HP2 = Mathf.FloorToInt(HP1 * 1.1f);
+      HP2 = Mathf.FloorToInt(HP1 * 1.05f);
       ATK2 = Mathf.RoundToInt(ATK1 * 1.05f);
       ITV2 = Mathf.RoundToInt(ITV1 * 0.95f);
 
@@ -65,7 +65,7 @@ public class statusRedOF : MonoBehaviour
       ITV1 = PlayerPrefs.GetInt("RedOffenceITV", 50);
       Point = PlayerPrefs.GetInt("RedOffencePoint", 100);
 
-      HP2 = Mathf.FloorToInt(HP1 * 1.1f);
+      HP2 = Mathf.FloorToInt(HP1 * 1.05f);
       ATK2 = Mathf.RoundToInt(ATK1 * 1.05f);
       ITV2 = Mathf.RoundToInt(ITV1 * 0.95f);
 

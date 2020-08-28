@@ -19,7 +19,7 @@ public class BlackDFATKbutton : MonoBehaviour
   public void OnClick()
   {
       possession = PlayerPrefs.GetInt("possession", 0);
-      ATK = PlayerPrefs.GetInt("BlackDefenceATK", 300);
+      ATK = PlayerPrefs.GetInt("BlackDefenceATK", 500);
       Point = PlayerPrefs.GetInt("BlackDefencePoint", 100);
 
       possession = possession - Point;
@@ -32,7 +32,7 @@ public class BlackDFATKbutton : MonoBehaviour
 
       beforeATKText.text = string.Format("{0:#,0}", ATK);
       afterATKText.text = string.Format("{0:#,0}", Mathf.FloorToInt(ATK * 1.05f));
-      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.2f));
+      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.5f));
 
       Possession.possession = possession;
       possessionText.text = string.Format("{0:#,0}", possession);

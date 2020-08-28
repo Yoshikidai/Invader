@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004170d003ab746eba326e643e7290e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Position: DF
   Element: black
-  HitPoint: 300
   particleObjectHit: {fileID: 6903210514356192264, guid: 761fa4d470c804a229c2579ee9db3480,
     type: 3}
   particleObjectExplosion: {fileID: 8073077066717164463, guid: d5ebea9638f504d6f9783c592ed5e31f,

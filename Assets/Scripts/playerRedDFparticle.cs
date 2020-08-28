@@ -8,6 +8,7 @@ public class playerRedDFparticle : MonoBehaviour
   float normalPower;
   private float weakPower;
   private float strongPower;
+  private ParticleSystem ps;
 
   void OnParticleCollision(GameObject obj)
   {
@@ -32,6 +33,12 @@ public class playerRedDFparticle : MonoBehaviour
       normalPower = PlayerPrefs.GetInt("RedDefenceATK", 300);
       weakPower = normalPower * 0.8f;
       strongPower = normalPower * 1.2f;
+
+      ps = this.GetComponent<ParticleSystem>();
+      ps.Stop();
+      ParticleSystem.MainModule main = ps.main;
+      main.duration = PlayerPrefs.GetInt("RedDefenceITV", 300) * 0.01f;
+      ps.Play();
     }
 
     // Update is called once per frame

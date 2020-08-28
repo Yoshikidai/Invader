@@ -19,7 +19,7 @@ public class RedDFATKbutton : MonoBehaviour
   public void OnClick()
   {
       possession = PlayerPrefs.GetInt("possession", 0);
-      ATK = PlayerPrefs.GetInt("RedDefenceATK", 300);
+      ATK = PlayerPrefs.GetInt("RedDefenceATK", 500);
       Point = PlayerPrefs.GetInt("RedDefencePoint", 100);
 
       possession = possession - Point;
@@ -32,7 +32,7 @@ public class RedDFATKbutton : MonoBehaviour
 
       beforeATKText.text = string.Format("{0:#,0}", ATK);
       afterATKText.text = string.Format("{0:#,0}", Mathf.FloorToInt(ATK * 1.05f));
-      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.2f));
+      pointText.text = string.Format("{0:#,0}", Mathf.FloorToInt(Point * 1.5f));
 
       Possession.possession = possession;
       possessionText.text = string.Format("{0:#,0}", possession);

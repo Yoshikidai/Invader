@@ -36,12 +36,12 @@ public class statusBlueDF : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      HP1 = PlayerPrefs.GetInt("BlueDefenceHP", 300);
-      ATK1 = PlayerPrefs.GetInt("BlueDefenceATK", 300);
+      HP1 = PlayerPrefs.GetInt("BlueDefenceHP", 500);
+      ATK1 = PlayerPrefs.GetInt("BlueDefenceATK", 500);
       ITV1 = PlayerPrefs.GetInt("BlueDefenceITV", 300);
       Point = PlayerPrefs.GetInt("BlueDefencePoint", 100);
 
-      HP2 = Mathf.FloorToInt(HP1 * 1.1f);
+      HP2 = Mathf.FloorToInt(HP1 * 1.05f);
       ATK2 = Mathf.RoundToInt(ATK1 * 1.05f);
       ITV2 = Mathf.RoundToInt(ITV1 * 0.95f);
 
@@ -60,12 +60,12 @@ public class statusBlueDF : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      HP1 = PlayerPrefs.GetInt("BlueDefenceHP", 300);
-      ATK1 = PlayerPrefs.GetInt("BlueDefenceATK", 300);
+      HP1 = PlayerPrefs.GetInt("BlueDefenceHP", 500);
+      ATK1 = PlayerPrefs.GetInt("BlueDefenceATK", 500);
       ITV1 = PlayerPrefs.GetInt("BlueDefenceITV", 300);
       Point = PlayerPrefs.GetInt("BlueDefencePoint", 100);
 
-      HP2 = Mathf.FloorToInt(HP1 * 1.1f);
+      HP2 = Mathf.FloorToInt(HP1 * 1.05f);
       ATK2 = Mathf.RoundToInt(ATK1 * 1.05f);
       ITV2 = Mathf.RoundToInt(ITV1 * 0.95f);
 
