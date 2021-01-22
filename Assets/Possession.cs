@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using NCMB;
-using System.Linq;
+
 
 public class Possession : MonoBehaviour
 {
@@ -19,7 +18,7 @@ public class Possession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      possession = PlayerPrefs.GetInt("possession", 0);
+      possession = PlayerPrefs.GetInt("possession", 1000);
 
     }
 

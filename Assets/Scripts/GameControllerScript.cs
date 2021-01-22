@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using NCMB;
-using System.Linq;
+
 
 
 public class GameControllerScript : MonoBehaviour
@@ -44,14 +43,13 @@ public class GameControllerScript : MonoBehaviour
   public int enemyBoxNumber;
 
   private string stageName;
+  private int stageNumber;
 
   public GameObject unablePanel;
   public GameObject pausePanel;
 
   int beforePossession;
   int afterPossession;
-  NCMBObject obj1;
-  NCMBObject obj2;
   public Text Possession1;
   public Text Possession2;
   public Text PossessionText;
@@ -61,6 +59,7 @@ public class GameControllerScript : MonoBehaviour
   void Start()
   {
     stageName = SceneController.getStage();
+    stageNumber = SceneController.getStageNumber();
 
     enemyBoxNumber = EditPosition.getEnemyBoxNumber();
 
@@ -208,36 +207,36 @@ public class GameControllerScript : MonoBehaviour
     DF5 = GameObject.FindGameObjectsWithTag("playerDF5");
     DF6 = GameObject.FindGameObjectsWithTag("playerDF6");
 
-    beforePossession = PlayerPrefs.GetInt ("possession", 0);
+    beforePossession = PlayerPrefs.GetInt ("possession", 1000);
 
     if(stageName == "1_1" || stageName == "2_1" || stageName == "3_1" || stageName == "4_1")
     {
-      afterPossession = beforePossession + 50;
+      afterPossession = beforePossession + 300 * (stageNumber - 1) + 50;
 
     }
     if(stageName == "1_2" || stageName == "2_2" || stageName == "3_2" || stageName == "4_2")
     {
-      afterPossession = beforePossession + 100;
+      afterPossession = beforePossession + 300 * (stageNumber - 1) + 100;
 
     }
     if(stageName == "1_3" || stageName == "2_3" || stageName == "3_3" || stageName == "4_3")
     {
-      afterPossession = beforePossession + 150;
+      afterPossession = beforePossession + 300 * (stageNumber - 1) + 150;
 
     }
     if(stageName == "1_4" || stageName == "2_4" || stageName == "3_4" || stageName == "4_4")
     {
-      afterPossession = beforePossession + 200;
+      afterPossession = beforePossession + 300 * (stageNumber - 1) + 200;
 
     }
     if(stageName == "1_5" || stageName == "2_5" || stageName == "3_5" || stageName == "4_5")
     {
-      afterPossession = beforePossession + 250;
+      afterPossession = beforePossession + 300 * (stageNumber - 1) + 250;
 
     }
     if(stageName == "1_boss" || stageName == "2_boss" || stageName == "3_boss" || stageName == "4_boss")
     {
-      afterPossession = beforePossession + 300;
+      afterPossession = beforePossession + 300 * (stageNumber - 1) + 300;
 
     }
 
@@ -258,6 +257,8 @@ public class GameControllerScript : MonoBehaviour
 
     if (Input.GetMouseButtonDown(0))
     {
+      SceneController.bossStage = 1;
+
 
       for(int i = 0; i < emptyOFbox.Length; ++i)
       {

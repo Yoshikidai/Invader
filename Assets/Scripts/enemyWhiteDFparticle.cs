@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyWhiteDFparticle : MonoBehaviour
 {
 
-  public float normalPower;
+  private float normalPower;
   private float weakPower;
   private float strongPower;
 
@@ -29,6 +29,7 @@ public class enemyWhiteDFparticle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      normalPower = 300;
       weakPower = normalPower * 0.8f;
       strongPower = normalPower * 1.2f;
     }

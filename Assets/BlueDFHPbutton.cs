@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using NCMB;
-using System.Linq;
+
 
 public class BlueDFHPbutton : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class BlueDFHPbutton : MonoBehaviour
 
   public void OnClick()
   {
-      possession = PlayerPrefs.GetInt("possession", 0);
+      possession = PlayerPrefs.GetInt("possession", 1000);
       HP = PlayerPrefs.GetInt("BlueDefenceHP", 500);
       Point = PlayerPrefs.GetInt("BlueDefencePoint", 100);
 

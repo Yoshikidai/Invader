@@ -245,6 +245,7 @@ public class enemySpeedScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      beforeSpeed = beforeSpeed * SceneController.bossStage;
       afterSpeed = beforeSpeed;
     }
 

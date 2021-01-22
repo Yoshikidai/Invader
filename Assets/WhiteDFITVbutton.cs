@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using NCMB;
-using System.Linq;
+
 
 public class WhiteDFITVbutton : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class WhiteDFITVbutton : MonoBehaviour
 
   public void OnClick()
   {
-      possession = PlayerPrefs.GetInt("possession", 0);
+      possession = PlayerPrefs.GetInt("possession", 1000);
       ITV = PlayerPrefs.GetInt("WhiteDefenceITV", 300);
       Point = PlayerPrefs.GetInt("WhiteDefencePoint", 100);
 

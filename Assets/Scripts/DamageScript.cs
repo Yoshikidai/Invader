@@ -10,6 +10,7 @@ public class DamageScript : MonoBehaviour
   public GameObject particleObjectHit;
   public GameObject particleObjectExplosion;
   public AudioClip explosionSE;
+  private int stageNumber;
 
 
   public void Damage(float damage)
@@ -61,6 +62,8 @@ public class DamageScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      stageNumber = SceneController.getStageNumber();
+
       if(Position == "DF")
       {
         if(Element == "white")
@@ -83,7 +86,7 @@ public class DamageScript : MonoBehaviour
       }
       if(Position == "enemyDF")
       {
-        HitPoint = 500;
+        HitPoint = 500 * stageNumber;
       }
       if(Position == "OF")
       {
@@ -107,7 +110,7 @@ public class DamageScript : MonoBehaviour
       }
       if(Position == "enemyOF")
       {
-        HitPoint = 50;
+        HitPoint = 50 * stageNumber;
       }
 
     }

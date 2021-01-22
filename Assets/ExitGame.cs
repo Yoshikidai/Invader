@@ -27,6 +27,7 @@ public class ExitGame : MonoBehaviour
 
   public void OnClick()
   {
+    SceneController.bossStage = 1;
     stageName = SceneController.getStage();
 
     emptyOFbox = GameObject.FindGameObjectsWithTag("emptyBox");

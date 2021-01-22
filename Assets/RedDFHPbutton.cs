@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using NCMB;
-using System.Linq;
+
 
 public class RedDFHPbutton : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class RedDFHPbutton : MonoBehaviour
 
   public void OnClick()
   {
-      possession = PlayerPrefs.GetInt("possession", 0);
+      possession = PlayerPrefs.GetInt("possession", 1000);
       HP = PlayerPrefs.GetInt("RedDefenceHP", 500);
       Point = PlayerPrefs.GetInt("RedDefencePoint", 100);
 

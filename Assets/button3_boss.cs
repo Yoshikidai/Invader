@@ -15,6 +15,7 @@ public class button3_boss : MonoBehaviour
         Destroy(background[i].gameObject);
       }
 
+      SceneController.stageNumber = 2;
       SceneController.stage = "3_boss";
     }
     // Start is called before the first frame update

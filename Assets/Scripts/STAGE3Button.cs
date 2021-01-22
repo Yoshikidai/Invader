@@ -9,6 +9,7 @@ public class STAGE3Button : MonoBehaviour
 
     public void OnClick()
     {
+      SceneController.stageNumber = 3;
       SceneManager.LoadScene("STAGE3");
     }
     // Start is called before the first frame update

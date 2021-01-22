@@ -9,6 +9,7 @@ public class backButton : MonoBehaviour
 
     public void OnClick()
     {
+      SceneController.bossStage = 1;
       SceneManager.LoadScene("ModeSelectScene");
     }
     // Start is called before the first frame update

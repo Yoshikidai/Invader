@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using NCMB;
-using System.Linq;
+
 
 public class RedDFATKbutton : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class RedDFATKbutton : MonoBehaviour
 
   public void OnClick()
   {
-      possession = PlayerPrefs.GetInt("possession", 0);
+      possession = PlayerPrefs.GetInt("possession", 1000);
       ATK = PlayerPrefs.GetInt("RedDefenceATK", 500);
       Point = PlayerPrefs.GetInt("RedDefencePoint", 100);
 

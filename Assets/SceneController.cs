@@ -5,9 +5,14 @@ using UnityEngine;
 public class SceneController : MonoBehaviour
 {
   public static string stage;
+  public static int stageNumber;
+  public static int bossStage;
+
 	// Use this for initialization
 	void Start () {
     stage = "";
+    stageNumber = 1;
+    bossStage = 1;
 	}
 
 
@@ -16,7 +21,15 @@ public class SceneController : MonoBehaviour
 
 	}
 
-	public static string getStage(){
+  public static string getStage(){
 		return stage;
+	}
+
+  public static int getStageNumber(){
+		return stageNumber;
+	}
+
+  public static int getBossStage(){
+		return bossStage;
 	}
 }
